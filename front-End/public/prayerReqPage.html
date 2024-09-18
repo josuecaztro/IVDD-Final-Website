@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="prayerReqPage.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h3 id="verse" class="text-center mb-4">"The prayer of a righteous person is powerful and effective." — James 5:16</h3>
+        <br>
+        <button id="back" class="btn btn-primary mb-4">Back to Home</button>
+
+        <h1 class="mb-4">Submit Prayer Request</h1>
+        <form id="prayerRequestForm" action="/submit-prayer-request" method="POST" autocomplete="off">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Enter your first name..." required>
+            </div>
+            
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Enter your last name..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="Enter your phone number..." pattern="[0-9\s\-]+" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="messageBody">What Is Your Prayer Request?</label>
+                <textarea id="messageBody" name="messageBody" class="form-control" rows="4" placeholder="Enter your prayer request here..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="dateTime">Date/Time Needed</label>
+                <input type="text" id="dateTime" name="dateTime" class="form-control" placeholder="Enter date/time needed..." required>
+            </div>
+            
+            <button type="submit" id="submit-id" class="btn btn-success">Send</button>
+        </form>
+        <br>
+        <br>
+        <h4>"And whatever you ask in prayer, you will receive, if you have faith." — Matthew 21:22</h4>
+        <br>
+        <br>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+
+// this is the return back home button
+let x = document.getElementById("back");
+x.addEventListener("click", ()=>{
+    window.location.href = 'http://localhost:3000';
+    console.log("clicked");
+})
+
+document.getElementById('prayerRequestForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const formData = {
+                description: document.getElementById('messageBody').value,
+                timeFrame: document.getElementById('dateTime').value,
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                phoneNumber: document.getElementById('phoneNumber').value
+            };
+
+            fetch('http://localhost:8080/api/prayer-request-forms', {
+                method: 'POST',
+                headers: {
+                    'Accept': '*/*',
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyNDYxMjg5NCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzI0NTI2NDk0fQ.Eg_AbBi76kCMox5ddPB4wSjJ1YpYoJ0gvXtvHHZ5I3QeuMUobXN2VEdw9M8jz3THUlAhfiNNuqXdSu3VGiqpng'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Prayer request submitted successfully!');
+                document.getElementById('prayerRequestForm').reset(); // Optionally reset the form
+            })
+            .catch(error => {
+                console.error('Error submitting prayer request:', error);
+                alert('Error submitting prayer request');
+            });
+        });
+
+
+</script>
+</html>

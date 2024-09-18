@@ -1,0 +1,18 @@
+img {
+    max-width: 500px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+
+}
+
+
+
+.carousel {
+    width: 500px; /* Adjust the height to match your images */
+  }
+  
+  .carousel img {
+    height: 100%; /* Ensure the images fill the height */
+    object-fit: cover; /* Optionally adjust how the image fits within the container */
+  }
+  

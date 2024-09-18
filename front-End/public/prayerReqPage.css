@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(to bottom,#87CEFA,#F0F8FF );
+    margin-top: 50px;
+    margin-bottom: 100px;
+    /* color: #2F4F4F; */
+    color: #333333;
+}
+
+h1 {
+    font-family: "sinter", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2, h3, h4 {
+    font-family: "sinter", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
