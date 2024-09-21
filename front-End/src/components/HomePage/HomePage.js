@@ -25,9 +25,6 @@ function DisplayHomePage(){
         <div id="top-page">
       <h1 id="titleh1">Iglesia Voz de Dios</h1>
       <CoolButton text="We're glad you're here." onClick={scrollToDiv}/>
-      {/* <h3>Pastor Roberto Castro</h3> */}
-          {/* <ButtonComponent /> 
-          <ButtonComponent2/> */}
       {/* <DisplayHomeImg/> */}
       <div id="caro">
           </div>
@@ -57,10 +54,10 @@ function DisplayHomePage(){
           <h4>Connect with Us <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
     </svg></h4>
-           <SocialIcon url="https://www.youtube.com/PastorRobertoC" class="social"/>
-          <SocialIcon url="https://www.facebook.com/IglesiaVozdeDiosPA/" class="social"/>
-          <SocialIcon url="https://www.tiktok.com/@iglesiavozdedios?is_from_webapp=1&sender_device=pc" class="social"/>
-          <SocialIcon url="https://www.instagram.com/folsomvozdedios/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" class="social"/>
+           <SocialIcon url="https://www.youtube.com/PastorRobertoC" class="social" target="_blank"/>
+          <SocialIcon url="https://www.facebook.com/IglesiaVozdeDiosPA/" class="social" target="_blank"/>
+          <SocialIcon url="https://www.tiktok.com/@iglesiavozdedios?is_from_webapp=1&sender_device=pc" class="social" target="_blank"/>
+          <SocialIcon url="https://www.instagram.com/folsomvozdedios/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" class="social" target="_blank"/>
           </div>
           
           <Container className="mt-3">

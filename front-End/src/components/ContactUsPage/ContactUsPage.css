@@ -1,10 +1,4 @@
-/* body {
-    background: linear-gradient(120deg,#F8C471 ,#1D2B64 );
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-} */
-
-body {
+#body-for-cp {
     background: linear-gradient(to bottom, #f7f7f7, #e0e0e0) !important;
     height: 100vh;
     display: flex;
@@ -12,9 +6,10 @@ body {
     align-items: center;
     color: #333;
     padding-bottom: 50px;
+    margin-top: 25px;
 }
 
-.container {
+.container1 {
     margin: 70px;
 }
 
@@ -44,17 +39,6 @@ body {
     color: #1D2B64;
 }
 
-/* .btn-custom {
-    background-color: #1D2B64;
-    color: #fff;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-custom:hover {
-    background-color: #F8C471;
-    color: #fff;
-} */
 
 #the {
     background-color: #1D2B64;
@@ -73,15 +57,15 @@ body {
 #back-button {
 
     padding: 0.75rem 1.5rem;
-    background-color: #007bff; /* Primary blue color */
-    color: #ffffff; /* White text */
+    background-color: #007bff; 
+    color: #ffffff; 
     font-size: 0.75rem;
     font-weight: 500;
     text-align: center;
     text-decoration: none;
-    border-radius: 50px; /* Rounded corners */
+    border-radius: 50px; 
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     margin: 15px;
 
 
@@ -89,13 +73,13 @@ body {
 }
 
 #back-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
-    text-decoration: none; /* Ensures no underline on hover */
+    background-color: #0056b3; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+    text-decoration: none; 
 }
 
 #back-button:active {
-    background-color: #004494; /* Even darker blue when clicked */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
-    transform: translateY(2px); /* Small shift down on click for a pressed effect */
+    background-color: #004494; 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
+    transform: translateY(2px); 
 }

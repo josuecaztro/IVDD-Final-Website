@@ -1,9 +1,11 @@
-body {
+#body-for-prp {
     background: linear-gradient(to bottom,#87CEFA,#F0F8FF );
-    margin-top: 50px;
-    margin-bottom: 100px;
-    /* color: #2F4F4F; */
     color: #333333;
+}
+
+#request-container {
+    padding: 50px;
+    padding-bottom: 125px;
 }
 
 h1 {
@@ -16,4 +18,8 @@ h2, h3, h4 {
     font-family: "sinter", sans-serif;
     font-weight: 600;
     font-style: normal;
+}
+
+#submit-id-pr {
+    margin-top: 15px;
 }
