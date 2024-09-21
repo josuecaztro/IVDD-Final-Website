@@ -4,7 +4,7 @@ function ContactUs() {
     const formRef = useRef(null);
 
     const handleBackClick = () => {
-        window.location.href = 'http://localhost:3000';
+        window.location.href = 'http://3.18.110.219/';
         console.log('clicked');
     };
 
