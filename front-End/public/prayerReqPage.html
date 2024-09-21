@@ -66,6 +66,8 @@ x.addEventListener("click", ()=>{
 document.getElementById('prayerRequestForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
 
+            console.log("im testing this git pull went to cloud");
+
             const formData = {
                 description: document.getElementById('messageBody').value,
                 timeFrame: document.getElementById('dateTime').value,
