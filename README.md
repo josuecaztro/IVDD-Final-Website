@@ -14,6 +14,8 @@ My dad's church organization isn't so tech-savvy, and I noticed they didn't have
   
 - **Prayer Request Forms**: Submit your prayer requests, and let us support you in prayer.
 
+- This project is hosted on **AWS Cloud Services**
+
 ## Coming Soon
 
 - **Online Donations**: Soon, you'll be able to donate online, making it easier to support our church community.
