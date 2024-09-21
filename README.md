@@ -1,10 +1,10 @@
-#⛪️ Voice of God - Church Website
+# ⛪️ Voice of God - Church Website
 
-##📕 The Back Story
+## 📕 The Back Story
 
 My dad's church organization isn't so tech-savvy, and I noticed they didn't have a website. I thought this would be a great opportunity to use my skills in full-stack development to construct a website for our church organization. Although it's still a work in progress, you can follow this link [HERE](http://18.119.7.144/) to see the website and how it’s going!
 
-##🌟 Features
+## 🌟 Features
 
 - **Google Calendar API**: Stay updated with upcoming events and activities in our church.
   
@@ -16,7 +16,7 @@ My dad's church organization isn't so tech-savvy, and I noticed they didn't have
 
 - This project is hosted on **AWS Cloud Services**
 
-##👉 Coming Soon
+## 👉 Coming Soon
 
 - **Online Donations**: Soon, you'll be able to donate online, making it easier to support our church community.
 
