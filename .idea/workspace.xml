@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a9a55e07-89f7-437e-927e-7c35483b694c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/front-End/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/node_modules/.cache/default-development/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/HomePage/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/AwesomeButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/HomePage/AwesomeButton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/AwesomeButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/HomePage/AwesomeButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/ButtonComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/ForTesting/ButtonComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/ButtonComponent2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/ForTesting/ButtonComponent2.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/ContactUsPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/Donate.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/DonatePage/Donate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/HomePage/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/WhoWeAre.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/HomePage/carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/carousel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/HomePage/carousel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/homephoto.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/HomePage/homephoto.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/homephoto.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/HomePage/homephoto.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-End/src/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/NavBar/navbar.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2mO2grXv3tDQ2l4ViJyDxKrSh4O" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/josuecastro/MyProjects/IVDD-Final-Website"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/front-End/src/components/HomePage" />
+      <recent name="$PROJECT_DIR$/front-End/src/components/ForTesting" />
+      <recent name="$PROJECT_DIR$/front-End/src/components/DonatePage" />
+      <recent name="$PROJECT_DIR$/front-End/src/components/NavBar" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9a55e07-89f7-437e-927e-7c35483b694c" name="Changes" comment="" />
+      <created>1726933417459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726933417459</updated>
+    </task>
+    <servers />
+  </component>
+</project>

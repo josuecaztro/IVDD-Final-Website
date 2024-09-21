@@ -1,10 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import GenerateNav from './navbar';
+import GenerateNav from './components/NavBar/navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import DisplayDonatePage from './Donate';
-import DisplayHomePage from './HomePage';
+import DisplayDonatePage from './components/DonatePage/Donate';
+import DisplayHomePage from './components/HomePage/HomePage';
 
 function App() {
   return (

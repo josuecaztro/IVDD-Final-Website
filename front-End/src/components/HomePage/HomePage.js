@@ -3,6 +3,8 @@ import { SocialIcon } from 'react-social-icons'
 import Container from 'react-bootstrap/Container';
 import CarouselFadeExample from './carousel';
 import CoolButton from './AwesomeButton';
+import './App.css';
+
 
 
 
