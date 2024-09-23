@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# Ignore local properties file (this contains mysql admin passwords)
+application-local.properties
+
