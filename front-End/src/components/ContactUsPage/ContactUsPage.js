@@ -26,7 +26,7 @@ function DeployContactUs(){
       const handleFormSubmit = (e) => {
         e.preventDefault();
         
-        fetch('http://localhost:8080/api/contact-requests', {
+        fetch('http://18.119.7.144:8080/api/contact-requests', {
           method: 'POST',
           headers: {
             'Accept': '*/*',
