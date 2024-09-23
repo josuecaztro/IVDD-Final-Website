@@ -23,7 +23,7 @@ function DisplayPrayerReqPage(){
       const handleFormSubmit = (e) => {
         e.preventDefault();
         
-        fetch('http://localhost:8080/api/prayer-request-forms', {
+        fetch('http://18.119.7.144:8080/api/prayer-request-forms', {
           method: 'POST',
           headers: {
             'Accept': '*/*',
