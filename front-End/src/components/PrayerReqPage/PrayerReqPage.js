@@ -27,8 +27,7 @@ function DisplayPrayerReqPage(){
           method: 'POST',
           headers: {
             'Accept': '*/*',
-            'Content-Type': 'application/json',
-            'Authorization': 'Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTcyNDYxMjg5NCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzI0NTI2NDk0fQ.Eg_AbBi76kCMox5ddPB4wSjJ1YpYoJ0gvXtvHHZ5I3QeuMUobXN2VEdw9M8jz3THUlAhfiNNuqXdSu3VGiqpng'
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify(formData)
         })
@@ -47,11 +46,6 @@ function DisplayPrayerReqPage(){
             console.error('Error submitting prayer request:', error);
             alert('Error submitting prayer request');
           });
-      };
-    
-      const handleBackClick = () => {
-        window.location.href = '/';
-        console.log("clicked");
       };
     
       return (
