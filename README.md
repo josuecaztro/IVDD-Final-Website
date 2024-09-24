@@ -22,4 +22,4 @@ My dad's church organization isn't so tech-savvy, and I noticed they didn't have
 
 ---
 
-Feel feel to suggest any feedback, thanks. -J.C. 
+Feel feel to suggest any feedback, thanks. - J.C. 
