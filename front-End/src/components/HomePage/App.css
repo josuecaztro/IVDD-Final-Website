@@ -45,7 +45,50 @@ font-style: normal;
   width: 100%;
   gap: 8rem;
   justify-content: center;
-  /* justify-content: space-around; */
+
+}
+
+@media (max-width: 600px) {
+
+  /* #wholepage {
+    width: 100%;
+  } */
+
+  #top-page {
+    height: 30rem;
+  }
+
+  h1 {
+    font-size: 4rem !important;
+    
+  }
+
+  #middle-page {
+    display: block;
+    width: 100% !important;
+  }
+
+  #youtube {
+    width: 75%;
+    height: auto;
+  }
+
+  #googleapi {
+    width: 90%;
+  }
+
+  #bottom-page {
+    display: block !important;
+  }
+
+  #googlemap{
+    width: 90%;
+    height: auto;
+  }
+
+  #footerid {
+    display: block !important;
+  }
 
 }
 

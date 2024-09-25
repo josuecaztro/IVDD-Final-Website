@@ -15,4 +15,11 @@ img {
     height: 100%; /* Ensure the images fill the height */
     object-fit: cover; /* Optionally adjust how the image fits within the container */
   }
+
+  @media (max-width: 600px) {
+    .carousel {
+      width: 100%;
+      height: auto;
+    }
+  }
   

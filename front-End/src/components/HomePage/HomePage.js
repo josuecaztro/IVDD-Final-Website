@@ -60,7 +60,7 @@ function DisplayHomePage(){
           <SocialIcon url="https://www.instagram.com/folsomvozdedios/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" class="social" target="_blank"/>
           </div>
           
-          <Container className="mt-3">
+          <Container className="mt-3" id="carousel-container-id">
           <CarouselFadeExample />
           </Container>
     
