@@ -16,6 +16,8 @@ function DisplayHomePage(){
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }
+
+      //random comment for testing
     
       return (
         <>
