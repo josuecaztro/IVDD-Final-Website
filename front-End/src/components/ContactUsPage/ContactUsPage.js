@@ -26,7 +26,7 @@ function DeployContactUs(){
       const handleFormSubmit = (e) => {
         e.preventDefault();
         
-        fetch('http://18.119.7.144:8080/api/contact-requests', {
+        fetch('http://iglesiavozdedios.net:8080/api/contact-requests', {
           method: 'POST',
           headers: {
             'Accept': '*/*',
