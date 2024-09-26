@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 
 
-function GenerateNav(){
+function GenerateNav( { language, setLanguage } ){
 
   function scrollToFooter(){
     const element = document.getElementById('thefooter');
@@ -13,6 +13,11 @@ function GenerateNav(){
       element.scrollIntoView({behavior: 'smooth'});
     }
   }
+
+  function toggleLanguage (){
+    setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'es' : 'en'));
+  }
+
 
 return (
   <>
@@ -25,9 +30,23 @@ return (
       <Nav.Link as={NavLink} to="/">Home</Nav.Link>
       <Nav.Link href="#link">Who We Are</Nav.Link>
       <Nav.Link href="#link">Mission</Nav.Link>
-      <Nav.Link href="#link">Events</Nav.Link>
+
+      {/* For now I'm leaving the events tab toggled, but it can be put back if needed.  */}
+      {/* <Nav.Link href="#link">Events</Nav.Link> */}
+
       <Nav.Link as={NavLink} to="/donate">Donate</Nav.Link>
       <Nav.Link as={NavLink} to="/prayerReq">Prayer Request</Nav.Link>
+
+    
+      {/* Implement translation dropdown feature here: */}
+      <NavDropdown title="Language" id="language-dropdown">
+                <NavDropdown.Item onClick={toggleLanguage}>
+                  {language === 'en' ? 'Español' : 'English'}
+                </NavDropdown.Item>
+      </NavDropdown>
+
+
+
       <NavDropdown title="Contact Us" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1" onClick={scrollToFooter}>E-Mail</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2" onClick={scrollToFooter}>

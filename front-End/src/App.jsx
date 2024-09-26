@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GenerateNav from './components/NavBar/navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -8,12 +8,16 @@ import DisplayPrayerReqPage from './components/PrayerReqPage/PrayerReqPage';
 import DeployContactUs from './components/ContactUsPage/ContactUsPage';
 
 function App() {
+
+  const [language, setLanguage] = useState('es');
+
   return (
     
     <Router>
-    <GenerateNav/>
+    <GenerateNav language={language} setLanguage={setLanguage}/>
+
     <Routes>
-      <Route path="/" element={<DisplayHomePage/>}/>
+      <Route path="/" element={<DisplayHomePage language={language}/>}/>
       <Route path="/donate" element={<DisplayDonatePage/>}/>
       <Route path="/contact" element={<DeployContactUs/>}/>
       <Route path="/prayerReq" element={<DisplayPrayerReqPage/>}/>

@@ -8,7 +8,45 @@ import './App.css';
 
 
 
-function DisplayHomePage(){
+function DisplayHomePage({ language }){
+
+  const siteText = {
+    en: {
+      welcome: "We're glad you're here.",
+      title: "Voice of God Church",
+      visitService: "Visit Our Service",
+      serviceHours: "Service Hours",
+      sundayService: "Sunday 3:30PM - Main Service",
+      wednesdayPrayer: "Wednesday 7:30PM - Prayer",
+      saturdayBibleStudy: "Saturday 7:30PM - Bible Study",
+      connectWithUs: "Connect with Us",
+      missedService: "Missed last Sunday's service?",
+      ourEvents: "Our Events",
+      footer: "Iglesia Voz de Dios at Folsom",
+      phone: "484.213.1946",
+      email: "Email us at",
+      location: "1530 4th Ave Folsom, PA 19033",
+    },
+    es: {
+      welcome: "Estamos contentos de que estés aquí.",
+      title: "Iglesia Voz de Dios",
+      visitService: "Visita nuestro servicio",
+      serviceHours: "Horas de servicio",
+      sundayService: "Domingo 3:30PM - Servicio Principal",
+      wednesdayPrayer: "Miércoles 7:30PM - Oración",
+      saturdayBibleStudy: "Sábado 7:30PM - Estudio Bíblico",
+      connectWithUs: "Conéctate con nosotros",
+      missedService: "¿Perdiste el servicio del domingo pasado?",
+      ourEvents: "Nuestros eventos",
+      footer: "Iglesia Voz de Dios en Folsom",
+      phone: "484.213.1946",
+      email: "Envíanos un correo a",
+      location: "1530 4th Ave Folsom, PA 19033",
+    }
+  }
+  
+
+
 
     function scrollToDiv() {
         const element = document.getElementById('middle-page');
@@ -25,8 +63,15 @@ function DisplayHomePage(){
     
     {/* THE TOP DIV */}
         <div id="top-page">
-      <h1 id="titleh1">Iglesia Voz de Dios</h1>
-      <CoolButton text="We're glad you're here." onClick={scrollToDiv}/>
+
+      <h1 id="titleh1">{siteText[language].title}</h1>
+      {/* <h1 id="titleh1">Iglesia Voz de Dios</h1> */}
+
+
+      {/* <CoolButton text="We're glad you're here." onClick={scrollToDiv}/> */}
+      <CoolButton text={siteText[language].welcome} onClick={scrollToDiv}/>
+
+
       {/* <DisplayHomeImg/> */}
       <div id="caro">
           </div>
