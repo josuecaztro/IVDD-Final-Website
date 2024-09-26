@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = {"http://www.iglesiavozdedios.net", "http://iglesiavozdedios.net"}) //this allows route 53 to allow api calls
 @RestController
 @RequestMapping("/api")
 public class ContactFormController {
