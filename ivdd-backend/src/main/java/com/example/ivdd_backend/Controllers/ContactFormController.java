@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = {"http://localhost:3000", "http://18.119.7.144/"}) //this allows port from React to allow api calls
+@CrossOrigin(origins = {"http://www.iglesiavozdedios.net", "http://iglesiavozdedios.net"}) //this allows route 53 to allow api calls
 @RestController
 @RequestMapping("/api")
 public class ContactFormController {
