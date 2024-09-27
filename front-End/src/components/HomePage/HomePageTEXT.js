@@ -21,7 +21,7 @@ const siteText = {
       title: "Iglesia Voz de Dios",
       visitService: "Visita nuestro servicio",
       serviceHours: "Horas de servicio",
-      sundayService: "Domingo 3:30PM - Servicio Principal",
+      sundayService: "Domingo 3:30PM - Servicio Dominical",
       wednesdayPrayer: "Miércoles 7:30PM - Oración",
       saturdayBibleStudy: "Sábado 7:30PM - Estudio Bíblico",
       connectWithUs: "Conéctate con nosotros",
