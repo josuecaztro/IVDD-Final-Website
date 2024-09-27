@@ -4,7 +4,7 @@ const navText = {
     en: {
         main: "Voice of God Church",
         whoWeAre: "Who We Are",
-        mission: "Mission",
+        mission: "Our Mission",
         donate: "Donate",
         prayerReq: "Prayer Request",
         lang: "Language",
@@ -18,7 +18,7 @@ const navText = {
     es: {
         main: "Iglesia Voz de Dios",
         whoWeAre: "Quiénes Somos",
-        mission: "Misión",
+        mission: "Nuestra Misión",
         donate: "Donar",
         prayerReq: "Solicitud de Oración",
         lang: "Idioma",

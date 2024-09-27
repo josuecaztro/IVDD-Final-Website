@@ -7,6 +7,7 @@ import DisplayHomePage from './components/HomePage/HomePage';
 import DisplayPrayerReqPage from './components/PrayerReqPage/PrayerReqPage';
 import DeployContactUs from './components/ContactUsPage/ContactUsPage';
 import ShowToggleButton from './components/NavBar/toggleLangButton';
+import DisplayMission from './components/MissionPage/Mission';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
 
     <Routes>
       <Route path="/" element={<DisplayHomePage language={language}/>}/>
+      <Route path="/mission" element={<DisplayMission language={language}/>}/>
       <Route path="/donate" element={<DisplayDonatePage/>}/>
       <Route path="/contact" element={<DeployContactUs/>}/>
       <Route path="/prayerReq" element={<DisplayPrayerReqPage/>}/>
