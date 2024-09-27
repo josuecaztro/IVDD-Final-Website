@@ -31,7 +31,7 @@ return (
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="me-auto">
       {/* <Nav.Link as={NavLink} to="/">Home</Nav.Link> */}
-      <Nav.Link href="#link">{navText[language].whoWeAre}</Nav.Link>
+      <Nav.Link as={NavLink} to="/about">{navText[language].whoWeAre}</Nav.Link>
       <Nav.Link as={NavLink} to="/mission">{navText[language].mission}</Nav.Link>
 
       {/* For now I'm leaving the events tab toggled, but it can be put back if needed.  */}
