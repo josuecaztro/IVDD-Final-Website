@@ -6,6 +6,7 @@ import DisplayDonatePage from './components/DonatePage/Donate';
 import DisplayHomePage from './components/HomePage/HomePage';
 import DisplayPrayerReqPage from './components/PrayerReqPage/PrayerReqPage';
 import DeployContactUs from './components/ContactUsPage/ContactUsPage';
+import ShowToggleButton from './components/NavBar/toggleLangButton';
 
 function App() {
 

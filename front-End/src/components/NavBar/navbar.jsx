@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import navText from './navbarTEXT';
 import ShowToggleButton from './toggleLangButton';
+import './navbar.css';
 
 
 function GenerateNav( { language, setLanguage } ){
@@ -41,11 +42,12 @@ return (
 
     
       {/* Implement translation dropdown feature here: */}
-      <NavDropdown title={navText[language].lang} id="language-dropdown">
+      {/* I got rid of the dropdown and instead made a toggle button component to handle this logic */}
+      {/* <NavDropdown title={navText[language].lang} id="language-dropdown">
                 <NavDropdown.Item onClick={toggleLanguage}>
                   {language === 'en' ? 'Español' : 'English'}
                 </NavDropdown.Item>
-      </NavDropdown>
+      </NavDropdown> */}
 
 
 
@@ -62,8 +64,8 @@ return (
       </NavDropdown>
     </Nav>
   </Navbar.Collapse>
-  <Nav.Link>{navText[language].aOption}</Nav.Link>
-<ShowToggleButton onClick={toggleLanguage}>{language === 'en' ? 'Español' : 'English'}</ShowToggleButton>
+  <Nav.Link id="current-language-text-element">{navText[language].aOption}</Nav.Link>
+<ShowToggleButton language={language} setLanguage={setLanguage} onClick={toggleLanguage}>{language === 'en' ? 'Español' : 'English'}</ShowToggleButton>
 
 </Container>
 </Navbar> 

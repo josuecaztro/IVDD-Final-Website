@@ -13,18 +13,18 @@
   .toggle-btn {
     width: 50px;
     height: 25px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
     border-radius: 30px;
     position: relative;
     transition: background-color 0.3s ease;
   }
   
   .toggle-btn.english {
-    background-color: #4caf50;
+    background-color: grey;
   }
   
   .toggle-btn.spanish {
-    background-color: #f44336;
+    background-color: rgb(52, 188, 233);
   }
   
   .toggle-circle {
