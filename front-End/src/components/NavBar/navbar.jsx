@@ -62,10 +62,13 @@ return (
           {navText[language].sendMessage}
         </NavDropdown.Item>
       </NavDropdown>
+
+      <Nav.Link id="current-language-text-element">{navText[language].aOption}</Nav.Link>
+<ShowToggleButton language={language} setLanguage={setLanguage} onClick={toggleLanguage}>{language === 'en' ? 'Español' : 'English'}</ShowToggleButton>
+
+
     </Nav>
   </Navbar.Collapse>
-  <Nav.Link id="current-language-text-element">{navText[language].aOption}</Nav.Link>
-<ShowToggleButton language={language} setLanguage={setLanguage} onClick={toggleLanguage}>{language === 'en' ? 'Español' : 'English'}</ShowToggleButton>
 
 </Container>
 </Navbar> 

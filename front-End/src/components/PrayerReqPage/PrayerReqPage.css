@@ -34,3 +34,14 @@ h2, h3, h4 {
 #prayerRequestForm textarea{
     width: 30rem;
 }
+
+@media (max-width: 600px) {
+    
+    #prayerRequestForm input{
+        width: 20rem;
+    }
+    #prayerRequestForm textarea{
+        width: 20rem;
+    }
+
+}
