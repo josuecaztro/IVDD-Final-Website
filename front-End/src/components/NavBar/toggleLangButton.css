@@ -1,0 +1,63 @@
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    padding: 10px;
+    /* background-color: #f1f1f1; */
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .toggle-btn {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-btn.english {
+    background-color: #4caf50;
+  }
+  
+  .toggle-btn.spanish {
+    background-color: #f44336;
+  }
+  
+  .toggle-circle {
+    width: 23px;
+    height: 23px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    transition: left 0.3s ease;
+  }
+  
+  .toggle-btn.spanish .toggle-circle {
+    left: 24px;
+  }
+  
+  .label5 {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .english-label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .spanish-label {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  

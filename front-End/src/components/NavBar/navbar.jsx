@@ -3,6 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
+import navText from './navbarTEXT';
+import ShowToggleButton from './toggleLangButton';
 
 
 function GenerateNav( { language, setLanguage } ){
@@ -23,23 +25,23 @@ return (
   <>
 <Navbar expand="lg" className="bg-body-tertiary" class="nav" data-bs-theme="dark">
 <Container>
-  <Navbar.Brand as={NavLink} to="/">Iglesia Voz de Dios</Navbar.Brand>
+  <Navbar.Brand as={NavLink} to="/">{navText[language].main}</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-      <Nav.Link href="#link">Who We Are</Nav.Link>
-      <Nav.Link href="#link">Mission</Nav.Link>
+      {/* <Nav.Link as={NavLink} to="/">Home</Nav.Link> */}
+      <Nav.Link href="#link">{navText[language].whoWeAre}</Nav.Link>
+      <Nav.Link href="#link">{navText[language].mission}</Nav.Link>
 
       {/* For now I'm leaving the events tab toggled, but it can be put back if needed.  */}
       {/* <Nav.Link href="#link">Events</Nav.Link> */}
 
-      <Nav.Link as={NavLink} to="/donate">Donate</Nav.Link>
-      <Nav.Link as={NavLink} to="/prayerReq">Prayer Request</Nav.Link>
+      <Nav.Link as={NavLink} to="/donate">{navText[language].donate}</Nav.Link>
+      <Nav.Link as={NavLink} to="/prayerReq">{navText[language].prayerReq}</Nav.Link>
 
     
       {/* Implement translation dropdown feature here: */}
-      <NavDropdown title="Language" id="language-dropdown">
+      <NavDropdown title={navText[language].lang} id="language-dropdown">
                 <NavDropdown.Item onClick={toggleLanguage}>
                   {language === 'en' ? 'Español' : 'English'}
                 </NavDropdown.Item>
@@ -47,19 +49,22 @@ return (
 
 
 
-      <NavDropdown title="Contact Us" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1" onClick={scrollToFooter}>E-Mail</NavDropdown.Item>
+      <NavDropdown title={navText[language].contactUs} id="basic-nav-dropdown">
+        <NavDropdown.Item href="#action/3.1" onClick={scrollToFooter}>{navText[language].email}</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2" onClick={scrollToFooter}>
-          Phone Number
+          {navText[language].phoneNumber}
         </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3" onClick={scrollToFooter}>Address</NavDropdown.Item>
+        <NavDropdown.Item href="#action/3.3" onClick={scrollToFooter}>{navText[language].address}</NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item as={NavLink} to="/contact">
-          Send Message
+          {navText[language].sendMessage}
         </NavDropdown.Item>
       </NavDropdown>
     </Nav>
   </Navbar.Collapse>
+  <Nav.Link>{navText[language].aOption}</Nav.Link>
+<ShowToggleButton onClick={toggleLanguage}>{language === 'en' ? 'Español' : 'English'}</ShowToggleButton>
+
 </Container>
 </Navbar> 
 
