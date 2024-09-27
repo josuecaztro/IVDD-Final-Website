@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './PrayerReqPage.css'; 
+import prText from './PrayerReqTEXT';
 
 
-function DisplayPrayerReqPage(){
+function DisplayPrayerReqPage( { language } ){
    
     const [formData, setFormData] = useState({
         firstName: '',
@@ -33,7 +34,7 @@ function DisplayPrayerReqPage(){
         })
           .then(response => response.json())
           .then(data => {
-            alert('Prayer request submitted successfully!');
+            alert(prText[language].successMessage);
             setFormData({
               firstName: '',
               lastName: '',
@@ -44,7 +45,7 @@ function DisplayPrayerReqPage(){
           })
           .catch(error => {
             console.error('Error submitting prayer request:', error);
-            alert('Error submitting prayer request');
+            alert(prText[language].errorMessage);
           });
       };
     
@@ -52,22 +53,22 @@ function DisplayPrayerReqPage(){
         <div id="body-for-prp">
         <div id="request-container">
           <h3 id="verse" className="text-center mb-4">
-            "The prayer of a righteous person is powerful and effective." — James 5:16
+            {prText[language].verse}
           </h3>
           {/* <button id="back-pr" className="btn btn-primary mb-4" onClick={handleBackClick}>
             Back to Home
           </button> */}
     
-          <h1 className="mb-4">Submit Prayer Request</h1>
+          <h1 className="mb-4">{prText[language].title}</h1>
           <form id="prayerRequestForm" onSubmit={handleFormSubmit} autoComplete="off">
             <div className="form-group">
-              <label htmlFor="firstName">First Name</label>
+              <label htmlFor="firstName">{prText[language].firstName}</label>
               <input
                 type="text"
                 id="firstName"
                 name="firstName"
                 className="form-control"
-                placeholder="Enter your first name..."
+                placeholder={prText[language].firstName}
                 value={formData.firstName}
                 onChange={handleInputChange}
                 required
@@ -75,13 +76,13 @@ function DisplayPrayerReqPage(){
             </div>
     
             <div className="form-group">
-              <label htmlFor="lastName">Last Name</label>
+              <label htmlFor="lastName">{prText[language].lastName}</label>
               <input
                 type="text"
                 id="lastName"
                 name="lastName"
                 className="form-control"
-                placeholder="Enter your last name..."
+                placeholder={prText[language].placeholderLastName}
                 value={formData.lastName}
                 onChange={handleInputChange}
                 required
@@ -89,13 +90,13 @@ function DisplayPrayerReqPage(){
             </div>
     
             <div className="form-group">
-              <label htmlFor="phoneNumber">Phone Number</label>
+              <label htmlFor="phoneNumber">{prText[language].phoneNumber}</label>
               <input
                 type="tel"
                 id="phoneNumber"
                 name="phoneNumber"
                 className="form-control"
-                placeholder="Enter your phone number..."
+                placeholder={prText[language].placeholderPhoneNumber}
                 pattern="[0-9\s\-]+"
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
@@ -104,13 +105,13 @@ function DisplayPrayerReqPage(){
             </div>
     
             <div className="form-group">
-              <label htmlFor="messageBody">What Is Your Prayer Request?</label>
+              <label htmlFor="messageBody">{prText[language].messageBody}</label>
               <textarea
                 id="messageBody"
                 name="messageBody"
                 className="form-control"
                 rows="4"
-                placeholder="Enter your prayer request here..."
+                placeholder={prText[language].placeholderMessageBody}
                 value={formData.messageBody}
                 onChange={handleInputChange}
                 required
@@ -118,25 +119,25 @@ function DisplayPrayerReqPage(){
             </div>
     
             <div className="form-group">
-              <label htmlFor="dateTime">Date/Time Needed</label>
+              <label htmlFor="dateTime">{prText[language].dateTime}</label>
               <input
                 type="text"
                 id="dateTime"
                 name="dateTime"
                 className="form-control"
-                placeholder="Enter date/time needed..."
+                placeholder={prText[language].placeholderDateTime}
                 value={formData.dateTime}
                 onChange={handleInputChange}
                 required
               />
             </div>
     
-            <button type="submit" id="submit-id-pr" className="btn btn-success">Send</button>
+            <button type="submit" id="submit-id-pr" className="btn btn-success">{prText[language].submit}</button>
           </form>
           <br />
           <br />
           <h4>
-            "And whatever you ask in prayer, you will receive, if you have faith." — Matthew 21:22
+          {prText[language].verse2}
           </h4>
           <br />
           <br />

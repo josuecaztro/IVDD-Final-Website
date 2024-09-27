@@ -6,6 +6,10 @@
 #request-container {
     padding: 50px;
     padding-bottom: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -22,4 +26,11 @@ h2, h3, h4 {
 
 #submit-id-pr {
     margin-top: 15px;
+}
+
+#prayerRequestForm input{
+    width: 30rem;
+}
+#prayerRequestForm textarea{
+    width: 30rem;
 }
