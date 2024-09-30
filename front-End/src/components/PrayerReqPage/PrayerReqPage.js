@@ -24,7 +24,7 @@ function DisplayPrayerReqPage( { language } ){
       const handleFormSubmit = (e) => {
         e.preventDefault();
         
-        fetch('https://iglesiavozdedios.net:8080/api/prayer-request-forms', {
+        fetch('https://iglesiavozdedios.net/api/prayer-request-forms', {
           method: 'POST',
           headers: {
             'Accept': '*/*',

@@ -27,7 +27,7 @@ function DeployContactUs( { language } ){
       const handleFormSubmit = (e) => {
         e.preventDefault();
         
-        fetch('https://iglesiavozdedios.net:8080/api/contact-requests', {
+        fetch('https://iglesiavozdedios.net/api/contact-requests', {
           method: 'POST',
           headers: {
             'Accept': '*/*',
