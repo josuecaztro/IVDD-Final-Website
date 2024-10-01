@@ -63,9 +63,21 @@ return (
         </NavDropdown.Item>
       </NavDropdown>
 
-      <Nav.Link id="current-language-text-element">{navText[language].aOption}</Nav.Link>
-<ShowToggleButton language={language} setLanguage={setLanguage} onClick={toggleLanguage}>{language === 'en' ? 'Español' : 'English'}</ShowToggleButton>
+      {/* <Nav.Link id="current-language-text-element">{navText[language].aOption}</Nav.Link>
+<ShowToggleButton language={language} setLanguage={setLanguage} onClick={toggleLanguage}>{language === 'en' ? 'Español' : 'English'}</ShowToggleButton> */}
 
+<Nav.Link id="current-language-text-element">
+        <div style={{ display: 'flex' }}>
+          <span>{navText[language].aOption}</span>
+          <ShowToggleButton 
+            language={language} 
+            setLanguage={setLanguage} 
+            onClick={toggleLanguage}
+          >
+            {language === 'en' ? 'Español' : 'English'}
+          </ShowToggleButton>
+        </div>
+      </Nav.Link>
 
     </Nav>
   </Navbar.Collapse>
