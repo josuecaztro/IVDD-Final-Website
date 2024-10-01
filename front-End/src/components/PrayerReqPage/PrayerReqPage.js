@@ -71,7 +71,6 @@ function DisplayPrayerReqPage( { language } ){
                 placeholder={prText[language].firstName}
                 value={formData.firstName}
                 onChange={handleInputChange}
-                required
               />
             </div>
     
@@ -85,7 +84,6 @@ function DisplayPrayerReqPage( { language } ){
                 placeholder={prText[language].placeholderLastName}
                 value={formData.lastName}
                 onChange={handleInputChange}
-                required
               />
             </div>
     
@@ -100,12 +98,11 @@ function DisplayPrayerReqPage( { language } ){
                 pattern="[0-9\s\-]+"
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
-                required
               />
             </div>
     
             <div className="form-group">
-              <label htmlFor="messageBody">{prText[language].messageBody}</label>
+              <label htmlFor="messageBody">{prText[language].messageBody}  <span className="red-star">*</span></label>
               <textarea
                 id="messageBody"
                 name="messageBody"
@@ -119,7 +116,7 @@ function DisplayPrayerReqPage( { language } ){
             </div>
     
             <div className="form-group">
-              <label htmlFor="dateTime">{prText[language].dateTime}</label>
+              <label htmlFor="dateTime">{prText[language].dateTime}  <span className="red-star">*</span></label>
               <input
                 type="text"
                 id="dateTime"
