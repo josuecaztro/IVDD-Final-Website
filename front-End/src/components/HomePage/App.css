@@ -50,6 +50,17 @@ font-style: normal;
 
 @media (max-width: 600px) {
 
+  #socialdiv {
+    margin: 0;
+    width: 105%;
+    padding-top: 1rem !important;
+  }
+
+  #custom-verse{
+    padding: 3rem;
+    text-align: center;
+  }
+
   /* #wholepage {
     width: 100%;
   } */
