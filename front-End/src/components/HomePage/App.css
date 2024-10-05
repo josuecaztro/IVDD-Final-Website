@@ -164,8 +164,13 @@ footer {
 }
 
 #titleh1 {
-  animation: flipIn 1s ease-out;
+  animation: flipIn 2s ease-out;
 
+}
+
+#custom-verse{
+  animation: flipIn 1s ease-out;
+  color: rgb(218, 218, 218);
 }
 
 .social:hover{
@@ -196,7 +201,6 @@ body {
 }
 
 h1 {
-  padding-top: 35px;
   font-size: 75px;
 }
 
@@ -255,6 +259,11 @@ h3 {
   box-shadow: 6px 6px 6px black;
   border-radius: 5px;
 }
+
+
+
+
+
 
 
 

@@ -14,7 +14,8 @@ const siteText = {
       missedService: "Missed last Sunday's service?",
       ourEvents: "Our Events",
       footer: "Voice of God Church in Folsom",
-      rights: "All rights reserved - Voice of God © 2024"
+      rights: "All rights reserved - Voice of God © 2024",
+      customVerse: "O land, land, land, hear the word of the Lord! - Jeremiah 22:29"
     },
     es: {
       welcome: "Estamos contentos de que estés aquí.",
@@ -28,7 +29,8 @@ const siteText = {
       missedService: "¿Perdiste el servicio del domingo pasado?",
       ourEvents: "Nuestros eventos",
       footer: "Iglesia Voz de Dios en Folsom",
-      rights: "Todos los derechos reservados - Iglesia Voz de Dios © 2024"
+      rights: "Todos los derechos reservados - Iglesia Voz de Dios © 2024",
+      customVerse: "¡Tierra, tierra, tierra!, oye palabra de Jehová. - Jeremías 22:29"
     }
   }
 
