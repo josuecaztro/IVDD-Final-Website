@@ -286,6 +286,22 @@ h3 {
   transform: translateY(0); 
 }
 
+/* For the library of prediacciones button*/
+#service-library-button {
+  color: #3D2B1F;
+  background-color: #d8ccae;
+  border: 1px solid #d8ccae;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  box-shadow: 2px 2px 2px #b5ab92;
+  min-width: 25%;
+}
+
+#service-library-button:hover {
+  background-color: #e6d9ba;
+}
+
 
 
 

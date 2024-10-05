@@ -5,6 +5,7 @@ import CarouselFadeExample from './carousel';
 import CoolButton from './AwesomeButton';
 import './App.css';
 import siteText from './HomePageTEXT';
+import Dropdown from './DropDownButton';
 
 function DisplayHomePage({ language }){
 
@@ -13,6 +14,12 @@ function DisplayHomePage({ language }){
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
+    }
+
+    function exploreMoreVideosButton(){
+
+      //the function for the button I made recently
+
     }
 
       //delete anything below this 
@@ -106,11 +113,13 @@ function DisplayHomePage({ language }){
          <div>
           <h2 id="youtube-title" className="scroll-animation">{siteText[language].missedService}</h2>
          <iframe width="616" height="347" src="https://www.youtube.com/embed/SmzsSMRp-hA?si=Omz4O-qveAeLhOhB&autoplay=1&mute=1" id="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         <button id="service-library-button" onClick={exploreMoreVideosButton}>View Preachings by Topic</button>
+         <Dropdown/>
          </div>
     
          <div>
           <h2 id="calendar-title" className="scroll-animation">{siteText[language].ourEvents}</h2>
-          <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&ctz=America%2FNew_York&bgcolor=%23039BE5&showTabs=0&showPrint=0&showNav=0&showCalendars=0&showTz=0&showTitle=0&src=cm9jYjc3N0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4&color=%237986CB&color=%237986CB" style={{border:"solid 1px #777"}} width="400" id="googleapi" height="300" frameborder="0" scrolling="no"></iframe>
+          <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&ctz=America%2FNew_York&bgcolor=%23039BE5&showTabs=0&showPrint=0&showNav=0&showCalendars=0&showTz=0&showTitle=0&src=cm9jYjc3N0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4&color=%237986CB&color=%237986CB" style={{border:"solid 1px #777"}} width="450" id="googleapi" height="350" frameborder="0" scrolling="no"></iframe>
           </div>
           </div>
     {/* END OF BOTTOM DIV */}
