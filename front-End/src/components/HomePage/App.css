@@ -274,17 +274,20 @@ h3 {
 
 
 
-/* App.css or any other CSS file */
+/* this is for animation when scrolling onto certain divs */
 .scroll-animation {
   opacity: 0;
-  transform: translateY(50px); /* Start below the viewport */
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+  transform: translateY(50px); 
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
 }
 
 .scroll-animation.in-view {
   opacity: 1;
-  transform: translateY(0); /* Bring element into view */
+  transform: translateY(0); 
 }
+
+
+
 
 
 

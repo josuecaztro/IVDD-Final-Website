@@ -13,10 +13,12 @@ function DisplayHomePage({ language }){
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }
+    }
 
       //delete anything below this 
 
+
+      //THE NEXT 3 FUNCTIONS HERE ALLOW THE SCROLLING ANIMATION TO WORK 
       const isInView = (element) => {
         const rect = element.getBoundingClientRect();
         return (
@@ -24,8 +26,6 @@ function DisplayHomePage({ language }){
             rect.bottom >= 0
         );
     };
-
-    // Function to handle scroll and add/remove 'in-view' class
     const handleScroll = () => {
         const elements = document.querySelectorAll('.scroll-animation');
         elements.forEach((el) => {
@@ -36,16 +36,11 @@ function DisplayHomePage({ language }){
             }
         });
     };
-
-    // Adding the scroll event listener on component mount
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        // Check elements initially in case they're already in view
         handleScroll();
-        
-        // Cleanup on component unmount
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -57,7 +52,7 @@ function DisplayHomePage({ language }){
     {/* THE TOP DIV */}
         <div id="top-page">
 
-        <p id="custom-verse" style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}>{siteText[language].customVerse}</p>
+        <p id="custom-verse" className="scroll-animation" style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}>{siteText[language].customVerse}</p>
 
       <h1 id="titleh1" className="scroll-animation" style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}>{siteText[language].title}</h1>
 
@@ -72,11 +67,11 @@ function DisplayHomePage({ language }){
     {/* THE MIDDLE DIV */}
         <div id="middle-page">
           <div id="middle-left">
-           <h4>{siteText[language].visitService}</h4>
+           <h4 className="scroll-animation">{siteText[language].visitService}</h4>
            <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
     </svg>  1530 4th Ave Folsom, PA 19033</p>
-           <h4>{siteText[language].serviceHours}</h4>
+           <h4 className="scroll-animation">{siteText[language].serviceHours}</h4>
            <ul>
             <li>{siteText[language].sundayService}</li>
             <li>{siteText[language].wednesdayPrayer}</li>
@@ -88,7 +83,7 @@ function DisplayHomePage({ language }){
           <div id="middle-middle">
           
           <div id="socialdiv">
-          <h4>{siteText[language].connectWithUs} <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <h4 className="scroll-animation">{siteText[language].connectWithUs} <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
     </svg></h4>
            <SocialIcon url="https://www.youtube.com/PastorRobertoC" class="social" target="_blank"/>
@@ -109,26 +104,14 @@ function DisplayHomePage({ language }){
     {/* THE BOTTOM DIV */}
         <div id="bottom-page">
          <div>
-          <h2 id="youtube-title">{siteText[language].missedService}</h2>
+          <h2 id="youtube-title" className="scroll-animation">{siteText[language].missedService}</h2>
          <iframe width="616" height="347" src="https://www.youtube.com/embed/SmzsSMRp-hA?si=Omz4O-qveAeLhOhB&autoplay=1&mute=1" id="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
          </div>
     
          <div>
-          <h2 id="calendar-title">{siteText[language].ourEvents}</h2>
+          <h2 id="calendar-title" className="scroll-animation">{siteText[language].ourEvents}</h2>
           <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&ctz=America%2FNew_York&bgcolor=%23039BE5&showTabs=0&showPrint=0&showNav=0&showCalendars=0&showTz=0&showTitle=0&src=cm9jYjc3N0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4&color=%237986CB&color=%237986CB" style={{border:"solid 1px #777"}} width="400" id="googleapi" height="300" frameborder="0" scrolling="no"></iframe>
           </div>
-
-          <div>
-            {/* Elements that will have the scroll animation */}
-            <div className="scroll-animation" style={{ height: '100px', margin: '50px 0' }}>
-                <h1>Scroll Down to See Me Animate!</h1>
-            </div>
-            <div className="scroll-animation" style={{ height: '100px', margin: '50px 0' }}>
-                <h1>Another Animated Element</h1>
-            </div>
-            {/* More content or animated elements */}
-        </div>
-
           </div>
     {/* END OF BOTTOM DIV */}
     
