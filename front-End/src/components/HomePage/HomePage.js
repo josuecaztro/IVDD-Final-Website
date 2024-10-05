@@ -113,7 +113,6 @@ function DisplayHomePage({ language }){
          <div>
           <h2 id="youtube-title" className="scroll-animation">{siteText[language].missedService}</h2>
          <iframe width="616" height="347" src="https://www.youtube.com/embed/SmzsSMRp-hA?si=Omz4O-qveAeLhOhB&autoplay=1&mute=1" id="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         <button id="service-library-button" onClick={exploreMoreVideosButton}>View Preachings by Topic</button>
          <Dropdown/>
          </div>
     
