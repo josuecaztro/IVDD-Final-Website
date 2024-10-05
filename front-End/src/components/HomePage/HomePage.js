@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { SocialIcon } from 'react-social-icons'
 import Container from 'react-bootstrap/Container';
 import CarouselFadeExample from './carousel';
 import CoolButton from './AwesomeButton';
 import './App.css';
 import siteText from './HomePageTEXT';
-import ShowYoutubeLive from './YoutubeLive';
 
 function DisplayHomePage({ language }){
 
@@ -15,6 +14,40 @@ function DisplayHomePage({ language }){
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }
+
+      //delete anything below this 
+
+      const isInView = (element) => {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    };
+
+    // Function to handle scroll and add/remove 'in-view' class
+    const handleScroll = () => {
+        const elements = document.querySelectorAll('.scroll-animation');
+        elements.forEach((el) => {
+            if (isInView(el)) {
+                el.classList.add('in-view');
+            } else {
+                el.classList.remove('in-view');
+            }
+        });
+    };
+
+    // Adding the scroll event listener on component mount
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        // Check elements initially in case they're already in view
+        handleScroll();
+        
+        // Cleanup on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
 
       return (
@@ -26,7 +59,7 @@ function DisplayHomePage({ language }){
 
         <p id="custom-verse" style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}>{siteText[language].customVerse}</p>
 
-      <h1 id="titleh1" style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}>{siteText[language].title}</h1>
+      <h1 id="titleh1" className="scroll-animation" style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}>{siteText[language].title}</h1>
 
       <CoolButton text={siteText[language].welcome} onClick={scrollToDiv}/>
 
@@ -84,6 +117,18 @@ function DisplayHomePage({ language }){
           <h2 id="calendar-title">{siteText[language].ourEvents}</h2>
           <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&ctz=America%2FNew_York&bgcolor=%23039BE5&showTabs=0&showPrint=0&showNav=0&showCalendars=0&showTz=0&showTitle=0&src=cm9jYjc3N0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4&color=%237986CB&color=%237986CB" style={{border:"solid 1px #777"}} width="400" id="googleapi" height="300" frameborder="0" scrolling="no"></iframe>
           </div>
+
+          <div>
+            {/* Elements that will have the scroll animation */}
+            <div className="scroll-animation" style={{ height: '100px', margin: '50px 0' }}>
+                <h1>Scroll Down to See Me Animate!</h1>
+            </div>
+            <div className="scroll-animation" style={{ height: '100px', margin: '50px 0' }}>
+                <h1>Another Animated Element</h1>
+            </div>
+            {/* More content or animated elements */}
+        </div>
+
           </div>
     {/* END OF BOTTOM DIV */}
     
