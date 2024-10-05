@@ -8,6 +8,7 @@ import DisplayPrayerReqPage from './components/PrayerReqPage/PrayerReqPage';
 import DeployContactUs from './components/ContactUsPage/ContactUsPage';
 import DisplayMission from './components/MissionPage/Mission';
 import DisplayAboutUs from './components/WhoWeArePage/AboutUs';
+import ShowAllVideoTopics from './components/VideoTopicPage/videotopic';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <Route path="/" element={<DisplayHomePage language={language}/>}/>
       <Route path="/about" element={<DisplayAboutUs language={language}/>}/>
       <Route path="/mission" element={<DisplayMission language={language}/>}/>
+      <Route path="/livetopics" element={<ShowAllVideoTopics/>}/>
       <Route path="/donate" element={<DisplayDonatePage language={language}/>}/>
       <Route path="/contact" element={<DeployContactUs language={language}/>}/>
       <Route path="/prayerReq" element={<DisplayPrayerReqPage language={language}/>}/>

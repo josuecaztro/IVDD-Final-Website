@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './DropDownButton.css'; // Import CSS file for styling
+import './DropDownButton.css'; 
 
-const Dropdown = () => {
+const Dropdown = ( { setTopic } ) => {
   const [isOpen, setIsOpen] = useState(false);
   
   const toggleDropdown = () => {
@@ -9,9 +9,8 @@ const Dropdown = () => {
   };
 
   const handleOptionClick = (topic) => {
-    // Replace with your logic for what to do when an option is clicked
-    console.log(`Selected topic: ${topic}`);
-    // Optionally close the dropdown after selection
+    setTopic(topic);
+    console.log("Set topic is: " + topic);
     setIsOpen(false);
   };
 
@@ -24,8 +23,8 @@ const Dropdown = () => {
       </button>
       {isOpen && (
         <ul className="dropdown-list2">
-          <li onClick={() => handleOptionClick('Topic 1')}>Discipleship</li>
-          <li onClick={() => handleOptionClick('Topic 2')}>Marriage</li>
+          <li onClick={() => handleOptionClick('Discipleship')}>Discipleship</li>
+          <li onClick={() => handleOptionClick('Marriage')}>Marriage</li>
           {/* Add more topics here */}
         </ul>
       )}

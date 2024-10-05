@@ -302,6 +302,13 @@ h3 {
   background-color: #e6d9ba;
 }
 
+#bottom-left-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 

@@ -1,0 +1,14 @@
+#full-topic-page {
+    color: #3D2B1F;
+    background-color: #c7bca2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "sinter", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
