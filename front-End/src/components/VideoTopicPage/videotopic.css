@@ -1,7 +1,7 @@
 #full-topic-page {
     color: #3D2B1F;
     background-color: #c7bca2;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -44,4 +44,21 @@
     background-color: #3D2B1F;
     /* background-color: #3498db;  */
   }
+
+@media (max-width: 600px) {
+
+    #full-topic-page{
+        padding: 1rem;
+    }
+
+    #middle-topic-container{
+        display: block;
+        width: 85%;
+    }
+
+    #current-video-on-topic-playlist{
+        width: 100%;
+        height: auto;
+    }
+}
   

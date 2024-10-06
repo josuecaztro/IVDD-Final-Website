@@ -73,6 +73,7 @@ const handlePrevious = () => {
         {/* Current video section */}
         <div className="video-section">
           <iframe
+            id="current-video-on-topic-playlist"
             width="560"
             height="315"
             src={videos[videoIndex].url}
@@ -108,24 +109,17 @@ const handlePrevious = () => {
       
   
        {/* Visual indicator for current video */}
-<div className="progress-indicator">
-  {videos.map((video, index) => (
-    <span
-      key={index}
-      className={`circle ${index === videoIndex ? 'filled' : ''}`} // Only fill the current video
-    ></span>
-  ))}
-</div>
+    <div className="progress-indicator">
+        {videos.map((video, index) => (
+         <span
+         key={index}
+         className={`circle ${index === videoIndex ? 'filled' : ''}`} // Only fill the current video
+     ></span>
+     ))}
+    </div>
 
                 </div>
                 </div>
-
-
-       
-  
-
-
-  
 
     )
 }
