@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { SocialIcon } from 'react-social-icons'
 import Container from 'react-bootstrap/Container';
 import CarouselFadeExample from './carousel';
@@ -8,6 +8,9 @@ import siteText from './HomePageTEXT';
 import Dropdown from './DropDownButton';
 
 function DisplayHomePage({ language }){
+
+  const [topic, setTopic] = useState('');
+
 
     function scrollToDiv() {
         const element = document.getElementById('middle-page');
@@ -113,7 +116,7 @@ function DisplayHomePage({ language }){
          <div id="bottom-left-div">
           <h2 id="youtube-title" className="scroll-animation">{siteText[language].missedService}</h2>
          <iframe width="616" height="347" src="https://www.youtube.com/embed/SmzsSMRp-hA?si=Omz4O-qveAeLhOhB&autoplay=1&mute=1" id="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         <Dropdown/>
+         <Dropdown setTopic={setTopic}/>
          </div>
     
          <div>

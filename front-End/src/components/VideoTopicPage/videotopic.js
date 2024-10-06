@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './videotopic.css';
 import Dropdown from '../HomePage/DropDownButton';
+import { useLocation } from 'react-router-dom';
+
 
 function ShowAllVideoTopics(){
 
@@ -20,8 +22,11 @@ function ShowAllVideoTopics(){
 
 */
 
-const [topic, setTopic] = useState('Discipleship');  // Default topic
-const [videoIndex, setVideoIndex] = useState(0);
+const location = useLocation();
+
+// Get the topic from the route state, or fall back to the default topic
+const initialTopic = location.state?.selectedTopic || 'Discipleship';
+const [topic, setTopic] = useState(initialTopic);const [videoIndex, setVideoIndex] = useState(0);
 
 // Mock data for videos
 const videoData = {

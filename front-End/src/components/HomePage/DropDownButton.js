@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import './DropDownButton.css'; 
+import './DropDownButton.css';
+import { useNavigate } from 'react-router-dom'; 
 
-const Dropdown = ( { setTopic } ) => {
+const Dropdown = ( { setTopic }) => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   
   const toggleDropdown = () => {
@@ -10,6 +12,8 @@ const Dropdown = ( { setTopic } ) => {
 
   const handleOptionClick = (topic) => {
     setTopic(topic);
+    // navigate("/livetopics")
+    navigate('/livetopics', { state: { selectedTopic: topic } });
     console.log("Set topic is: " + topic);
     setIsOpen(false);
   };
