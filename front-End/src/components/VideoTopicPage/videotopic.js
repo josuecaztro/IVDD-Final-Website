@@ -36,7 +36,8 @@ const videoData = {
   ],
   'Marriage': [
     { title: 'Marriage Part 1', url: 'https://www.youtube.com/embed/videoID3' },
-    { title: 'Marriage Part 2', url: 'https://www.youtube.com/embed/videoID4' }
+    { title: 'Marriage Part 2', url: 'https://www.youtube.com/embed/videoID4' },
+    { title: 'Marriage Part 3', url: 'https://www.youtube.com/embed/videoID4' }
   ]
 };
 
@@ -58,17 +59,19 @@ const handlePrevious = () => {
 
     return (
         <div id="full-topic-page">
-        {/* Display the selected topic */}
+
+         {/* Display the selected topic */}
+         <div id="top-topic-div">
+         <p>Explore our complete series of preachings on {topic}, organized in order to guide you through each message step by step.</p>
         <h1>{topic}</h1>
-        <p>Learn about {topic} throughout our previous preachings!</p>
-        <p>Total Videos: {totalVideos}</p>
-        
-        {/* Dropdown for choosing a different topic */}
-        <Dropdown setTopic={setTopic} />
-  
+        <p>{topic} Playlist:  {totalVideos} Videos</p>
+        </div>
+
+
+        <div id="middle-topic-container">
+        <div id="left-topic-div">
         {/* Current video section */}
         <div className="video-section">
-          <h3>{videos[videoIndex].title}</h3>
           <iframe
             width="560"
             height="315"
@@ -78,8 +81,22 @@ const handlePrevious = () => {
             allowFullScreen
             title={videos[videoIndex].title}
           ></iframe>
+          <p>Originally uploaded June 8, 2018</p>
         </div>
-  
+            </div>
+            <div id="right-topic-div">
+                           {/* Dropdown for choosing a different topic */}
+                           <h2>{videos[videoIndex].title}</h2>
+                           <h4>Title: youtube title </h4>
+                           <h5>Description: do not fall into temptation</h5>
+           <Dropdown setTopic={setTopic} />
+             {/* Preachings label */}
+
+            </div>
+            </div>
+            
+            <div id="bottom-topic-div">
+
         {/* Navigation buttons */}
         <button onClick={handlePrevious} disabled={videoIndex === 0}>
           Previous Video
@@ -88,19 +105,28 @@ const handlePrevious = () => {
           Next Video
         </button>
   
-        {/* Preachings label */}
-        <h4>Preachings on {topic} (in order!)</h4>
+      
   
-        {/* Visual indicator for current video */}
-        <div className="progress-indicator">
-          {videos.map((video, index) => (
-            <span
-              key={index}
-              className={`circle ${index <= videoIndex ? 'filled' : ''}`}
-            ></span>
-          ))}
-        </div>
-      </div>
+       {/* Visual indicator for current video */}
+<div className="progress-indicator">
+  {videos.map((video, index) => (
+    <span
+      key={index}
+      className={`circle ${index === videoIndex ? 'filled' : ''}`} // Only fill the current video
+    ></span>
+  ))}
+</div>
+
+                </div>
+                </div>
+
+
+       
+  
+
+
+  
+
     )
 }
 

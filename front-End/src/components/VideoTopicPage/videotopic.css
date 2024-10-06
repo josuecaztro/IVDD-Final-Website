@@ -2,13 +2,46 @@
     color: #3D2B1F;
     background-color: #c7bca2;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    padding-top: 3rem;
 
     font-family: "sinter", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
+
+#middle-topic-container {
+    display: flex;
+    background-color: rgb(209, 199, 178);
+    border: 2px solid #3D2B1F;
+    border-radius: 8px;
+    padding: 2.5rem;
+    gap: 5rem;
+    margin-bottom: 3rem;
+}
+
+/* Progress Indicator Styling */
+.progress-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .circle {
+    width: 12px;
+    height: 12px;
+    border: 0.5px solid black;
+    border-radius: 50%;
+    background-color: rgb(213, 213, 213);
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+  }
+  .filled {
+    background-color: #3D2B1F;
+    /* background-color: #3498db;  */
+  }
+  
