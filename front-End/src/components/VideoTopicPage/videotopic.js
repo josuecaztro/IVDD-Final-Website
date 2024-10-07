@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import './videotopic.css';
 import Dropdown from '../HomePage/DropDownButton';
 import { useLocation } from 'react-router-dom';
+import topicText from './videotopicTEXT';
+import siteText from '../HomePage/HomePageTEXT';
 
-
-function ShowAllVideoTopics(){
+function ShowAllVideoTopics( { language } ){
 
 /*
     TOPIC
@@ -57,14 +58,30 @@ const handlePrevious = () => {
   }
 };
 
+
+//this function is here for DYNAMIC TRANSLATION
+const getTranslatedText = (key, replacements) => {
+  let text = topicText[language][key];
+
+  // Replace placeholders in the text
+  for (const [placeholder, value] of Object.entries(replacements)) {
+    text = text.replace(`{${placeholder}}`, value);
+  }
+
+  return text;
+};
+
+const translatedTopic = siteText[language].topics[topic] || topic; // Fallback to the original topic if not found
+console.log(translatedTopic);
+
     return (
         <div id="full-topic-page">
 
          {/* Display the selected topic */}
          <div id="top-topic-div">
-         <p>Explore our complete series of preachings on {topic}, organized in order to guide you through each message step by step.</p>
-        <h1>{topic}</h1>
-        <p>{topic} Playlist:  {totalVideos} Videos</p>
+         <p>{getTranslatedText("topicIntro", {translatedTopic})}</p>
+        <h1>{translatedTopic}</h1>
+        <p>{topicText[language].totalVideos.replace("{total}", totalVideos)}</p>
         </div>
 
 
@@ -90,7 +107,7 @@ const handlePrevious = () => {
                            <h2>{videos[videoIndex].title}</h2>
                            <h4>Title: youtube title </h4>
                            <h5>Description: do not fall into temptation</h5>
-           <Dropdown setTopic={setTopic} />
+           <Dropdown setTopic={setTopic} language={language}/>
              {/* Preachings label */}
 
             </div>
@@ -100,10 +117,10 @@ const handlePrevious = () => {
 
         {/* Navigation buttons */}
         <button onClick={handlePrevious} disabled={videoIndex === 0}>
-          Previous Video
+          {topicText[language].previousVideo}
         </button>
         <button onClick={handleNext} disabled={videoIndex === totalVideos - 1}>
-          Next Video
+          {topicText[language].nextVideo}
         </button>
   
       

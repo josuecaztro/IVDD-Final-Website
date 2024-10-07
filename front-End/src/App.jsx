@@ -25,7 +25,7 @@ function App() {
       <Route path="/" element={<DisplayHomePage language={language}/>}/>
       <Route path="/about" element={<DisplayAboutUs language={language}/>}/>
       <Route path="/mission" element={<DisplayMission language={language}/>}/>
-      <Route path="/livetopics" element={<ShowAllVideoTopics/>}/>
+      <Route path="/livetopics" element={<ShowAllVideoTopics language={language}/>}/>
       <Route path="/donate" element={<DisplayDonatePage language={language}/>}/>
       <Route path="/contact" element={<DeployContactUs language={language}/>}/>
       <Route path="/prayerReq" element={<DisplayPrayerReqPage language={language}/>}/>

@@ -15,7 +15,15 @@ const siteText = {
       ourEvents: "Our Events",
       footer: "Voice of God Church in Folsom",
       rights: "All rights reserved - Voice of God © 2024",
-      customVerse: "O land, land, land, hear the word of the Lord! - Jeremiah 22:29"
+      customVerse: "O land, land, land, hear the word of the Lord! - Jeremiah 22:29",
+      topicButton: "View Messages by Topic",
+      dOption: "Discipleship",
+      mOption: "Marriage",
+      topics: {
+        Discipleship: "Discipleship",
+        Marriage: "Marriage",
+        // Add more topics here as needed
+      }
     },
     es: {
       welcome: "Estamos contentos de que estés aquí.",
@@ -30,7 +38,15 @@ const siteText = {
       ourEvents: "Nuestros eventos",
       footer: "Iglesia Voz de Dios en Folsom",
       rights: "Todos los derechos reservados - Iglesia Voz de Dios © 2024",
-      customVerse: "¡Tierra, tierra, tierra!, oye palabra de Jehová. - Jeremías 22:29"
+      customVerse: "¡Tierra, tierra, tierra!, oye palabra de Jehová. - Jeremías 22:29",
+      topicButton: "Ver mensajes por tema",
+      dOption: "Discipulado",
+      mOption: "Matrimonio",
+      topics: {
+        Discipleship: "Discipulado",
+        Marriage: "Matrimonio",
+        // Add more topics here as needed
+      }
     }
   }
 

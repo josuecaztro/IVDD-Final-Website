@@ -37,7 +37,7 @@ return (
       {/* For now I'm leaving the events tab toggled, but it can be put back if needed.  */}
       {/* <Nav.Link href="#link">Events</Nav.Link> */}
 
-      <Nav.Link as={NavLink} to="/livetopics">Live Services</Nav.Link>
+      <Nav.Link as={NavLink} to="/livetopics">{navText[language].liveVids}</Nav.Link>
       <Nav.Link as={NavLink} to="/donate">{navText[language].donate}</Nav.Link>
       <Nav.Link as={NavLink} to="/prayerReq">{navText[language].prayerReq}</Nav.Link>
 
