@@ -4,6 +4,7 @@ import Dropdown from '../HomePage/DropDownButton';
 import { useLocation } from 'react-router-dom';
 import topicText from './videotopicTEXT';
 import siteText from '../HomePage/HomePageTEXT';
+import videoData from './videoDATA';
 
 function ShowAllVideoTopics( { language } ){
 
@@ -29,20 +30,7 @@ const location = useLocation();
 const initialTopic = location.state?.selectedTopic || 'Discipleship';
 const [topic, setTopic] = useState(initialTopic);const [videoIndex, setVideoIndex] = useState(0);
 
-// Mock data for videos
-const videoData = {
-  'Discipleship': [
-    { title: 'Discipleship Part 1', url: 'https://www.youtube.com/embed/videoID1' },
-    { title: 'Discipleship Part 2', url: 'https://www.youtube.com/embed/videoID2' }
-  ],
-  'Marriage': [
-    { title: 'Marriage Part 1', url: 'https://www.youtube.com/embed/videoID3' },
-    { title: 'Marriage Part 2', url: 'https://www.youtube.com/embed/videoID4' },
-    { title: 'Marriage Part 3', url: 'https://www.youtube.com/embed/videoID4' }
-  ]
-};
-
-const videos = videoData[topic];
+const videos = videoData[language][topic];
 const totalVideos = videos.length;
 
 // Handler for navigating between videos
@@ -99,14 +87,13 @@ console.log(translatedTopic);
             allowFullScreen
             title={videos[videoIndex].title}
           ></iframe>
-          <p>Originally uploaded June 8, 2018</p>
+          <p>{topicText[language].originallyUploaded.replace("{date}", videos[videoIndex].date)}</p>
         </div>
             </div>
             <div id="right-topic-div">
                            {/* Dropdown for choosing a different topic */}
                            <h2>{videos[videoIndex].title}</h2>
-                           <h4>Title: youtube title </h4>
-                           <h5>Description: do not fall into temptation</h5>
+                           <h5>{topicText[language].description.replace("{description}", videos[videoIndex].desc)}</h5>
            <Dropdown setTopic={setTopic} language={language}/>
              {/* Preachings label */}
 
