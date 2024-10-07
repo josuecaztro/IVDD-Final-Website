@@ -103,10 +103,10 @@ console.log(translatedTopic);
             <div id="bottom-topic-div">
 
         {/* Navigation buttons */}
-        <button onClick={handlePrevious} disabled={videoIndex === 0}>
+        <button className="player-buttons-for-topic" onClick={handlePrevious} disabled={videoIndex === 0}>
           {topicText[language].previousVideo}
         </button>
-        <button onClick={handleNext} disabled={videoIndex === totalVideos - 1}>
+        <button className="player-buttons-for-topic"  onClick={handleNext} disabled={videoIndex === totalVideos - 1}>
           {topicText[language].nextVideo}
         </button>
   

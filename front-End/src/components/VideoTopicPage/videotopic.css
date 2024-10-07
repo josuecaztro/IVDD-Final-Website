@@ -12,6 +12,7 @@
     font-family: "sinter", sans-serif;
     font-weight: 700;
     font-style: normal;
+    padding-bottom: 5rem;
 }
 
 #middle-topic-container {
@@ -68,5 +69,19 @@
         width: 100%;
         height: auto;
     }
+}
+
+.player-buttons-for-topic {
+    background-color: #d8ccae;
+    border-radius: 8px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 2px #b5ab92;
+    color: #3D2B1F;
+    font-size: 1.25rem;
+}
+
+.player-buttons-for-topic:hover{
+    background-color: #e6d9ba;
 }
   
