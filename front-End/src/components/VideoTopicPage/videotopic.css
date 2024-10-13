@@ -62,7 +62,7 @@
 
     #middle-topic-container{
         display: block;
-        width: 85%;
+        min-width: 100%;
     }
 
     #current-video-on-topic-playlist{
