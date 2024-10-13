@@ -1,6 +1,6 @@
 #full-topic-page {
-    color: #3D2B1F;
-    background-color: #c7bca2;
+    color: white;
+    background-color: #101a39;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -17,8 +17,8 @@
 
 #middle-topic-container {
     display: flex;
-    background-color: rgb(209, 199, 178);
-    border: 2px solid #3D2B1F;
+    background-color: #17244a;
+    border: 2px solid #034078;
     border-radius: 8px;
     padding: 2.5rem;
     gap: 5rem;
@@ -29,7 +29,7 @@
 #right-topic-div h5{
     padding: 1rem;
     border-radius: 8px;
-    background-color: #c7bca2;
+    background-color: #22305a;
     font-size: 1rem;
 }
 
@@ -41,16 +41,16 @@
     margin-top: 20px;
   }
   .circle {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border: 0.5px solid black;
     border-radius: 50%;
-    background-color: rgb(213, 213, 213);
+    background-color: white;
     margin: 0 5px;
     transition: background-color 0.3s ease;
   }
   .filled {
-    background-color: #3D2B1F;
+    background-color: #165897;
     /* background-color: #3498db;  */
   }
 
@@ -69,19 +69,36 @@
         width: 100%;
         height: auto;
     }
+
+    #upload-text-for-vid {
+        display: none;
+    }
+}
+
+#current-video-on-topic-playlist{
+    border: 3px ridge #034078;
 }
 
 .player-buttons-for-topic {
-    background-color: #d8ccae;
-    border-radius: 8px;
+    background-color: #0d1631;
+    border: 1px solid #508CA4;
+    border-radius: 25px;
     margin: 0.5rem;
-    padding: 0.5rem;
-    box-shadow: 2px 2px 2px #b5ab92;
-    color: #3D2B1F;
+    padding: 0.25rem 1.5rem;
+    box-shadow: 1px 1px 1px #A9D6E5;
+    color: white;
     font-size: 1.25rem;
 }
 
 .player-buttons-for-topic:hover{
-    background-color: #e6d9ba;
+    background-color: #213161;
 }
-  
+
+#t-id-h1{
+    color: #A9D6E5;
+}
+
+#sub-title-for-curr-id{
+    color: #A9D6E5;
+}
+

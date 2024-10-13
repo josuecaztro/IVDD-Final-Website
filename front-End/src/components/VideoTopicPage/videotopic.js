@@ -5,6 +5,8 @@ import { useLocation } from 'react-router-dom';
 import topicText from './videotopicTEXT';
 import siteText from '../HomePage/HomePageTEXT';
 import videoData from './videoDATA';
+import Dropdown2 from './videoTopicButton';
+
 
 function ShowAllVideoTopics( { language } ){
 
@@ -68,7 +70,7 @@ console.log(translatedTopic);
          {/* Display the selected topic */}
          <div id="top-topic-div">
          <p>{getTranslatedText("topicIntro", {translatedTopic})}</p>
-        <h1>{translatedTopic}</h1>
+        <h1 id="t-id-h1">{translatedTopic}</h1>
         <p>{topicText[language].totalVideos.replace("{total}", totalVideos)}</p>
         </div>
 
@@ -77,6 +79,11 @@ console.log(translatedTopic);
         <div id="left-topic-div">
         {/* Current video section */}
         <div className="video-section">
+        <Dropdown2 setTopic={setTopic} language={language}/>
+        <br/>
+        <br/>
+    
+
           <iframe
             id="current-video-on-topic-playlist"
             width="560"
@@ -87,43 +94,54 @@ console.log(translatedTopic);
             allowFullScreen
             title={videos[videoIndex].title}
           ></iframe>
-          <p>{topicText[language].originallyUploaded.replace("{date}", videos[videoIndex].date)}</p>
+          <p id="upload-text-for-vid">{topicText[language].originallyUploaded.replace("{date}", videos[videoIndex].date)}</p>
         </div>
             </div>
             <div id="right-topic-div">
                            {/* Dropdown for choosing a different topic */}
-                           <h2>{videos[videoIndex].title}</h2>
+                           <h2 id="sub-title-for-curr-id">{videos[videoIndex].title}</h2>
                            <h5>{topicText[language].description.replace("{description}", videos[videoIndex].desc)}</h5>
-           <Dropdown setTopic={setTopic} language={language}/>
+
              {/* Preachings label */}
+
+
+
+ {/* Navigation buttons */}
+ <button className="player-buttons-for-topic" onClick={handlePrevious} disabled={videoIndex === 0}>
+          {topicText[language].previousVideo}
+        </button>
+        <button className="player-buttons-for-topic"  onClick={handleNext} disabled={videoIndex === totalVideos - 1}>
+          {topicText[language].nextVideo}
+        </button>
+
+
+             
+    
+        {/* Visual indicator for current video */}
+      <div className="progress-indicator">
+          {videos.map((video, index) => (
+          <span
+          key={index}
+          className={`circle ${index === videoIndex ? 'filled' : ''}`} // Only fill the current video
+      ></span>
+      ))}
+      </div>
+
 
             </div>
             </div>
             
             <div id="bottom-topic-div">
 
-        {/* Navigation buttons */}
-        <button className="player-buttons-for-topic" onClick={handlePrevious} disabled={videoIndex === 0}>
-          {topicText[language].previousVideo}
-        </button>
-        <button className="player-buttons-for-topic"  onClick={handleNext} disabled={videoIndex === totalVideos - 1}>
-          {topicText[language].nextVideo}
-        </button>
-  
-      
-  
-       {/* Visual indicator for current video */}
-    <div className="progress-indicator">
-        {videos.map((video, index) => (
-         <span
-         key={index}
-         className={`circle ${index === videoIndex ? 'filled' : ''}`} // Only fill the current video
-     ></span>
-     ))}
-    </div>
 
-                </div>
-                </div>
+              
+
+       
+  
+ 
+
+    </div>
+    </div>
 
     )
 }

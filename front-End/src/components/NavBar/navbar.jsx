@@ -41,6 +41,7 @@ return (
       <Nav.Link as={NavLink} to="/donate">{navText[language].donate}</Nav.Link>
       <Nav.Link as={NavLink} to="/prayerReq">{navText[language].prayerReq}</Nav.Link>
 
+
     
       {/* Implement translation dropdown feature here: */}
       {/* I got rid of the dropdown and instead made a toggle button component to handle this logic */}

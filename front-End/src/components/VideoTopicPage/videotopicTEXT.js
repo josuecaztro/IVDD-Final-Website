@@ -6,8 +6,8 @@ const topicText = {
       originallyUploaded: "Originally uploaded: {date}",
       title: "Title: {videoTitle}",
       description: "Description: {description}",
-      previousVideo: "Previous Video",
-      nextVideo: "Next Video",
+      previousVideo: "Previous",
+      nextVideo: "Next",
       dropdownPlaceholder: "Choose OTHER topics"
     },
     es: {
@@ -17,8 +17,8 @@ const topicText = {
       originallyUploaded: "Subido originalmente: {date}",
       title: "Título: {videoTitle}",
       description: "Descripción: {description}",
-      previousVideo: "Video Anterior",
-      nextVideo: "Siguiente Video",
+      previousVideo: "Anterior",
+      nextVideo: "Siguiente",
       dropdownPlaceholder: "Elige OTROS temas"
     }
   };

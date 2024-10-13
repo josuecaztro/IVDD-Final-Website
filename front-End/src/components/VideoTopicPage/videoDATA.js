@@ -12,12 +12,12 @@ const videoData = {
     },
     es: {
       'Discipleship': [
-        { title: 'La Concupiscencia', date: "09/21/2024", url: 'https://www.youtube.com/embed/LB3ZRQm5m38?si=iTYotPojGAxWFQ9D', desc: "Para siquiera pensar en convertirte en un discípulo, el primer paso es confrontar y vencer tu deseo de pecar. Con obediencia a Cristo, Él te empoderará para que te levantes y te ayude a vivir tu verdadero propósito." },
-        { title: 'La virtud, el temor y la verdad', date:"10/05/2024", url: 'https://www.youtube.com/embed/KLByGYOqhc8?si=iAqHpaVX92bG1vqs', desc:"Este mensaje destaca las cualidades esenciales de un buen discípulo y los rasgos necesarios para convertirse en un líder potencial en Cristo. ¡La virtud juega un papel crucial en este camino!" }
+        { title: 'La Concupiscencia', date: "21/09/2024", url: 'https://www.youtube.com/embed/LB3ZRQm5m38?si=iTYotPojGAxWFQ9D', desc: "Para siquiera pensar en convertirte en un discípulo, el primer paso es confrontar y vencer tu deseo de pecar. Con obediencia a Cristo, Él te empoderará para que te levantes y te ayude a vivir tu verdadero propósito." },
+        { title: 'La virtud, el temor y la verdad', date:"05/10/2024", url: 'https://www.youtube.com/embed/KLByGYOqhc8?si=iAqHpaVX92bG1vqs', desc:"Este mensaje destaca las cualidades esenciales de un buen discípulo y los rasgos necesarios para convertirse en un líder potencial en Cristo. ¡La virtud juega un papel crucial en este camino!" }
     ],
       'Marriage': [
-        { title: 'Se queda uno o se quedan los dos', date: "09/22/2024", url: 'https://www.youtube.com/embed/aogAEZp9FNM?si=Z2_wCAirtGivkWXW', desc: "Este mensaje enfatiza la importancia de la unidad y la obediencia en el matrimonio y las relaciones, basado en Lucas 17:34-35. Resalta cómo ambos compañeros deben seguir a Dios juntos para lograr verdadera armonía y fortaleza en su relación." },
-        { title: 'Ojo por Ojo, Diente por Diente', date:"10/29/2024", url: 'https://www.youtube.com/embed/SmzsSMRp-hA?si=EFbi0ohM4nBq4bYy', desc:"Este mensaje explora el principio de \"ojo por ojo\" y enfatiza que en el matrimonio debemos seguir las enseñanzas de Jesús. La unidad es clave—enfócate en la autorreflexión en lugar de la retaliación. ¡Descubre más en este mensaje!" }
+        { title: 'Se queda uno o se quedan los dos', date: "22/09/2024", url: 'https://www.youtube.com/embed/aogAEZp9FNM?si=Z2_wCAirtGivkWXW', desc: "Este mensaje enfatiza la importancia de la unidad y la obediencia en el matrimonio y las relaciones, basado en Lucas 17:34-35. Resalta cómo ambos compañeros deben seguir a Dios juntos para lograr verdadera armonía y fortaleza en su relación." },
+        { title: 'Ojo por Ojo, Diente por Diente', date:"29/10/2024", url: 'https://www.youtube.com/embed/SmzsSMRp-hA?si=EFbi0ohM4nBq4bYy', desc:"Este mensaje explora el principio de \"ojo por ojo\" y enfatiza que en el matrimonio debemos seguir las enseñanzas de Jesús. La unidad es clave—enfócate en la autorreflexión en lugar de la retaliación. ¡Descubre más en este mensaje!" }
       ]
     }
   };
