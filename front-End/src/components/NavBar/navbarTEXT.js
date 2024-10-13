@@ -3,6 +3,7 @@ import React from 'react';
 const navText = {
     en: {
         main: "Voice of God Church",
+        about: "About",
         whoWeAre: "Who We Are",
         mission: "Our Mission",
         donate: "Donate",
@@ -18,6 +19,7 @@ const navText = {
     },
     es: {
         main: "Iglesia Voz de Dios",
+        about: "Acerca de",
         whoWeAre: "Quiénes Somos",
         mission: "Nuestra Misión",
         donate: "Donar",

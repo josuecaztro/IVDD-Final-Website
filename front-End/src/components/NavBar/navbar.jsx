@@ -30,9 +30,15 @@ return (
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="me-auto">
-      {/* <Nav.Link as={NavLink} to="/">Home</Nav.Link> */}
-      <Nav.Link as={NavLink} to="/about">{navText[language].whoWeAre}</Nav.Link>
-      <Nav.Link as={NavLink} to="/mission">{navText[language].mission}</Nav.Link>
+      <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+      <NavDropdown title={navText[language].about} id="basic-nav-dropdown">
+      <NavDropdown.Item as={NavLink} to="/about">
+          {navText[language].whoWeAre}
+        </NavDropdown.Item>
+        <NavDropdown.Item as={NavLink} to="/mission">
+          {navText[language].mission}
+        </NavDropdown.Item>
+        </NavDropdown>
 
       {/* For now I'm leaving the events tab toggled, but it can be put back if needed.  */}
       {/* <Nav.Link href="#link">Events</Nav.Link> */}
