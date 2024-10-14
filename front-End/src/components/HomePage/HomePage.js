@@ -115,7 +115,7 @@ function DisplayHomePage({ language }){
         <div id="bottom-page">
          <div id="bottom-left-div">
           <h2 id="youtube-title" className="scroll-animation">{siteText[language].missedService}</h2>
-         <iframe width="616" height="347" src="https://www.youtube-nocookie.com/embed/SmzsSMRp-hA?si=Omz4O-qveAeLhOhB&autoplay=1&mute=1" id="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         <iframe width="616" height="347" src="https://www.youtube.com/embed/e0C8Rv09nNE?si=1NivMLDLDgl6Hp3K&autoplay=1&mute=1" id="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
          <Dropdown setTopic={setTopic} language={language}/>
          </div>
     
