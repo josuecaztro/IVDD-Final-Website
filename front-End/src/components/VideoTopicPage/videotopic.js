@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './videotopic.css';
-import Dropdown from '../HomePage/DropDownButton';
 import { useLocation } from 'react-router-dom';
 import topicText from './videotopicTEXT';
 import siteText from '../HomePage/HomePageTEXT';
@@ -30,7 +29,8 @@ const location = useLocation();
 
 // Get the topic from the route state, or fall back to the default topic
 const initialTopic = location.state?.selectedTopic || 'Discipleship';
-const [topic, setTopic] = useState(initialTopic);const [videoIndex, setVideoIndex] = useState(0);
+const [topic, setTopic] = useState(initialTopic);
+const [videoIndex, setVideoIndex] = useState(0);
 
 const videos = videoData[language][topic];
 const totalVideos = videos.length;
@@ -48,7 +48,6 @@ const handlePrevious = () => {
   }
 };
 
-
 //this function is here for DYNAMIC TRANSLATION
 const getTranslatedText = (key, replacements) => {
   let text = topicText[language][key];
@@ -62,7 +61,11 @@ const getTranslatedText = (key, replacements) => {
 };
 
 const translatedTopic = siteText[language].topics[topic] || topic; // Fallback to the original topic if not found
-console.log(translatedTopic);
+//console.log(translatedTopic);
+
+useEffect(() => {
+  setVideoIndex(0);
+},[topic]);
 
     return (
         <div id="full-topic-page">
@@ -88,19 +91,19 @@ console.log(translatedTopic);
             id="current-video-on-topic-playlist"
             width="560"
             height="315"
-            src={videos[videoIndex].url}
+            src={videos[videoIndex]?.url}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            title={videos[videoIndex].title}
+            title={videos[videoIndex]?.title}
           ></iframe>
-          <p id="upload-text-for-vid">{topicText[language].originallyUploaded.replace("{date}", videos[videoIndex].date)}</p>
+          <p id="upload-text-for-vid">{topicText[language].originallyUploaded.replace("{date}", videos[videoIndex]?.date)}</p>
         </div>
             </div>
             <div id="right-topic-div">
                            {/* Dropdown for choosing a different topic */}
-                           <h2 id="sub-title-for-curr-id">{videos[videoIndex].title}</h2>
-                           <h5>{topicText[language].description.replace("{description}", videos[videoIndex].desc)}</h5>
+                           <h2 id="sub-title-for-curr-id">{videos[videoIndex]?.title}</h2>
+                           <h5>{topicText[language].description.replace("{description}", videos[videoIndex]?.desc)}</h5>
 
              {/* Preachings label */}
 
@@ -131,16 +134,7 @@ console.log(translatedTopic);
             </div>
             </div>
             
-            {/* <div id="bottom-topic-div">
-
-
-              
- ILL LEAVE THIS DIV HERE IF YOU EVER WANT TO INCLUDE SOMETHING IN BOTTOM OF PAGE
-       
-  
- 
-
-    </div> */}
+    
     </div>
 
     )
