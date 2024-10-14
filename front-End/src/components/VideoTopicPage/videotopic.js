@@ -115,7 +115,7 @@ console.log(translatedTopic);
         </button>
 
 
-             
+          
     
         {/* Visual indicator for current video */}
       <div className="progress-indicator">
@@ -131,16 +131,16 @@ console.log(translatedTopic);
             </div>
             </div>
             
-            <div id="bottom-topic-div">
+            {/* <div id="bottom-topic-div">
 
 
               
-
+ ILL LEAVE THIS DIV HERE IF YOU EVER WANT TO INCLUDE SOMETHING IN BOTTOM OF PAGE
        
   
  
 
-    </div>
+    </div> */}
     </div>
 
     )
