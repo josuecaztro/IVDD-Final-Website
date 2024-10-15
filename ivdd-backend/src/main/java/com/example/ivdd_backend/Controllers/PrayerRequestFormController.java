@@ -28,6 +28,14 @@ public class PrayerRequestFormController {
         return repository.findAll();
     }
 
+    @GetMapping("/prayer-request-forms/{id}")
+    public ResponseEntity<PrayerRequestForm> getPrayerRequestById(@PathVariable Long id) {
+        return repository.findById(id)
+                .map(prayerRequest -> new ResponseEntity<>(prayerRequest, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+
     @DeleteMapping("/prayer-request-forms")
     public ResponseEntity<Void> deletePrayerRequestForm(@PathVariable Long id){
         if (repository.existsById(id)){
