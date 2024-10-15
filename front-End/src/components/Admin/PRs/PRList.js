@@ -6,8 +6,15 @@ const PRList = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [selectedId, setSelectedId] = useState(null);  // Track selected item ID
+    const [showData, setShowData] = useState(false);  // New state to manage visibility
 
     const fetchData = async () => {
+        if (showData) {
+            // If already showing data, just toggle the visibility
+            setShowData(false);
+            return;
+        }
+
         setLoading(true);
         setError(null);
         try {
@@ -17,6 +24,7 @@ const PRList = () => {
             }
             const result = await response.json();
             setData(result);
+            setShowData(true);  // Set to true only when data is fetched successfully
         } catch (err) {
             setError(err.message);
         } finally {
@@ -48,6 +56,7 @@ const PRList = () => {
             // Remove the deleted item from the state
             setData((prevData) => prevData.filter(item => item.id !== id));
             console.log("Deleting id #" + id);
+            alert("Successfully deleted");
             setSelectedId(null);  // Reset the selection after deletion
         } catch (err) {
             setError(err.message);
@@ -58,40 +67,42 @@ const PRList = () => {
         <div className="data-list-container">
 
             <div id="buttons-pr-container">
-            <button
-                onClick={fetchData}
-                className="get-button"
-            >
-                Get Prayers
-            </button>
+                <button
+                    onClick={fetchData}
+                    className="get-button"
+                >
+                    {showData ? 'Hide Prayers' : 'Get Prayers'}
+                </button>
 
-            {loading && <p>Loading...</p>}
-            {error && <p className="error-message">{error}</p>}
+                {loading && <p>Loading...</p>}
+                {error && <p className="error-message">{error}</p>}
 
-            {/* Add a Delete button */}
-            <button
-                onClick={() => deletePrayerRequest(selectedId)}
-                className="delete-button"
-                disabled={!selectedId}  // Disable if no item is selected
-            >
-                Delete Prayer
-            </button>
+                {/* Add a Delete button */}
+                <button
+                    onClick={() => deletePrayerRequest(selectedId)}
+                    className="delete-button"
+                    disabled={!selectedId}  // Disable if no item is selected
+                >
+                    Delete Prayer
+                </button>
             </div>
 
-            <ul className="data-list">
-                {data.map((item) => (
-                    <li 
-                        key={item.id} 
-                        className={`data-item ${item.id === selectedId ? 'highlighted' : ''}`}  // Highlight selected item
-                        onClick={() => handleSelect(item.id)}  // Select item on click
-                    >
-                        <h2 className="item-names">{item.firstName} {item.lastName}</h2>
-                        <p className="data-phone-num">Phone #: {item.phoneNumber}</p>
-                        <p className="data-pr">{item.messageBody}</p>
-                        <p className="data-phone-num"><strong>Deadline: </strong>{item.dateTime}</p>
-                    </li>
-                ))}
-            </ul>
+            {showData && (
+                <ul className="data-list">
+                    {data.map((item) => (
+                        <li 
+                            key={item.id} 
+                            className={`data-item ${item.id === selectedId ? 'highlighted' : ''}`}  // Highlight selected item
+                            onClick={() => handleSelect(item.id)}  // Select item on click
+                        >
+                            <h2 className="item-names">{item.firstName} {item.lastName}</h2>
+                            <p className="data-phone-num">Phone #: {item.phoneNumber}</p>
+                            <p className="data-pr">{item.messageBody}</p>
+                            <p className="data-phone-num"><strong>Deadline: </strong>{item.dateTime}</p>
+                        </li>
+                    ))}
+                </ul>
+            )}
         </div>
     );
 };

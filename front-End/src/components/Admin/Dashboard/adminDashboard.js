@@ -9,7 +9,7 @@ function DisplayAdminDashboard (){
     return (
         <div id="dashboard-pg">
             <br/>
-        <h1>Admin Dashboard</h1>
+        <h1 id="dash-board-title">Admin Dashboard</h1>
         <div id="lists-dashboard">
         <MessageList/>
         <PRList/>

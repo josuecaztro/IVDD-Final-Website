@@ -2,4 +2,7 @@
     display: flex;
     justify-content: center;
     margin: 0.5rem;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgb(88, 88, 124);
 }

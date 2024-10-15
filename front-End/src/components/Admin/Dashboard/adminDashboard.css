@@ -8,6 +8,12 @@
     justify-content: center;
 }
 
+#dash-board-title{
+    background-color: rgb(88, 88, 124);
+    padding: 2rem;
+    border-radius: 25px;
+}
+
 #lists-dashboard {
     display: flex;
 }

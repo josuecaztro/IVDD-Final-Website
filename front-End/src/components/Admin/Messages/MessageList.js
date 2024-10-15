@@ -6,8 +6,13 @@ const MessageList = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [selectedId, setSelectedId] = useState(null);  // Track selected item ID
+    const [showData, setShowData] = useState(false);
 
     const fetchData = async () => {
+        if (showData){
+            setShowData(false);
+            return;
+        }
         setLoading(true);
         setError(null);
         try {
@@ -17,6 +22,7 @@ const MessageList = () => {
             }
             const result = await response.json();
             setData(result);
+            setShowData(true);
         } catch (err) {
             setError(err.message);
         } finally {
@@ -48,6 +54,7 @@ const MessageList = () => {
             // Remove the deleted item from the state
             setData((prevData) => prevData.filter(item => item.id !== id));
             console.log("Deleting id #" + id);
+            alert("Successfully deleted.");
             setSelectedId(null);  // Reset the selection after deletion
         } catch (err) {
             setError(err.message);
@@ -61,7 +68,7 @@ const MessageList = () => {
                 onClick={fetchData}
                 className="get-button"
             >
-                Get Messages
+                {showData ? 'Hide Messages' : 'Get Messages'}
             </button>
 
             {loading && <p>Loading...</p>}
@@ -77,6 +84,7 @@ const MessageList = () => {
             </button>
             </div>
 
+            {showData && (
             <ul className="data-list">
                 {data.map((item) => (
                     <li 
@@ -90,6 +98,7 @@ const MessageList = () => {
                     </li>
                 ))}
             </ul>
+            )}
         </div>
     );
 };
