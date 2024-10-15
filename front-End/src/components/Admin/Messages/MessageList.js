@@ -44,6 +44,7 @@ const MessageList = () => {
             }
             // Remove the deleted item from the state
             setData((prevData) => prevData.filter(item => item.id !== id));
+            console.log("Deleting id #" + id);
             setSelectedId(null);  // Reset the selection after deletion
         } catch (err) {
             setError(err.message);
