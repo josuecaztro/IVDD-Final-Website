@@ -1,6 +1,8 @@
 import React from 'react';
 import './adminDashboard.css';
 import MessageList from '../Messages/MessageList';
+import PRList from '../PRs/PRList';
+
 
 
 function DisplayAdminDashboard (){
@@ -8,7 +10,10 @@ function DisplayAdminDashboard (){
         <div id="dashboard-pg">
             <br/>
         <h1>Admin Dashboard</h1>
+        <div id="lists-dashboard">
         <MessageList/>
+        <PRList/>
+        </div>
         </div>
     )
 }

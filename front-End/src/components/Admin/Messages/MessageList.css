@@ -67,3 +67,10 @@
 .data-phone-num{
     font-size: 0.75rem;
 }
+
+#buttons-list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}

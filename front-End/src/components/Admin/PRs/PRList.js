@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './MessageList.css';
+import './PRList.css';
 
-const MessageList = () => {
+const PRList = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -11,7 +11,7 @@ const MessageList = () => {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch('https://iglesiavozdedios.net/api/contact-requests');
+            const response = await fetch('https://iglesiavozdedios.net/api/prayer-request-forms');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -36,7 +36,7 @@ const MessageList = () => {
             return;
         }
         try {
-            const response = await fetch(`https://iglesiavozdedios.net/api/contact-requests/${id}`, {
+            const response = await fetch(`https://iglesiavozdedios.net/api/prayer-request-forms/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -56,12 +56,13 @@ const MessageList = () => {
 
     return (
         <div className="data-list-container">
-            <div id="buttons-list-container">
+
+            <div id="buttons-pr-container">
             <button
                 onClick={fetchData}
                 className="get-button"
             >
-                Get Messages
+                Get Prayers
             </button>
 
             {loading && <p>Loading...</p>}
@@ -73,7 +74,7 @@ const MessageList = () => {
                 className="delete-button"
                 disabled={!selectedId}  // Disable if no item is selected
             >
-                Delete Message
+                Delete Prayer
             </button>
             </div>
 
@@ -87,6 +88,7 @@ const MessageList = () => {
                         <h2 className="item-names">{item.firstName} {item.lastName}</h2>
                         <p className="data-phone-num">Phone #: {item.phoneNumber}</p>
                         <p className="data-pr">{item.messageBody}</p>
+                        <p className="data-phone-num"><strong>Deadline: </strong>{item.dateTime}</p>
                     </li>
                 ))}
             </ul>
@@ -94,4 +96,4 @@ const MessageList = () => {
     );
 };
 
-export default MessageList;
+export default PRList;
