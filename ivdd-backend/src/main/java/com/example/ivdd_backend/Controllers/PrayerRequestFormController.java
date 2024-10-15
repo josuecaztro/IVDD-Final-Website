@@ -36,7 +36,7 @@ public class PrayerRequestFormController {
     }
 
 
-    @DeleteMapping("/prayer-request-forms")
+    @DeleteMapping("/prayer-request-forms/{id}")
     public ResponseEntity<Void> deletePrayerRequestForm(@PathVariable Long id){
         if (repository.existsById(id)){
             repository.deleteById(id);

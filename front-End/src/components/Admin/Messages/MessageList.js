@@ -38,6 +38,9 @@ const MessageList = () => {
         try {
             const response = await fetch(`https://iglesiavozdedios.net/api/prayer-request-forms/${id}`, {
                 method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
             });
             if (!response.ok) {
                 throw new Error('Failed to delete the request');
