@@ -23,13 +23,14 @@ const MessageList = () => {
         }
     };
 
+
     return (
         <div className="data-list-container">
             <button
                 onClick={fetchData}
                 className="get-button"
             >
-                Get
+                Get Prayer Requests
             </button>
 
             {loading && <p>Loading...</p>}
@@ -38,9 +39,10 @@ const MessageList = () => {
             <ul className="data-list">
                 {data.map((item, index) => (
                     <li key={index} className="data-item">
-                        {/* Customize this based on the structure of your JSON object */}
-                        <h2 className="item-title">{item.title}</h2>
-                        <p>{item.description}</p>
+                        <h2 className="item-names">{item.firstName} {item.lastName}</h2>
+                        <p className="data-phone-num">Phone #: {item.phoneNumber}</p>
+                        <p className="data-pr">{item.messageBody}</p>
+                        <p className="data-phone-num"><strong>Deadline: </strong>{item.dateTime}</p>
                     </li>
                 ))}
             </ul>

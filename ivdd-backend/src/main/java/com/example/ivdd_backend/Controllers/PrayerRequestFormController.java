@@ -4,6 +4,7 @@ package com.example.ivdd_backend.Controllers;
 import com.example.ivdd_backend.Models.PrayerRequestForm;
 import com.example.ivdd_backend.Repositories.PrayerRequestFormRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,6 +28,15 @@ public class PrayerRequestFormController {
         return repository.findAll();
     }
 
+    @DeleteMapping("/prayer-request-forms")
+    public ResponseEntity<Void> deletePrayerRequestForm(@PathVariable Long id){
+        if (repository.existsById(id)){
+            repository.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 
 
 }
