@@ -1,0 +1,9 @@
+#dashboard-pg {
+    background-color: rgb(104, 104, 139);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

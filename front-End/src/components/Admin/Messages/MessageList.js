@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './MessagesList.css';
+import './MessageList.css';
 
 const MessageList = () => {
     const [data, setData] = useState([]);

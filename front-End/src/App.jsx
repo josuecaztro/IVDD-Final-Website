@@ -9,6 +9,7 @@ import DeployContactUs from './components/ContactUsPage/ContactUsPage';
 import DisplayMission from './components/MissionPage/Mission';
 import DisplayAboutUs from './components/WhoWeArePage/AboutUs';
 import ShowAllVideoTopics from './components/VideoTopicPage/videotopic';
+import DisplayAdminDashboard from './components/Admin/Dashboard/adminDashboard';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       <Route path="/donate" element={<DisplayDonatePage language={language}/>}/>
       <Route path="/contact" element={<DeployContactUs language={language}/>}/>
       <Route path="/prayerReq" element={<DisplayPrayerReqPage language={language}/>}/>
+      <Route path="/admin" element={<DisplayAdminDashboard/>}/>
     </Routes>
     </Router>
 
