@@ -27,7 +27,7 @@ const MessageList = () => {
     const handleSelect = (id) => {
         // Set the ID of the selected item
         setSelectedId(id === selectedId ? null : id); // Toggle selection
-        console.log(selectedId);
+        console.log(id);
     };
 
     const deletePrayerRequest = async (id) => {
