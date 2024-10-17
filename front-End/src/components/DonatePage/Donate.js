@@ -3,6 +3,8 @@ import React from 'react';
 
 function DisplayDonatePage (){
 
+    //look up online how to implement payment methods
+
     return (
         <div style={{textAlign: "center", marginTop: "5rem"}}>
         <h4>Donation Page</h4>
