@@ -103,8 +103,8 @@ useEffect(() => {
             <div id="right-topic-div">
                            {/* Dropdown for choosing a different topic */}
                            <h2 id="sub-title-for-curr-id">{videos[videoIndex]?.title}</h2>
-                           <h5>{topicText[language].description.replace("{description}", videos[videoIndex]?.desc)}</h5>
-
+                           <h5><span id="description-header-h5">{topicText[language].description}</span> {videos[videoIndex]?.desc}</h5>
+                           {/* <h5>{topicText[language].description.replace("{description}", videos[videoIndex]?.desc)}</h5> */}
              {/* Preachings label */}
 
 

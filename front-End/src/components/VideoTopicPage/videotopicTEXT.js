@@ -5,7 +5,7 @@ const topicText = {
       currentVideoLabel: "Current Video:",
       originallyUploaded: "Originally uploaded: {date}",
       title: "Title: {videoTitle}",
-      description: "Description: {description}",
+      description: "Description:",
       previousVideo: "Previous",
       nextVideo: "Next",
       dropdownPlaceholder: "Choose OTHER topics"
@@ -16,7 +16,7 @@ const topicText = {
       currentVideoLabel: "Video Actual:",
       originallyUploaded: "Subido originalmente: {date}",
       title: "Título: {videoTitle}",
-      description: "Descripción: {description}",
+      description: "Descripción:",
       previousVideo: "Anterior",
       nextVideo: "Siguiente",
       dropdownPlaceholder: "Elige OTROS temas"

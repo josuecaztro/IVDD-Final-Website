@@ -23,4 +23,10 @@
     transform: translateY(1px); /* Press effect */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow on press */
   }
+
+  @media (max-width: 600px) {
+    .cool-button {
+      margin-bottom: 7.5rem;
+    }
+  }
   
