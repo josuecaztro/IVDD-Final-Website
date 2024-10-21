@@ -72,7 +72,7 @@ useEffect(() => {
 
          {/* Display the selected topic */}
          <div id="top-topic-div">
-         <p>{getTranslatedText("topicIntro", {translatedTopic})}</p>
+         <p id="t-intro">{getTranslatedText("topicIntro", {translatedTopic})}</p>
         <h1 id="t-id-h1">{translatedTopic}</h1>
         <p>{topicText[language].totalVideos.replace("{total}", totalVideos)}</p>
         </div>

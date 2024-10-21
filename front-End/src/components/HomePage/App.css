@@ -335,9 +335,9 @@ h3 {
 /* FOR TABLET / IPAD SCREEN WIDTHS */
 @media (min-width: 601px) and (max-width: 1024px) {
 
-  h1 {
+  /* h1 {
     color: red;
-  }
+  } */
 
   #middle-page{
     flex-direction: column;
