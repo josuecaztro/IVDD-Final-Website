@@ -57,6 +57,8 @@ font-style: normal;
     width: 105%;
     padding-top: 1rem !important;
     margin-right: 400rem !important;
+    align-items: center;
+    justify-content: center;
   }
 
   #custom-verse{
@@ -107,6 +109,12 @@ font-style: normal;
 
   .social {
     padding: 1.4rem !important;
+    /* border: 1px solid white; */
+  }
+
+  #sample-svg {
+    height: 0.5rem;
+    width: auto;
   }
 
 }
@@ -169,10 +177,11 @@ footer {
 }
 
 .social {
-  /* border: 1px solid white; */
+  border: 1px solid white;
   border-radius: 50%;
   padding: 1rem;
   transition: transform 0.2s;
+  box-shadow: 1px 1px 5px black;
 }
 
 @keyframes flipIn {
