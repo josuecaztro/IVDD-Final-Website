@@ -1,6 +1,6 @@
 #full-topic-page {
-    color: white;
-    background-color: #101a39;
+    color: #DFD0B8;
+    background-color: #153448;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -17,8 +17,8 @@
 
 #middle-topic-container {
     display: flex;
-    background-color: #17244a;
-    border: 2px solid #034078;
+    background-color: #3C5B6F;
+    /* border: 2px solid #E2DAD6; */
     border-radius: 8px;
     padding: 2.5rem;
     gap: 5rem;
@@ -29,7 +29,7 @@
 #right-topic-div h5{
     padding: 1rem;
     border-radius: 8px;
-    background-color: #22305a;
+    background-color: #948979;
     font-size: 1rem;
 }
 
@@ -50,7 +50,7 @@
     transition: background-color 0.3s ease;
   }
   .filled {
-    background-color: #165897;
+    background-color: #153448;
     /* background-color: #3498db;  */
   }
 
@@ -76,12 +76,13 @@
 }
 
 #current-video-on-topic-playlist{
-    border: 3px ridge #034078;
+    border: 2px solid #948979;
+    border-radius: 5px;
 }
 
 .player-buttons-for-topic {
-    background-color: #0d1631;
-    border: 1px solid #508CA4;
+    background-color: #948979;
+    border: 1px solid #DFD0B8;
     border-radius: 25px;
     margin: 0.5rem;
     padding: 0.25rem 1.5rem;
@@ -91,23 +92,28 @@
 }
 
 .player-buttons-for-topic:hover{
-    background-color: #213161;
+    background-color: #ada18e;
 }
 
 #t-id-h1{
-    color: #A9D6E5;
+    color: #DFD0B8;
 }
 
 #sub-title-for-curr-id{
-    color: #A9D6E5;
+    color: #DFD0B8;
 }
 
 #description-header-h5{
-    color: #A9D6E5;
+    color: #DFD0B8;
 }
 
 #upload-text-for-vid{
+    color: #DFD0B8;
     font-size: 0.8rem;
+}
+
+#right-topic-div, h5 {
+    color: whitesmoke;
 }
 
 /* FOR TABLET / IPAD SCREEN WIDTHS */
