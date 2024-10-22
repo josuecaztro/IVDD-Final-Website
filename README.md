@@ -6,7 +6,7 @@ My dad's church organization isn't so tech-savvy, and I noticed they didn't have
 
 ## 🌟 Features
 
-- **Google Calendar API**: Stay updated with upcoming events and activities in our church.
+- <code>**Google Calendar API**</code>: Stay updated with upcoming events and activities in our church.
   
 - **YouTube API**: Watch the latest church service live streams directly from our website.
   
