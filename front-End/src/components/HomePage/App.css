@@ -219,6 +219,7 @@ footer {
 
 #youtube-title {
   padding: 20px;
+  padding-bottom: 5px;
 }
 
 #calendar-title {
@@ -361,6 +362,10 @@ h3 {
 
 }
 
+#sub-head-title-for-vid {
+  margin-bottom: 1rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
 
 
 

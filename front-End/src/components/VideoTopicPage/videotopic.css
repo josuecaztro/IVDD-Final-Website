@@ -86,7 +86,7 @@
     border-radius: 25px;
     margin: 0.5rem;
     padding: 0.25rem 1.5rem;
-    box-shadow: 1px 1px 1px #A9D6E5;
+    /* box-shadow: 1px 1px 1px #A9D6E5; */
     color: white;
     font-size: 1.25rem;
 }
