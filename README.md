@@ -2,19 +2,19 @@
 
 ## 📕 The Back Story
 
-My dad's church organization isn't so tech-savvy, and I noticed they didn't have a website. I thought this would be a great opportunity to use my skills in full-stack development to construct a website for our church organization. <strong>Although it's still a work in progress, you can follow this link [HERE](https://www.iglesiavozdedios.net) to see the website and how it’s going!</strong> <code>(or visit www.iglesiavozdedios.net)</code>
+My dad's church organization isn't so tech-savvy, and I noticed they didn't have a website. I thought this would be a great opportunity to use my skills in full-stack development to construct a website for our church organization. <strong>Although it's a work in progress, the website is hosted LIVE NOW at this link [HERE](https://www.iglesiavozdedios.net)</strong> <code>(or visit www.iglesiavozdedios.net)</code>
 
 ## 🌟 Features
 
-- **Google Calendar API**: Stay updated with upcoming events and activities in our church.
+- <code>**Google Calendar API:**</code> Stay updated with upcoming events and activities in our church.
   
-- **YouTube API**: Watch the latest church service live streams directly from our website.
+- <code>**YouTube API:**</code> Watch the latest church service live streams directly from our website.
   
-- **Contact Us Forms**: Easily get in touch with us for any inquiries or support.
+- <code>**Contact Us Forms:**</code> Easily get in touch with us for any inquiries or support.
   
-- **Prayer Request Forms**: Submit your prayer requests, and let us support you in prayer.
+- <code>**Prayer Request Forms:**</code> Submit your prayer requests, and let us support you in prayer.
 
-- This project is hosted on **AWS Cloud Services**
+- This project is hosted on <code>**AWS Cloud Services**</code>
 
 ## 👉 Coming Soon
 
