@@ -19,6 +19,7 @@ const siteText = {
       topicButton: "View Messages by Topic",
       dOption: "Discipleship",
       mOption: "Marriage",
+      dailyUploads: "New content EVERY day!",
       topics: {
         Discipleship: "Discipleship",
         Marriage: "Marriage",
@@ -42,6 +43,7 @@ const siteText = {
       topicButton: "Ver mensajes por tema",
       dOption: "Discipulado",
       mOption: "Matrimonio",
+      dailyUploads: "¡Contenido nuevo TODOS los días!",
       topics: {
         Discipleship: "Discipulado",
         Marriage: "Matrimonio",
