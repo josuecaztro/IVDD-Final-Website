@@ -20,6 +20,8 @@ const siteText = {
       dOption: "Discipleship",
       mOption: "Marriage",
       dailyUploads: "New content EVERY day!",
+      subscribeCaption: "Receive reminders for upcoming events directly from our calendar!",
+      subscribeButton: "GET NOTIFICATIONS",
       topics: {
         Discipleship: "Discipleship",
         Marriage: "Marriage",
@@ -44,6 +46,8 @@ const siteText = {
       dOption: "Discipulado",
       mOption: "Matrimonio",
       dailyUploads: "¡Contenido nuevo TODOS los días!",
+      subscribeCaption: "¡Recibe recordatorios de los próximos eventos directamente desde nuestro calendario!",
+      subscribeButton: "RECIBIR NOTIFICACIONES",
       topics: {
         Discipleship: "Discipulado",
         Marriage: "Matrimonio",

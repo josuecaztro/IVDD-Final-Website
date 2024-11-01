@@ -129,8 +129,8 @@ function DisplayHomePage({ language }){
           <h2 id="calendar-title" className="scroll-animation">{siteText[language].ourEvents}</h2>
           <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=cm9jYjc3N0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4&color=%237986CB" style={{border:"solid 1px #777"}} width="450" height="350" frameborder="0" scrolling="no" id="googleapi"></iframe>
           {/* <iframe src="https://calendar.google.com/calendar/embed?src=rocb777%40gmail.com&ctz=America%2FNew_York" style={{border:"solid 1px #777"}} width="450" id="googleapi" height="350" frameborder="0" scrolling="no"></iframe> */}
-          <h6 id="notification-caption">Receive reminders for upcoming events directly from our calendar!</h6>
-          <button className="subscribeButton">{bellIcon} Get Notifications</button>
+          <h6 id="notification-caption">{siteText[language].subscribeCaption}</h6>
+          <button className="subscribeButton">{bellIcon} {siteText[language].subscribeButton}</button>
           </div>
 
           </div>
