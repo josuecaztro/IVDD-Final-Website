@@ -26,6 +26,9 @@
   font-family: "sinter", sans-serif;
   font-weight: 700;
   font-style: normal;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
 }
 
 #headerbutton{
@@ -122,6 +125,10 @@
 
   #connect-header-title{
     font-size: 0.75rem;
+  }
+
+  #notification-caption {
+    font-size: 0.80rem !important;
   }
 
 }
@@ -221,10 +228,15 @@ footer {
 #youtube-title {
   padding: 20px;
   padding-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
 }
+
 
 #calendar-title {
   padding: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
 }
 
 #youtube {
@@ -365,7 +377,48 @@ h3 {
 
 #sub-head-title-for-vid {
   margin-bottom: 1rem;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+#notification-caption {
+  /* color: black; */
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* width: 25rem; */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+
+/* JUST FOR CALENDAR SUBSCRIBE BUTTON */
+.subscribeButton {
+  background-color: #4CAF50; 
+  color: #fff; 
+  padding: 12px 24px;
+  /* border: none; */
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.subscribeButton:hover {
+  background-color: #45A049; 
+  transform: scale(1.05); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.subscribeButton:focus {
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.4); 
 }
 
 

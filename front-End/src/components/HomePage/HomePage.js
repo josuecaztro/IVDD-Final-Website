@@ -9,6 +9,10 @@ import Dropdown from './DropDownButton';
 
 function DisplayHomePage({ language }){
 
+  const bellIcon = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+</svg>
+
   const [topic, setTopic] = useState('');
 
 
@@ -121,10 +125,14 @@ function DisplayHomePage({ language }){
          </div>
     
          <div>
+
           <h2 id="calendar-title" className="scroll-animation">{siteText[language].ourEvents}</h2>
           <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=cm9jYjc3N0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4&color=%237986CB" style={{border:"solid 1px #777"}} width="450" height="350" frameborder="0" scrolling="no" id="googleapi"></iframe>
           {/* <iframe src="https://calendar.google.com/calendar/embed?src=rocb777%40gmail.com&ctz=America%2FNew_York" style={{border:"solid 1px #777"}} width="450" id="googleapi" height="350" frameborder="0" scrolling="no"></iframe> */}
+          <h6 id="notification-caption">Receive reminders for upcoming events directly from our calendar!</h6>
+          <button className="subscribeButton">{bellIcon} Get Notifications</button>
           </div>
+
           </div>
     {/* END OF BOTTOM DIV */}
     
