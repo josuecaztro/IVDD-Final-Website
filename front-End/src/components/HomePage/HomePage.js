@@ -23,10 +23,8 @@ function DisplayHomePage({ language }){
         }
     }
 
-    function exploreMoreVideosButton(){
-
-      //the function for the button I made recently
-
+    function askCalendarSubscription(){
+      window.open("https://calendar.google.com/calendar/u/3?cid=cm9jYjc3N0BnbWFpbC5jb20", "_blank");
     }
 
       //delete anything below this 
@@ -130,7 +128,7 @@ function DisplayHomePage({ language }){
           <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=cm9jYjc3N0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4&color=%237986CB" style={{border:"solid 1px #777"}} width="450" height="350" frameborder="0" scrolling="no" id="googleapi"></iframe>
           {/* <iframe src="https://calendar.google.com/calendar/embed?src=rocb777%40gmail.com&ctz=America%2FNew_York" style={{border:"solid 1px #777"}} width="450" id="googleapi" height="350" frameborder="0" scrolling="no"></iframe> */}
           <h6 id="notification-caption">{siteText[language].subscribeCaption}</h6>
-          <button className="subscribeButton">{bellIcon} {siteText[language].subscribeButton}</button>
+          <button className="subscribeButton" onClick={askCalendarSubscription}>{bellIcon} {siteText[language].subscribeButton}</button>
           </div>
 
           </div>
