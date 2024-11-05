@@ -58,6 +58,15 @@
 
 }
 
+/* Whatever element has this class, the text will not be able to be selected and/or highlighted */
+.no-select {
+  user-select: none; 
+  -webkit-user-select: none; 
+  -moz-user-select: none;
+  -ms-user-select: none; 
+}
+
+
 /* FOR EVERYTHING MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {
 

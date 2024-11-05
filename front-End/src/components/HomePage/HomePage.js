@@ -64,9 +64,9 @@ function DisplayHomePage({ language }){
     {/* THE TOP DIV */}
         <div id="top-page">
 
-        <p id="custom-verse" className="scroll-animation" style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}>{siteText[language].customVerse}</p>
+        <p id="custom-verse" className="scroll-animation no-select">{siteText[language].customVerse}</p>
 
-      <h1 id="titleh1" className="scroll-animation" style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}>{siteText[language].title}</h1>
+      <h1 id="titleh1" className="scroll-animation no-select">{siteText[language].title}</h1>
 
       <CoolButton text={siteText[language].welcome} onClick={scrollToDiv}/>
 
@@ -79,11 +79,11 @@ function DisplayHomePage({ language }){
     {/* THE MIDDLE DIV */}
         <div id="middle-page">
           <div id="middle-left">
-           <h4 className="scroll-animation">{siteText[language].visitService}</h4>
+           <h4 className="scroll-animation no-select">{siteText[language].visitService}</h4>
            <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
     </svg>  1530 4th Ave Folsom, PA 19033</p>
-           <h4 className="scroll-animation">{siteText[language].serviceHours}</h4>
+           <h4 className="scroll-animation no-select">{siteText[language].serviceHours}</h4>
            <ul>
             <li>{siteText[language].sundayService}</li>
             <li>{siteText[language].wednesdayPrayer}</li>
@@ -95,7 +95,7 @@ function DisplayHomePage({ language }){
           <div id="middle-middle">
           
           <div id="socialdiv">
-          <h4 id="connect-header-title" className="scroll-animation">{siteText[language].connectWithUs} <svg id="sample-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <h4 id="connect-header-title" className="scroll-animation no-select">{siteText[language].connectWithUs} <svg id="sample-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
     </svg></h4>
            <SocialIcon url="https://www.youtube.com/PastorRobertoC" class="social" target="_blank"/>
@@ -116,18 +116,18 @@ function DisplayHomePage({ language }){
     {/* THE BOTTOM DIV */}
         <div id="bottom-page">
          <div id="bottom-left-div">
-          <h2 id="youtube-title" className="scroll-animation">{siteText[language].missedService}</h2>
-          <h6 id="sub-head-title-for-vid">{siteText[language].dailyUploads}</h6>
+          <h2 id="youtube-title" className="scroll-animation no-select">{siteText[language].missedService}</h2>
+          <h6 id="sub-head-title-for-vid" className="no-select">{siteText[language].dailyUploads}</h6>
          <iframe width="616" height="347" src="https://www.youtube.com/embed/GDd2Teve29g?si=WV1YsZbpgyelCp1-&autoplay=1&mute=1" id="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
          <Dropdown setTopic={setTopic} language={language}/>
          </div>
     
          <div>
 
-          <h2 id="calendar-title" className="scroll-animation">{siteText[language].ourEvents}</h2>
+          <h2 id="calendar-title" className="scroll-animation no-select">{siteText[language].ourEvents}</h2>
           <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=cm9jYjc3N0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%234285F4&color=%237986CB" style={{border:"solid 1px #777"}} width="450" height="350" frameborder="0" scrolling="no" id="googleapi"></iframe>
           {/* <iframe src="https://calendar.google.com/calendar/embed?src=rocb777%40gmail.com&ctz=America%2FNew_York" style={{border:"solid 1px #777"}} width="450" id="googleapi" height="350" frameborder="0" scrolling="no"></iframe> */}
-          <h6 id="notification-caption">{siteText[language].subscribeCaption}</h6>
+          <h6 id="notification-caption" className="no-select">{siteText[language].subscribeCaption}</h6>
           <button className="subscribeButton" onClick={askCalendarSubscription}>{bellIcon} {siteText[language].subscribeButton}</button>
           </div>
 
@@ -136,7 +136,7 @@ function DisplayHomePage({ language }){
     
           </div>
           <footer id="thefooter">
-            <p id="footerfont">{siteText[language].footer}</p>
+            <p id="footerfont" className="no-select">{siteText[language].footer}</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
     </svg>
