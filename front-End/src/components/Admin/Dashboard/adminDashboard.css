@@ -12,8 +12,56 @@
     background-color: rgb(88, 88, 124);
     padding: 2rem;
     border-radius: 25px;
+    font-size: 1.5rem;
 }
 
 #lists-dashboard {
     display: flex;
+}
+
+.non-visible {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    #lists-dashboard {
+        display: block;
+    }
+
+    #dash-board-title{
+        padding: 0;
+        margin: 1rem;
+    }
+
+    #dashboard-pg{
+        display: block;
+    }
+}
+
+#admin-input {
+    border-radius: 5px;
+    border: 3px solid rgb(88, 88, 124);
+    padding: 0.5rem;
+}
+
+#admin-button {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(88, 88, 124);
+    color: white;
+    margin: 1rem;
+    padding: 1rem 5rem;
+    transition: transform 0.3s ease;
+}
+
+#admin-button:hover {
+    background-color: rgb(91, 91, 128);
+    transform: scale(1.08);
 }
