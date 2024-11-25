@@ -10,7 +10,24 @@
 }
 
 .container1 {
-    margin: 70px;
+    margin: 100px;
+}
+
+.cont-input{
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+
+    #contact-form-id {
+        min-width: 100%;
+        margin-right: 12rem;
+        padding: 3rem !important;
+    }
+
+    .cont-input{
+        width: 120%;
+    }
 }
 
 

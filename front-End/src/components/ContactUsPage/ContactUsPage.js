@@ -76,22 +76,22 @@ function DeployContactUs( { language } ){
         <h2 className="mb-4">{contactText[language].title}</h2>
   
         <form id="contact-form-id" className="p-4 rounded-3 shadow-sm bg-light" onSubmit={handleFormSubmit} autoComplete="off">
-          <div className="mb-3">
+          <div className="mb-3 cont-input">
             <label htmlFor="firstname" className="form-label">{contactText[language].firstName}</label>
             <input type="text" className="form-control" id="firstName" value={formData.firstName} onChange={handleInputChange} placeholder={contactText[language].placeholderFirstName} required />
           </div>
   
-          <div className="mb-3">
+          <div className="mb-3 cont-input">
             <label htmlFor="lastname" className="form-label">{contactText[language].lastName}</label>
             <input type="text" className="form-control" id="lastName" value={formData.lastName} onChange={handleInputChange} placeholder={contactText[language].placeholderLastName} required />
           </div>
   
-          <div className="mb-3">
+          <div className="mb-3 cont-input">
             <label htmlFor="phonenumber" className="form-label">{contactText[language].phoneNumber}</label>
             <input type="tel" className="form-control" id="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} placeholder={contactText[language].placeholderPhoneNumber} pattern="[0-9\s\-]+" required />
           </div>
   
-          <div className="mb-3">
+          <div className="mb-3 cont-input">
             <label htmlFor="message" className="form-label">{contactText[language].message}</label>
             <textarea className="form-control" id="messageBody" rows="4" value={formData.messageBody} onChange={handleInputChange} placeholder={contactText[language].placeholderMessage} required></textarea>
           </div>
