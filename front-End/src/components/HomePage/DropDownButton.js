@@ -30,6 +30,7 @@ const Dropdown = ( { setTopic, language }) => {
         <ul className="dropdown-list2">
           <li onClick={() => handleOptionClick('Discipleship')}>{siteText[language].dOption}</li>
           <li onClick={() => handleOptionClick('Marriage')}>{siteText[language].mOption}</li>
+          <li onClick={() => handleOptionClick('The Mind')}>{siteText[language].tmOption}</li>
           {/* Add more topics here */}
         </ul>
       )}

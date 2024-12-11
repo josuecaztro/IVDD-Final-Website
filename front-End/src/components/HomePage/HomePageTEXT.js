@@ -19,12 +19,14 @@ const siteText = {
       topicButton: "View Messages by Topic",
       dOption: "Discipleship",
       mOption: "Marriage",
+      tmOption: "The Mind",
       dailyUploads: "New content EVERY day!",
       subscribeCaption: "Get reminders for upcoming events from our calendar!",
       subscribeButton: "GET NOTIFICATIONS",
       topics: {
         Discipleship: "Discipleship",
         Marriage: "Marriage",
+        TheMind: "The Mind"
         // Add more topics here as needed
       }
     },
@@ -45,12 +47,14 @@ const siteText = {
       topicButton: "Ver mensajes por tema",
       dOption: "Discipulado",
       mOption: "Matrimonio",
+      tmOption: "La Mente",
       dailyUploads: "¡Contenido nuevo TODOS los días!",
       subscribeCaption: "Recibe recordatorios de eventos del calendario!",
       subscribeButton: "RECIBIR NOTIFICACIONES",
       topics: {
         Discipleship: "Discipulado",
         Marriage: "Matrimonio",
+        TheMind: "La Mente"
         // Add more topics here as needed
       }
     }

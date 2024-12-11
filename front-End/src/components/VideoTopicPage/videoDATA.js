@@ -1,5 +1,6 @@
 // Mock data for videos
 const videoData = {
+  // descriptions SHOULD BE 250 CHARACATERS OR LESS!!!!
     en: {
       'Discipleship': [
         { title: 'Desire to Sin', date: "09/21/2024", url: 'https://www.youtube.com/embed/LB3ZRQm5m38?si=iTYotPojGAxWFQ9D', desc: "To even consider becoming a disciple, the first step is to confront and overcome your desire to sin. Through obedience to Christ, He will empower you to rise above and help you live out your true purpose." },
@@ -16,6 +17,10 @@ const videoData = {
         { title: 'Eye for Eye, Tooth for Tooth - Part 5', date:"11/10/2024", url: 'https://www.youtube.com/embed/4xHyDIDQaN4?si=Ycw-N4GmPZx6P1vh', desc:"This message continues the principle of \"an eye for an eye\" and emphasizes that in marriage, we should follow Jesus' new teachings. This is part five of the series."},
         { title: 'Eye for Eye, Tooth for Tooth - Part 6', date:"11/17/2024", url: 'https://www.youtube.com/embed/yFWG8nWpccI?si=CErLKGYL2g8hyUyt', desc:"This message continues the principle of \"an eye for an eye\" and emphasizes that in marriage, we should follow Jesus' new teachings. This is part six of the series."},
         { title: 'Eye for Eye, Tooth for Tooth - Part 7', date:"11/24/2024", url: 'https://www.youtube.com/embed/xVyTro6uRkA?si=93lVfCSSn16fyAzN', desc:"This message concludes the principle of \"an eye for an eye\". This is the final episode of the series."}
+      ],
+      'The Mind': [
+        { title: 'The Mind', date: '11/30/2024', url: 'https://www.youtube.com/embed/OJxkw8KeGyQ?si=7HXUNDcbCHfJ6GKq', desc: 'Join our pastor as he uncovers biblical truths about the mind, teaching Christians how to guard their thoughts and hearts. Discover how mastering the mind can lead to a deeper discipleship and a stronger walk with Christ. Watch the series and be transformed!'},
+        { title: 'The Mind - Part 2', date: '12/7/2024', url: 'https://www.youtube.com/embed/pJ98PXJduxA?si=ttvnsmq70SNyJKGF', desc: 'Part 2 of our Mind series dives deeper into how your thoughts shape your life and faith. Learn to protect your mind and align your thoughts with God’s Word for a stronger walk with Christ. Don’t miss this transformative teaching!'}
       ]
     },
     es: {
@@ -34,7 +39,11 @@ const videoData = {
         { title: 'Ojo por Ojo, Diente por Diente - Parte 5', date:"10/11/2024", url: 'https://www.youtube.com/embed/4xHyDIDQaN4?si=Ycw-N4GmPZx6P1vh', desc:"Este mensaje continúa el principio de \"ojo por ojo\" y enfatiza que en el matrimonio debemos seguir las enseñanzas de Jesús. Esto es parte 5 de la serie."},
         { title: 'Ojo por Ojo, Diente por Diente - Parte 6', date:"17/11/2024", url: 'https://www.youtube.com/embed/yFWG8nWpccI?si=CErLKGYL2g8hyUyt', desc:"Este mensaje continúa el principio de \"ojo por ojo\" y enfatiza que en el matrimonio debemos seguir las enseñanzas de Jesús. Esto es parte 6 de la serie."},
         { title: 'Ojo por Ojo, Diente por Diente - Parte 7', date:"24/11/2024", url: 'https://www.youtube.com/embed/xVyTro6uRkA?si=93lVfCSSn16fyAzN', desc:"Este mensaje concluye el principio de \"ojo por ojo\". Este es el episodio final de la serie."}
-      ]
+      ],
+      'La Mente': [
+        { title: 'La Mente', date: '30/11/2024', url: 'https://www.youtube.com/embed/OJxkw8KeGyQ?si=7HXUNDcbCHfJ6GKq', desc: 'Acompaña a nuestro pastor mientras revela verdades bíblicas sobre la mente, enseñando a los cristianos a proteger sus pensamientos y corazones. Descubre cómo dominar la mente lleva a un discipulado más profundo. ¡Mira la serie y transforma tu vida!'},
+        { title: 'La Mente - Parte 2', date: '7/12/2024', url: 'https://www.youtube.com/embed/pJ98PXJduxA?si=ttvnsmq70SNyJKGF', desc: 'La Parte 2 de nuestra serie sobre la mente explora cómo tus pensamientos moldean tu vida y fe. Aprende a proteger tu mente y alinear tus ideas con la Palabra de Dios. ¡No te pierdas esta enseñanza transformadora!'}
+      ],
     }
   };
   

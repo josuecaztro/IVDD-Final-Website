@@ -32,10 +32,15 @@ const initialTopic = location.state?.selectedTopic || 'Discipleship';
 const [topic, setTopic] = useState(initialTopic);
 const [videoIndex, setVideoIndex] = useState(0);
 
-const videos = videoData[language][topic];
-const totalVideos = videos.length;
+// const videos = videoData[language][topic];
+// console.log("Videos: " + videos.length)
+// const totalVideos = videos.length;
+const videos = videoData[language]?.[topic] || [];
+console.log("Videos:", videos.length); // Now this won't throw an error
+const totalVideos = videos.length; // Safe to access
 
-// Handler for navigating between videos
+
+// navigate between videos function
 const handleNext = () => {
   if (videoIndex < totalVideos - 1) {
     setVideoIndex(videoIndex + 1);
@@ -48,11 +53,13 @@ const handlePrevious = () => {
   }
 };
 
+
+
 //this function is here for DYNAMIC TRANSLATION
 const getTranslatedText = (key, replacements) => {
   let text = topicText[language][key];
 
-  // Replace placeholders in the text
+  
   for (const [placeholder, value] of Object.entries(replacements)) {
     text = text.replace(`{${placeholder}}`, value);
   }
@@ -70,7 +77,7 @@ useEffect(() => {
     return (
         <div id="full-topic-page">
 
-         {/* Display the selected topic */}
+         {/* displays current selected topic */}
          <div id="top-topic-div">
          <p id="t-intro">{getTranslatedText("topicIntro", {translatedTopic})}</p>
         <h1 id="t-id-h1">{translatedTopic}</h1>
@@ -110,7 +117,7 @@ useEffect(() => {
 
 
  {/* Navigation buttons */}
- <button className="player-buttons-for-topic" onClick={handlePrevious} disabled={videoIndex === 0}>
+ <button className="player-buttons-for-topic" onClick={handlePrevious} disabled={videoIndex === 0} id="top-prev-but">
           {topicText[language].previousVideo}
         </button>
         <button className="player-buttons-for-topic"  onClick={handleNext} disabled={videoIndex === totalVideos - 1}>
