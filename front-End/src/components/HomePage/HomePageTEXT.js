@@ -26,7 +26,7 @@ const siteText = {
       topics: {
         Discipleship: "Discipleship",
         Marriage: "Marriage",
-        TheMind: "The Mind"
+        Mind: "The Mind"
         // Add more topics here as needed
       }
     },
@@ -54,7 +54,7 @@ const siteText = {
       topics: {
         Discipleship: "Discipulado",
         Marriage: "Matrimonio",
-        TheMind: "La Mente"
+        Mind: "La Mente"
         // Add more topics here as needed
       }
     }

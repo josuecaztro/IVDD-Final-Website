@@ -32,12 +32,19 @@ const initialTopic = location.state?.selectedTopic || 'Discipleship';
 const [topic, setTopic] = useState(initialTopic);
 const [videoIndex, setVideoIndex] = useState(0);
 
-// const videos = videoData[language][topic];
-// console.log("Videos: " + videos.length)
-// const totalVideos = videos.length;
-const videos = videoData[language]?.[topic] || [];
-console.log("Videos:", videos.length); // Now this won't throw an error
-const totalVideos = videos.length; // Safe to access
+const videos = videoData[language][topic];
+console.log("Videos: " + videos.length)
+const totalVideos = videos.length;
+/*
+If you ever run into an error again adding a NEW topic,
+you can uncomment these 3 lines of code right below this big
+comment. It helps mitigate any errors from being
+thrown and allowing videos.length to be safe to access so you
+can see what's going on.
+*/
+// const videos = videoData[language]?.[topic] || [];
+// console.log("Videos:", videos.length); 
+// const totalVideos = videos.length; 
 
 
 // navigate between videos function
@@ -68,7 +75,8 @@ const getTranslatedText = (key, replacements) => {
 };
 
 const translatedTopic = siteText[language].topics[topic] || topic; // Fallback to the original topic if not found
-//console.log(translatedTopic);
+console.log(translatedTopic);
+
 
 useEffect(() => {
   setVideoIndex(0);
