@@ -52,4 +52,12 @@
     /* background-color: #f1f1f1; Light gray on hover */
     background-color: #c5b89a;
   }
+
+  /* this here is for the animation on dropdown icon*/
+  .dropdown-icon1 {
+    transition: transform 0.3s ease;
+  }
+  .opened{
+    transform: rotate(180deg);
+  }
   

@@ -50,4 +50,12 @@
     background-color: #c9b79b;
     color: #3C5B6F;
   }
+
+  /*for the icon svg animation on dropdown...*/
+  .dropdown-icon2{
+    transition: transform 0.3s ease;
+  }
+  .opened2 {
+    transform: rotate(180deg);
+  }
   

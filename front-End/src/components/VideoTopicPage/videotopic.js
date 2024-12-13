@@ -7,24 +7,28 @@ import videoData from './videoDATA';
 import Dropdown2 from './videoTopicButton';
 
 
-function ShowAllVideoTopics( { language } ){
+function ShowAllVideoTopics( { onClick, language } ){
 
-/*
-    TOPIC
-    Learn about TOPIC throughout our previous preachings! 
-    Total Videos: N
-    
-    same drop down menu saying choose OTHER topics
+  const createRipple = (event) => {
+    console.log("Ripple effect triggered"); // Add this
+    //I got this utility function online. It allows the cool ripple effect on button click.
+    const button = event.currentTarget;
+    console.log("the button shuld be: " + event.currentTarget)
+    const rect = button.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const ripple = document.createElement("span");
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+    ripple.className = "ripple";
+    button.appendChild(ripple);
+    console.log(button.innerHTML); // Check if the span with class="ripple" is present
 
-    youtube current video title 
-    youtube iframe with video 1
-    buttons that say previous video , next video
-
-    preachings on TOPIC (in order!) label
-    some cool visual that shows what page or video you're on with all videos like filled in circles or something
-
-*/
-
+      setTimeout(() => {
+      ripple.remove();
+    }, 600);
+  };
+  
 const location = useLocation();
 
 // Get the topic from the route state, or fall back to the default topic
@@ -48,13 +52,22 @@ can see what's going on.
 
 
 // navigate between videos function
-const handleNext = () => {
+const handleNext = (e) => {
+  createRipple(e); // Triggers the ripple effect
+  if (onClick) {
+    onClick(e); 
+  }
+  // for video index logic
   if (videoIndex < totalVideos - 1) {
     setVideoIndex(videoIndex + 1);
   }
 };
 
-const handlePrevious = () => {
+const handlePrevious = (e) => {
+  createRipple(e);
+  if (onClick){
+    onClick(e);
+  }
   if (videoIndex > 0) {
     setVideoIndex(videoIndex - 1);
   }
