@@ -1,0 +1,28 @@
+.live-status-container {
+    text-align: center;
+    margin-top: 20px;
+}
+  
+.live {
+    color: red;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+  
+.not-live {
+    color: black;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+  
+.error {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#live-test {
+    font-size: 1rem !important;
+    user-select: none;
+}
+  

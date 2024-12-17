@@ -6,6 +6,7 @@ import CoolButton from './AwesomeButton';
 import './App.css';
 import siteText from './HomePageTEXT';
 import Dropdown from './DropDownButton';
+import LiveStatus from './YoutubeLive/YTLive';
 
 function DisplayHomePage({ language }){
 
@@ -65,7 +66,7 @@ function DisplayHomePage({ language }){
         <div id="top-page">
 
         <p id="custom-verse" className="scroll-animation no-select">{siteText[language].customVerse}</p>
-
+<LiveStatus/>
       <h1 id="titleh1" className="scroll-animation no-select">{siteText[language].title}</h1>
 
       <CoolButton text={siteText[language].welcome} onClick={scrollToDiv}/>
