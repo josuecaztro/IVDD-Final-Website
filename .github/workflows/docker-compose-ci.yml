@@ -47,10 +47,15 @@ jobs:
           docker build -t josuecaztro/backend:latest -f ivdd-backend/Dockerfile ivdd-backend
           docker push josuecaztro/backend:latest
 
+      - name: Create SSH Key
+        run: |
+          echo "${{ secrets.EC2_PRIVATE_KEY }}" > ec2-key.pem
+          chmod 600 ec2-key.pem
+
       # Step 5: Deploy to your server
       - name: Deploy Containers to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_PRIVATE_KEY }} ubuntu@iglesiavozdedios.net << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i ec2-key.pem ubuntu@iglesiavozdedios.net << 'EOF'
             docker pull josuecaztro/frontend:latest
             docker pull josuecaztro/backend:latest
             docker-compose down
