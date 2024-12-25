@@ -31,6 +31,17 @@ jobs:
           docker build -t josuecaztro/frontend:latest -f front-End/Dockerfile front-End
           docker push josuecaztro/frontend:latest
 
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build Backend JAR
+        run: |
+          cd ivdd-backend
+          mvn clean package
+
       - name: Build and Push Backend Image
         run: |
           docker build -t josuecaztro/backend:latest -f ivdd-backend/Dockerfile ivdd-backend
