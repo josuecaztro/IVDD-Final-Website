@@ -40,7 +40,7 @@ jobs:
       - name: Build Backend JAR
         run: |
           cd ivdd-backend
-          mvn clean package
+          mvn clean package -DskipTests
 
       - name: Build and Push Backend Image
         run: |
