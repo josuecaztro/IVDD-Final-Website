@@ -4,7 +4,7 @@ import React from 'react';
 const siteText = {
     en: {
       welcome: "We're glad you're here.",
-      title: "IT WORKED x2",
+      title: "It's Christmas 1AM🎄",
       // title: "Voice of God Church",
       visitService: "Visit Our Service",
       serviceHours: "Service Hours",
