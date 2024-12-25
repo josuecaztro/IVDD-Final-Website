@@ -56,6 +56,7 @@ jobs:
       - name: Deploy Containers to EC2
         run: |
           ssh -o StrictHostKeyChecking=no -i ec2-key.pem ubuntu@iglesiavozdedios.net << 'EOF'
+            cd /home/ubuntu/IVDD-Final-Website
             docker pull josuecaztro/frontend:latest
             docker pull josuecaztro/backend:latest
             docker-compose down
