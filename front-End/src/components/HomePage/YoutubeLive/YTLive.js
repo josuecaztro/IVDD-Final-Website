@@ -16,14 +16,16 @@ const LiveStatus = () => {
       );
       const data = await response.json();
 
-      if (data.items && data.items.length > 0) {
+      if (data.items && data.items?.length > 0) {
+        console.log("API is working and IVDD is LIVE!")
         setIsLive(true);
       } else {
+        console.log("API is working and IVDD is not live...")
         setIsLive(false);
       }
     } catch (err) {
-      console.error('Error fetching live status:', err);
-      setError('Unable to check live status. Please try again.');
+      console.error('ERROR FETCHING:', err);
+      setError('CANNOT CHECK IF IVDD IS LIVE OR NOT');
     }
   };
 

@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  frontend:
+    build:
+      context: ./front-End
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_YT_KEY: ${REACT_APP_YT_KEY}
+        REACT_APP_YT_CHANNEL: ${REACT_APP_YT_CHANNEL}
+        REACT_APP_ADMIN_PASS: ${REACT_APP_ADMIN_PASS}
+    ports:
+      - "80:80"
+    env_file:
+      - .env.frontend
+
+  backend:
+    build:
+      context: ./ivdd-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://172.31.35.72:3306/ivdd_database
+      - SPRING_DATASOURCE_USERNAME=clouduser
+      - SPRING_DATASOURCE_PASSWORD=reincito

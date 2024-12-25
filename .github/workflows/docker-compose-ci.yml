@@ -1,0 +1,48 @@
+name: Docker Compose CI/CD
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow on push to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Docker
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
+
+      # Step 3: Log in to Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # Step 4: Build and push Docker images
+      - name: Build and Push Frontend Image
+        run: |
+          docker build -t josuecaztro/frontend:latest -f front-End/Dockerfile front-End
+          docker push josuecaztro/frontend:latest
+
+      - name: Build and Push Backend Image
+        run: |
+          docker build -t josuecaztro/backend:latest -f ivdd-backend/Dockerfile ivdd-backend
+          docker push josuecaztro/backend:latest
+
+      # Step 5: Deploy to your server
+      - name: Deploy Containers to EC2
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ${{ secrets.EC2_PRIVATE_KEY }} ubuntu@iglesiavozdedios.net << 'EOF'
+            docker pull josuecaztro/frontend:latest
+            docker pull josuecaztro/backend:latest
+            docker-compose down
+            docker-compose up -d
+          EOF
+
