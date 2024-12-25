@@ -68,7 +68,7 @@ function DisplayHomePage({ language }){
         <p id="custom-verse" className="scroll-animation no-select">{siteText[language].customVerse}</p>
 <LiveStatus/>
       <h1 id="titleh1" className="scroll-animation no-select">{siteText[language].title}</h1>
-
+<h2> HO HO HO MERRY CHRISTMAS</h2>
       <CoolButton text={siteText[language].welcome} onClick={scrollToDiv}/>
 
       {/* <DisplayHomeImg/> */}
