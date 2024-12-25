@@ -20,7 +20,8 @@ const videoData = {
       ],
       'Mind': [
         { title: 'The Mind', date: '11/30/2024', url: 'https://www.youtube.com/embed/OJxkw8KeGyQ?si=7HXUNDcbCHfJ6GKq', desc: 'Join our pastor as he uncovers biblical truths about the mind, teaching Christians how to guard their thoughts and hearts. Discover how mastering the mind can lead to a deeper discipleship and a stronger walk with Christ. Watch the series and be transformed!'},
-        { title: 'The Mind - Part 2', date: '12/7/2024', url: 'https://www.youtube.com/embed/pJ98PXJduxA?si=ttvnsmq70SNyJKGF', desc: 'Part 2 of our Mind series dives deeper into how your thoughts shape your life and faith. Learn to protect your mind and align your thoughts with God’s Word for a stronger walk with Christ. Don’t miss this transformative teaching!'}
+        { title: 'The Mind - Part 2', date: '12/7/2024', url: 'https://www.youtube.com/embed/pJ98PXJduxA?si=ttvnsmq70SNyJKGF', desc: 'Part 2 of our Mind series dives deeper into how your thoughts shape your life and faith. Learn to protect your mind and align your thoughts with God’s Word for a stronger walk with Christ. Don’t miss this transformative teaching!'},
+        { title: 'The Mind - Part 3', date: '12/14/2024', url: 'https://www.youtube.com/embed/lyXF1k4LVn8?si=_h05I4PxYNs-BXAN', desc: 'In this final episode of The Mind series, Pastor wraps up with powerful insights and practical steps to renew your mind and live in God’s purpose. Whether you’re catching up or joining for the first time, this message is uplifting and transformative!'}
       ]
     },
     es: {
@@ -42,7 +43,8 @@ const videoData = {
       ],
       'Mind': [
         { title: 'La Mente', date: '30/11/2024', url: 'https://www.youtube.com/embed/OJxkw8KeGyQ?si=7HXUNDcbCHfJ6GKq', desc: 'Acompaña a nuestro pastor mientras revela verdades bíblicas sobre la mente, enseñando a los cristianos a proteger sus pensamientos y corazones. Descubre cómo dominar la mente lleva a un discipulado más profundo. ¡Mira la serie y transforma tu vida!'},
-        { title: 'La Mente - Parte 2', date: '7/12/2024', url: 'https://www.youtube.com/embed/pJ98PXJduxA?si=ttvnsmq70SNyJKGF', desc: 'La Parte 2 de nuestra serie sobre la mente explora cómo tus pensamientos moldean tu vida y fe. Aprende a proteger tu mente y alinear tus ideas con la Palabra de Dios. ¡No te pierdas esta enseñanza transformadora!'}
+        { title: 'La Mente - Parte 2', date: '7/12/2024', url: 'https://www.youtube.com/embed/pJ98PXJduxA?si=ttvnsmq70SNyJKGF', desc: 'La Parte 2 de nuestra serie sobre la mente explora cómo tus pensamientos moldean tu vida y fe. Aprende a proteger tu mente y alinear tus ideas con la Palabra de Dios. ¡No te pierdas esta enseñanza transformadora!'},
+        { title: 'La Mente - Parte 3', date: '14/12/2024', url: 'https://www.youtube.com/embed/lyXF1k4LVn8?si=_h05I4PxYNs-BXAN', desc: 'En este episodio final de la serie La Mente, el Pastor cierra con ideas profundas y pasos prácticos para renovar tu mente y vivir en el propósito de Dios. Ya sea que sigas la serie o sea tu primera vez, ¡este mensaje es edificante y transformador!'}
       ],
     }
   };
