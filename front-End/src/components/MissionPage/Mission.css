@@ -1,0 +1,75 @@
+/* 
+
+The color pallete:
+#153448 - Dark Blue
+#3C5B6F - Light Blue
+#948979 - Dark Tan
+#DFD0B8 - Tan
+
+*/
+
+#still-img-1 {
+    border-color: #948979;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    max-width: 25rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.mission-container {
+    background-color: #153448;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+  
+  .mission-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #DFD0B8;
+    transition: transform 0.3s ease;
+}
+  
+  .mission-header:hover {
+    transform: scale(1.05);
+}
+  
+  #mission-card {
+    max-width: 800px;
+    background-color:#3C5B6F;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: 1px solid #948979;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* transition: box-shadow 0.3s ease, transform 0.3s ease; */
+}
+  
+  /* #mission-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+} */
+
+#still-img-1:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+  
+  .mission-text {
+    margin: 0;
+    color: #eadcc6;
+}
+  
+ 
+
+  

@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9a55e07-89f7-437e-927e-7c35483b694c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-End/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-End/node_modules/.cache/default-development/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/node_modules/.cache/default-development/index.pack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-End/node_modules/.cache/default-development/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/node_modules/.cache/default-development/index.pack.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-End/src/components/HomePage/YoutubeLive/YTLive.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-End/src/components/HomePage/YoutubeLive/YTLive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ivdd-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ivdd-backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

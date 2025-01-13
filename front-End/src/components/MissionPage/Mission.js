@@ -1,15 +1,20 @@
 import React from 'react';
+import './Mission.css'
+import missionText from './MissionTEXT';
+import churchStillImage from '../../images/churchofchristpic.jpg'
 
-
-function DisplayMission (){
+function DisplayMission ( { language }){
 
     return (
-        <div style={{textAlign: "center", marginTop: "5rem"}}>
-        <h4>Our Mission Page</h4>
-        <h1>✋🏽🛑</h1>
-        <h3>Unfortunately, this page is under construction. 🔨</h3>
-        <h2>Please try again later.</h2>
+        <div className="mission-container">
+        <header className="mission-header">{missionText[language].heading}</header>
+        <img id="still-img-1" src={churchStillImage}/>
+        <div id="mission-card">
+          <p className="mission-text">
+            {missionText[language].missionBody}
+          </p>
         </div>
+      </div>
     )
 }
 
