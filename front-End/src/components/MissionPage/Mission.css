@@ -47,7 +47,7 @@ The color pallete:
     margin-bottom: 2.5rem;
     text-align: left;
     line-height: 1.6;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1rem;
     border: 1px solid #948979;
     border-radius: 1rem;
@@ -68,10 +68,15 @@ The color pallete:
   .mission-text {
     margin: 0;
     color: #eadcc6;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Roboto', sans-serif;
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
     padding: 1rem;
     border-radius: 2rem;
-    background-color: #355265;
+    /* background-color: #355265; */
+
+    /*EXTRA*/
+    font-weight: 600; 
+
 }
 
 
