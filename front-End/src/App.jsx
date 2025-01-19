@@ -10,6 +10,7 @@ import DisplayMission from './components/MissionPage/Mission';
 import DisplayAboutUs from './components/WhoWeArePage/AboutUs';
 import ShowAllVideoTopics from './components/VideoTopicPage/videotopic';
 import DisplayAdminDashboard from './components/Admin/Dashboard/adminDashboard';
+import DisplayDepartmentsPage from './components/Departments/Departments';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/" element={<DisplayHomePage language={language}/>}/>
       <Route path="/about" element={<DisplayAboutUs language={language}/>}/>
       <Route path="/mission" element={<DisplayMission language={language}/>}/>
+      <Route path="/departments"element={<DisplayDepartmentsPage language={language}/>}/>
       <Route path="/livetopics" element={<ShowAllVideoTopics language={language}/>}/>
       <Route path="/donate" element={<DisplayDonatePage language={language}/>}/>
       <Route path="/contact" element={<DeployContactUs language={language}/>}/>

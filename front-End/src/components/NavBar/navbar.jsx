@@ -38,6 +38,9 @@ return (
         <NavDropdown.Item as={NavLink} to="/mission">
           {navText[language].mission}
         </NavDropdown.Item>
+        <NavDropdown.Item as={NavLink} to="/departments">
+          {navText[language].departments}
+        </NavDropdown.Item>
         </NavDropdown>
 
       {/* For now I'm leaving the events tab toggled, but it can be put back if needed.  */}
