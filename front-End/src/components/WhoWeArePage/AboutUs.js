@@ -2,32 +2,39 @@ import React from 'react';
 import './AboutUs.css';
 import aboutText from './AboutUsTEXT';
 
-
 function DisplayAboutUs ( { language } ){
 
-
-
     return (
-        <div id="full-wwa-page">
-
-            <h1>🚫</h1>
-<h4>¡Página en construcción! 🚧 Somos un sitio nuevo; por favor, regresa más tarde o visita nuestra página principal. ¡Gracias! 😊</h4>    
-        {/* <h1>Who We Are</h1>
-            <h2>Iglesia Voz de Dios</h2>
-            <p>{aboutText[language].robertoBio}</p>
-            
-
-            <div id="profile-card-grid">
-                <div id="roberto">Roberto</div>
-                <div id="her-name">Her Name</div>
-                <div id="his-name">His Name</div>
-                <div id="his-bio">His Bio</div>
-                <div id="her-bio">Her Bio</div>
-                <div id="mirna">Mirna</div>
-            </div> */}
-
-        </div>
-    )
-}
+        <div className="who-we-are">
+      <header className="header">
+        <h1>{aboutText[language].head}</h1>
+      </header>
+      {/* <main className="content"> */}
+      <div className='text-layout'>
+        <section className='intro'>
+        <h2>{aboutText[language].h2_1}</h2>
+        <p>{aboutText[language].p1}</p>
+        </section>
+        <section className='mission'>
+        <h2>{aboutText[language].h2_2}</h2>
+        <p>{aboutText[language].p2}</p>
+        <blockquote>
+        <p>{aboutText[language].p3}</p>
+        </blockquote>
+        </section>
+        <section className='history'>
+        <h2>{aboutText[language].h2_3}</h2>
+        <p>{aboutText[language].p4}</p>
+        </section>
+        <section className='invitation'>
+        <h2>{aboutText[language].h2_4}</h2>
+        <p>{aboutText[language].p5}</p>
+        <p>{aboutText[language].p6}</p>
+        <p className='pastor-signature'>{aboutText[language].p7}</p>
+        </section>
+    </div>    
+    </div>
+  );
+};
 
 export default DisplayAboutUs;
