@@ -9,7 +9,7 @@ ARG REACT_APP_ADMIN_PASS
 ENV REACT_APP_YT_KEY=$REACT_APP_YT_KEY
 ENV REACT_APP_YT_CHANNEL=$REACT_APP_YT_CHANNEL
 ENV REACT_APP_ADMIN_PASS=$REACT_APP_ADMIN_PASS
-RUN echo "Building with REACT_APP_YT_KEY=$REACT_APP_YT_KEY" && npm run build
+RUN npm run build
 
 FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
