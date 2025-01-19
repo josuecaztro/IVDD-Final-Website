@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GenerateNav from './components/NavBar/navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import DisplayDonatePage from './components/DonatePage/Donate';
 import DisplayHomePage from './components/HomePage/HomePage';
 import DisplayPrayerReqPage from './components/PrayerReqPage/PrayerReqPage';
