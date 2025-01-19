@@ -6,11 +6,11 @@ function DisplayAboutUs ( { language } ){
 
     return (
         <div className="who-we-are">
-      <header className="header">
+      <header className="header-au">
         <h1>{aboutText[language].head}</h1>
       </header>
       {/* <main className="content"> */}
-      <div className='text-layout'>
+      <div className='text-layout-au'>
         <section className='intro'>
         <h2>{aboutText[language].h2_1}</h2>
         <p>{aboutText[language].p1}</p>
