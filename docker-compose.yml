@@ -9,7 +9,7 @@ services:
         REACT_APP_YT_CHANNEL: ${REACT_APP_YT_CHANNEL}
         REACT_APP_ADMIN_PASS: ${REACT_APP_ADMIN_PASS}
     ports:
-      - "80:80"
+      - "8081:80"
     env_file:
       - .env.frontend
 
