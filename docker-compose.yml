@@ -24,7 +24,3 @@ services:
       - "8080:8080"
     env_file:
       - .env
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://172.31.35.72:3306/ivdd_database
-      - SPRING_DATASOURCE_USERNAME=clouduser
-      - SPRING_DATASOURCE_PASSWORD=reincito
