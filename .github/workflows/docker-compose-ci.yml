@@ -60,6 +60,6 @@ jobs:
             docker pull josuecaztro/frontend:latest
             docker pull josuecaztro/backend:latest
             docker-compose down
-            docker-compose up -d
+            docker-compose up -d --build
           EOF
 
