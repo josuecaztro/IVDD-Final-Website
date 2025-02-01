@@ -7,12 +7,12 @@ import SmsSignup from './SMSFormMock';
 function DisplayDepartmentsPage ( { language } ){
 
     const departments = [
-        { name: depText[language].music, imageAlt: 'Music Department' },
+        { name: depText[language].music, imageAlt: 'Music' },
         { name: depText[language].kgroup, imageAlt: 'Kids Group' },
         { name: depText[language].ygroup, imageAlt: 'Youth Group' },
         { name: depText[language].freunion, imageAlt: 'Family Reunions' },
         { name: depText[language].evan, imageAlt: 'Evangelism' },
-        { name: depText[language].marriage, imageAlt: 'Marriages Department' },
+        { name: depText[language].marriage, imageAlt: 'Marriages' },
       ];
     
       return (
