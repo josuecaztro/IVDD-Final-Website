@@ -1,6 +1,7 @@
 import React from 'react';
 import './Departments.css'
 import depText from './DepartmentsTEXT';
+import SmsSignup from './SMSFormMock';
 
 
 function DisplayDepartmentsPage ( { language } ){
@@ -34,6 +35,7 @@ function DisplayDepartmentsPage ( { language } ){
             ))}
           </div>
         </div>
+        <SmsSignup/>
         </div>
       );
     };
