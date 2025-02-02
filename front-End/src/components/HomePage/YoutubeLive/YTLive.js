@@ -5,7 +5,7 @@ const LiveStatus = () => {
   const API_KEY = process.env.REACT_APP_YT_KEY; 
   const CHANNEL_ID = process.env.REACT_APP_YT_CHANNEL;  
 
-  console.log("The start of your API key is " + API_KEY.slice(0,5) + ".")
+  //console.log("The start of your API key is " + API_KEY.slice(0,5) + ".")
   console.log("If you don't see proper characters, the API key can NOT BE READ!")
 
   // Function to check live status
