@@ -34,5 +34,4 @@ build/
 
 
 # Ignore local properties file (this contains mysql admin passwords)
-application-local.properties
-
+src/main/resources/application-local.properties
