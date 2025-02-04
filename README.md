@@ -19,6 +19,7 @@ My dad's church organization isn't so tech-savvy, and I noticed they didn't have
 ## 👉 Coming Soon
 
 - **Online Donations**: Soon, you'll be able to donate online, making it easier to support our church community.
+- **SMS Subscription**: For members to sign up to receive SMS announcements for church events.
 
 ---
 
