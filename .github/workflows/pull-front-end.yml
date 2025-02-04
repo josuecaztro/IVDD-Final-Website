@@ -1,0 +1,33 @@
+name: Pull Changes - Front End
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      # Step 2: Get AWS Credentials
+      - name: Create SSH Key
+        run: |
+          echo "${{ secrets.EC2_PRIVATE_KEY }}" > ec2-key.pem
+          chmod 600 ec2-key.pem
+      # Step 3: Log into EC2 and GIT PULL
+      # This step also accounts for restarting Nginx to apply changes on live server
+      - name: Pull Front End Changes
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ec2-key.pem ubuntu@iglesiavozdedios.net << 'EOF'
+            cd /home/ubuntu/IVDD-Final-Website
+            git pull
+            git checkout -- front-End/node_modules/.cache/.eslintcache
+            git pull
+            cd front-End/
+            npm run build
+            sudo rm -rf /usr/share/nginx/html/*
+            sudo cp -r build/* /usr/share/nginx/html/
+            sudo systemctl restart nginx
+          EOF
