@@ -1,4 +1,6 @@
 front-End/node_modules/
 
-.envsrc/main/resources/application.properties
-src/main/resources/application-local.properties
+# Ignore sensitive config files
+ivdd-backend/src/main/resources/application.properties
+ivdd-backend/src/main/resources/application-local.properties
+
