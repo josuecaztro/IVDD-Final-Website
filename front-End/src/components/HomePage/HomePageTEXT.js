@@ -33,7 +33,7 @@ const siteText = {
     },
     es: {
       welcome: "Estamos contentos de que estés aquí.",
-      title: "Iglesia Vozz de Dios",
+      title: "Iglesia Voz de Dios",
       visitService: "Visita nuestro templo en",
       serviceHours: "Horas de nuestras reuniones",
       serviceHoursSubCaption: "con transmisión en vivo por Facebook y Youtube",
