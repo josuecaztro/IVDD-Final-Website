@@ -68,7 +68,18 @@ function DisplayHomePage({ language }){
         <p id="custom-verse" className="scroll-animation no-select">{siteText[language].customVerse}</p>
 <LiveStatus/>
       <h1 id="titleh1" className="scroll-animation no-select">{siteText[language].title}</h1>
-      <CoolButton text={siteText[language].welcome} onClick={scrollToDiv}/>
+      <div id="socialdiv">
+          <h4 id="connect-header-title" className="scroll-animation no-select">{siteText[language].connectWithUs} <svg id="sample-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+    </svg></h4>
+           <SocialIcon url="https://www.youtube.com/PastorRobertoC" class="social" target="_blank"/>
+          <SocialIcon url="https://www.facebook.com/IglesiaVozdeDiosPA/" class="social" target="_blank"/>
+          <SocialIcon url="https://www.tiktok.com/@iglesiavozdedios?is_from_webapp=1&sender_device=pc" class="social" target="_blank"/>
+          <SocialIcon url="https://www.instagram.com/folsomvozdedios/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" class="social" target="_blank"/>
+          </div>
+          <br></br>
+          <CoolButton text={siteText[language].welcome} onClick={scrollToDiv}/>
+
 
       {/* <DisplayHomeImg/> */}
       <div id="caro">
@@ -83,31 +94,32 @@ function DisplayHomePage({ language }){
            <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
     </svg>  1530 4th Ave Folsom, PA 19033</p>
-           <h4 className="scroll-animation no-select">{siteText[language].serviceHours}</h4>
+           {/* <h4 className="scroll-animation no-select">{siteText[language].serviceHours}</h4>
+           <h5 className="scroll-animation no-select">{siteText[language].serviceHoursSubCaption}</h5>
+           <ul>
+            <li>{siteText[language].sundayService}</li>
+            <li>{siteText[language].wednesdayPrayer}</li>
+            <li>{siteText[language].saturdayBibleStudy}</li>
+           </ul> */}
+
+          <Container className="mt-3" id="carousel-container-id">
+          <CarouselFadeExample />
+          </Container>
+          
+          </div>
+          <div id="middle-middle">
+          <h4 className="scroll-animation no-select">{siteText[language].serviceHours}</h4>
            <h5 className="scroll-animation no-select">{siteText[language].serviceHoursSubCaption}</h5>
            <ul>
             <li>{siteText[language].sundayService}</li>
             <li>{siteText[language].wednesdayPrayer}</li>
             <li>{siteText[language].saturdayBibleStudy}</li>
            </ul>
-           <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d97953.76532369152!2d-75.40154809584824!3d39.895397142499334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x89c6c28b142423f9%3A0xa6e57e023c0a6858!2s1530%204th%20Ave%2C%20Folsom%2C%20PA%2019033!3m2!1d39.8954263!2d-75.3191472!5e0!3m2!1sen!2sus!4v1724508630866!5m2!1sen!2sus" width="400" height="250" style={{border:"0;"}} id="googlemap" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          
-          </div>
-          <div id="middle-middle">
-          
-          <div id="socialdiv">
-          <h4 id="connect-header-title" className="scroll-animation no-select">{siteText[language].connectWithUs} <svg id="sample-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-    </svg></h4>
-           <SocialIcon url="https://www.youtube.com/PastorRobertoC" class="social" target="_blank"/>
-          <SocialIcon url="https://www.facebook.com/IglesiaVozdeDiosPA/" class="social" target="_blank"/>
-          <SocialIcon url="https://www.tiktok.com/@iglesiavozdedios?is_from_webapp=1&sender_device=pc" class="social" target="_blank"/>
-          <SocialIcon url="https://www.instagram.com/folsomvozdedios/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" class="social" target="_blank"/>
-          </div>
-          
-          <Container className="mt-3" id="carousel-container-id">
-          <CarouselFadeExample />
-          </Container>
+
+       
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d97953.76532369152!2d-75.40154809584824!3d39.895397142499334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x89c6c28b142423f9%3A0xa6e57e023c0a6858!2s1530%204th%20Ave%2C%20Folsom%2C%20PA%2019033!3m2!1d39.8954263!2d-75.3191472!5e0!3m2!1sen!2sus!4v1724508630866!5m2!1sen!2sus" width="400" height="250" style={{border:"0;"}} id="googlemap" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     
           </div>
           </div>

@@ -74,7 +74,7 @@
     margin: 0;
     width: 100%;
     padding-top: 1rem !important;
-    margin-right: 400rem !important;
+    /* margin-right: 400rem !important; */
     margin-top: 1rem;
     align-items: center;
     justify-content: center;
@@ -82,8 +82,10 @@
   }
 
   #custom-verse{
-    padding: 3rem;
-    text-align: center;
+    /* I'm thinking it's best to hide this if you're on mobile. Maybe I change my mind later. */
+    display: none; 
+    /* padding: 3rem;
+    text-align: center; */
   }
 
   /* #wholepage {
@@ -96,6 +98,7 @@
 
   h1 {
     font-size: 4rem !important;
+    margin-top: 4rem;
     
     
   }
@@ -143,6 +146,10 @@
 
   #notification-caption {
     font-size: 0.80rem !important;
+  }
+
+  #carousel-container-id{
+    margin-bottom: 1.5rem;
   }
 
 }
