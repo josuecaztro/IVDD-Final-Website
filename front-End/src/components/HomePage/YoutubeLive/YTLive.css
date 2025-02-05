@@ -1,28 +1,44 @@
-.live-status-container {
+.live-banner {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 0, 0, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
     text-align: center;
-    margin-top: 20px;
-}
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
-.live {
-    color: red;
-    font-size: 24px;
-    transition: color 0.3s ease;
-}
+  .live-banner h2 {
+    margin: 0;
+    padding-bottom: 10px;
+  }
   
-.not-live {
-    color: black;
-    font-size: 24px;
-    transition: color 0.3s ease;
-}
+  .live-banner iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 8px;
+  }
   
-.error {
-    color: red;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-#live-test {
-    font-size: 1rem !important;
-    user-select: none;
-}
+  /* Mobile-friendly adjustments */
+  @media (max-width: 600px) {
+    .live-banner {
+      width: 90%;
+      font-size: 16px;
+      padding: 8px;
+    }
+  
+    .live-banner iframe {
+      height: 200px;
+    }
+  }
   

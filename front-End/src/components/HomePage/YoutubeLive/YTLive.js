@@ -1,39 +1,61 @@
-import { useEffect } from 'react';
-import './YTLive.css'; // Import the CSS file
+import { useState, useEffect } from "react";
+import "./YTLive.css"; 
 
-const LiveStatus = () => {
-  const API_KEY = process.env.REACT_APP_YT_KEY; 
-  const CHANNEL_ID = process.env.REACT_APP_YT_CHANNEL;  
+const API_KEY = process.env.REACT_APP_YT_KEY
+const CHANNEL_ID = process.env.REACT_APP_YT_CHANNEL;
 
-  //console.log("The start of your API key is " + API_KEY.slice(0,5) + ".")
-  console.log("If you don't see proper characters, the API key can NOT BE READ!")
+const checkLiveStatus = async () => {
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&eventType=live&type=video&key=${API_KEY}`;
 
-  // Function to check live status
-  const checkLiveStatus = async () => {
-    const myurl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&type=video&eventType=live&key=${API_KEY}`;
-    try {
-      const response = await fetch(myurl);
-      const data = await response.json();
-
-      if (response.ok) {
-        console.log('YES!!! YouTube API connected successfully:', data);
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    if (data.items.length > 0) {
+      return data.items[0].id.videoId; // Live stream exists!
+      console.log("API SUCCESS AND LIVE STREAM HAS BEEN FOUND! IT'S CURRENTLY LIVE!")
     } else {
-        console.error('NO... YouTube API connection error:', data.error.message);
+      console.log("No live stream found. API successful though. Just no current livestream.")
+      return null; // No live stream found
     }
-    } catch (error) {
-        console.error('NO... Network error:', error.message);
-    }};
-
-  useEffect(() => {
-    checkLiveStatus(); 
-    const interval = setInterval(checkLiveStatus, 120000);
-    return () => clearInterval(interval); 
-  }, []);
-
-  //I NEVER RETURN NULL FOR REACT COMPONENTS
-  //THIS IS THE FIRST TIME I DID THIS CAUSE I JUST WANT TO CHECK API CONNECTIVITY
-  // I AM NOT LOOKING TO RETURN A VISUAL HTML ELEMENT SO THAT'S WHY THIS RETURNS NULL BUT I CAN STILL CALL IT OTHER PLACES
-  return null;
+  } catch (error) {
+    console.error("Error fetching live status:", error);
+    return null;
+  }
 };
 
-export default LiveStatus;
+const LiveStreamBanner = () => {
+  const [liveVideoId, setLiveVideoId] = useState(null);
+
+  useEffect(() => {
+    async function fetchLiveStatus() {
+      const videoId = await checkLiveStatus();
+      setLiveVideoId(videoId);
+    }
+
+    fetchLiveStatus();
+    const interval = setInterval(fetchLiveStatus, 60000); // Check every 60 seconds if there's a live
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <>
+      {liveVideoId && (
+        <div className="live-banner">
+          <h2>🔴 We are LIVE! Watch Now:</h2>
+          <iframe
+            width="560"
+            height="315"
+            src={`https://www.youtube.com/embed/${liveVideoId}?autoplay=1`}
+            title="Live Stream"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default LiveStreamBanner;

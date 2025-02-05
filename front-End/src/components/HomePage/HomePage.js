@@ -6,7 +6,7 @@ import CoolButton from './AwesomeButton';
 import './App.css';
 import siteText from './HomePageTEXT';
 import Dropdown from './DropDownButton';
-import LiveStatus from './YoutubeLive/YTLive';
+import LiveStreamBanner from './YoutubeLive/YTLive';
 
 function DisplayHomePage({ language }){
 
@@ -66,7 +66,6 @@ function DisplayHomePage({ language }){
         <div id="top-page">
 
         <p id="custom-verse" className="scroll-animation no-select">{siteText[language].customVerse}</p>
-<LiveStatus/>
       <h1 id="titleh1" className="scroll-animation no-select">{siteText[language].title}</h1>
       <div id="socialdiv">
           <h4 id="connect-header-title" className="scroll-animation no-select">{siteText[language].connectWithUs} <svg id="sample-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
@@ -79,6 +78,7 @@ function DisplayHomePage({ language }){
           </div>
           <br></br>
           <CoolButton text={siteText[language].welcome} onClick={scrollToDiv}/>
+          <LiveStreamBanner/>
 
 
       {/* <DisplayHomeImg/> */}
