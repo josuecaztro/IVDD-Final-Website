@@ -1,4 +1,9 @@
 import React from 'react';
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+
+const PUBLISHABLE_TEST_KEY = process.env.REACT_APP_STRIPE_PUBLISHABLE;
+const stripePromise = loadStripe(PUBLISHABLE_TEST_KEY); 
 
 
 function DisplayDonatePage (){
@@ -9,8 +14,7 @@ function DisplayDonatePage (){
         <div style={{textAlign: "center", marginTop: "5rem"}}>
         <h4>Donation Page</h4>
         <h1>✋🏽🛑</h1>
-        <h3>Unfortunately, this page is under construction. 🔨</h3>
-        <h2>Please try again later.</h2>
+           
         </div>
     )
 }
