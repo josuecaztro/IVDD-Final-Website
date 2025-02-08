@@ -16,11 +16,10 @@ public class SubscriberController {
     @Autowired
     private SubscriberRepository repository;
 
-    //YOU SHOULD UNCOMMENT THIS - I JUST DID THIS TO TEST BACKEND UPDATES FINE
-//    @GetMapping("/subscribers")
-//    public List<Subscriber> getAllSubscribers() {
-//        return repository.findAll();
-//    }
+    @GetMapping("/subscribers")
+    public List<Subscriber> getAllSubscribers() {
+        return repository.findAll();
+    }
 
     @PostMapping("/signup")
     public ResponseEntity<String> signUp(@RequestBody Map<String, String> request){
