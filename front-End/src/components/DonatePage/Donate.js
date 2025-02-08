@@ -1,21 +1,62 @@
-import React from 'react';
-import { Elements } from "@stripe/react-stripe-js";
+import React, { useState, useEffect } from "react";
 import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+import CheckoutForm from "./CheckoutForm";
+import CompletePage from "./CompletePage";
+import "./Donate.css"
 
-const PUBLISHABLE_TEST_KEY = process.env.REACT_APP_STRIPE_PUBLISHABLE;
-const stripePromise = loadStripe(PUBLISHABLE_TEST_KEY); 
 
 
 function DisplayDonatePage (){
+    const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE);
+const [clientSecret, setClientSecret] = useState("");
+useEffect(() => {
+    // Create PaymentIntent as soon as the page loads
+    fetch("https://iglesiavozdedios.net/api/create-payment-intent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: [{ id: "xl-tshirt", amount: 1000 }] }),
+    })
+      .then((res) => res.json())
+      .then((data) => setClientSecret(data.clientSecret));
+}, []);
+
+const appearance = {
+    theme: 'stripe',
+};
+// Enable the skeleton loader UI for optimal loading.
+const loader = 'auto';
 
     //look up online how to implement payment methods
 
     return (
-        <div style={{textAlign: "center", marginTop: "5rem"}}>
-        <h4>Donation Page</h4>
-        <h1>✋🏽🛑</h1>
-           
-        </div>
+        <div className="Donate-Stripe-Div">
+        {clientSecret && (
+            <Elements options={{ clientSecret, appearance, loader }} stripe={stripePromise}>
+                <Routes>
+                    <Route path="checkout" element={<CheckoutForm />} />
+                    <Route path="complete" element={<CompletePage />} />
+                </Routes>
+            </Elements>
+        )}
+    </div>
+    //     <Router>
+    //   <div className="Donate-Stripe-Div">
+    //     {clientSecret && (
+    //       <Elements options={{clientSecret, appearance, loader}} stripe={stripePromise}>
+    //         <Routes>
+    //           <Route path="/checkout" element={<CheckoutForm />} />
+    //           <Route path="/complete" element={<CompletePage />} />
+    //         </Routes>
+    //       </Elements>
+    //     )}
+    //   </div>
+    // </Router>
     )
 }
 
