@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 import CheckoutForm from "./CheckoutForm";
 import CompletePage from "./CompletePage";
-import "./Donate.css"
 
 
 
