@@ -17,7 +17,7 @@ public class PaymentService {
 
     public PaymentService(@Value("${stripe_publishable_key}") String myApiKey) {
         // Set Stripe API key
-        Stripe.apiKey = myApiKey;
+        Stripe.apiKey = System.getenv("STRIPE_PUBLISHABLE_KEY");
     }
 
     private int calculateOrderAmount(CreatePaymentItem[] items) {
