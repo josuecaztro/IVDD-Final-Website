@@ -28,6 +28,6 @@ jobs:
             git pull
             fuser -k 8080/tcp
             cd ivdd-backend/
-            mvn clean packge
+            mvn clean package
             nohup java -jar target/ivdd-backend-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
           EOF
