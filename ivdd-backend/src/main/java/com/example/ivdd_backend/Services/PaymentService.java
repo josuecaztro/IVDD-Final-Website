@@ -5,6 +5,8 @@ import com.example.ivdd_backend.Models.CreatePaymentResponse;
 import com.stripe.Stripe;
 import com.stripe.model.PaymentIntent;
 import com.stripe.param.PaymentIntentCreateParams;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -13,9 +15,9 @@ import java.util.Map;
 @Service
 public class PaymentService {
 
-    public PaymentService() {
+    public PaymentService(@Value("${stripe_publishable_key}") String myApiKey) {
         // Set Stripe API key
-        Stripe.apiKey = "sk_test_***************";
+        Stripe.apiKey = myApiKey;
     }
 
     private int calculateOrderAmount(CreatePaymentItem[] items) {
