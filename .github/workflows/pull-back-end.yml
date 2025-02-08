@@ -1,0 +1,33 @@
+name: Pull Changes - Back End
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      # Step 2: Get AWS Credentials
+      - name: Create SSH Key
+        run: |
+          echo "${{ secrets.EC2_PRIVATE_KEY }}" > ec2-key.pem
+          chmod 600 ec2-key.pem
+      # Step 3: Log into EC2 and GIT PULL
+      # This step accounts for rebooting with new Jar file and keeps it running ALWAYS
+      # If you get errors with the fuser -k line, try: fuser -k 8080/tcp || true
+      - name: Pull Back End Changes
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ec2-key.pem ubuntu@iglesiavozdedios.net << 'EOF'
+            cd /home/ubuntu/IVDD-Final-Website
+            git pull
+            git checkout -- front-End/node_modules/.cache/.eslintcache
+            git pull
+            fuser -k 8080/tcp
+            cd ivdd-backend/
+            mvn clean packge
+            nohup java -jar target/ivdd-backend-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
+          EOF
