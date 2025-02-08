@@ -15,7 +15,7 @@ import java.util.Map;
 @Service
 public class PaymentService {
 
-    public PaymentService(@Value("${stripe_publishable_key}") String myApiKey) {
+    public PaymentService() {
         // Set Stripe API key
         Stripe.apiKey = System.getenv("STRIPE_PUBLISHABLE_KEY");
     }
