@@ -26,6 +26,7 @@ jobs:
             git checkout -- front-End/node_modules/.cache/.eslintcache
             git pull
             cd front-End/
+            npm install
             npm run build
             sudo rm -rf /usr/share/nginx/html/*
             sudo cp -r build/* /usr/share/nginx/html/
