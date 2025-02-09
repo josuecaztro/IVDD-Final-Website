@@ -4,6 +4,7 @@ import {
   useStripe,
   useElements
 } from "@stripe/react-stripe-js";
+import "./Donate.css"
 
 export default function CheckoutForm() {
   const stripe = useStripe();
@@ -50,10 +51,10 @@ export default function CheckoutForm() {
   }
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit} className="pay-form">
+    <form id="donation-form" onSubmit={handleSubmit} className="pay-form">
 
       <PaymentElement id="payment-element" options={paymentElementOptions} />
-      <button disabled={isLoading || !stripe || !elements} id="submit" className="stripe-buttons">
+      <button disabled={isLoading || !stripe || !elements} id="submit" className="donation-button">
         <span id="button-text">
           {isLoading ? <div className="spinner" id="spinner"></div> : "Pay now"}
         </span>

@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import CheckoutForm from "./CheckoutForm";
 import CompletePage from "./CompletePage";
+import "./Donate.css"
 
 
 
@@ -34,15 +35,15 @@ const loader = 'auto';
     //look up online how to implement payment methods
 
     return (
-        <div className="Donate-Stripe-Div">
-        {clientSecret && (
-            <Elements options={{ clientSecret, appearance, loader }} stripe={stripePromise}>
-                <Routes>
-                    <Route path="checkout" element={<CheckoutForm />} />
-                    <Route path="complete" element={<CompletePage />} />
-                </Routes>
-            </Elements>
-        )}
+        <div id="the-donate-full-page">
+            <h2 id="don-title">DONATE HERE</h2>
+        <div id="Donate-Stripe-Div">
+         {clientSecret && (
+        <Elements options={{ clientSecret, appearance, loader }} stripe={stripePromise}>
+            <CheckoutForm />  {/* Just show the form, no extra Routes */}
+        </Elements>
+    )}
+    </div>
     </div>
     //     <Router>
     //   <div className="Donate-Stripe-Div">
