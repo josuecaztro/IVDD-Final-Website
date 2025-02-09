@@ -7,6 +7,7 @@ import './App.css';
 import siteText from './HomePageTEXT';
 import Dropdown from './DropDownButton';
 import LiveStreamBanner from './YoutubeLive/YTLive';
+import { getLatestLiveStream } from './YoutubeLive/YTLatestLive';
 
 function DisplayHomePage({ language }){
 
@@ -15,6 +16,8 @@ function DisplayHomePage({ language }){
 </svg>
 
   const [topic, setTopic] = useState('');
+  const [videoSrc, setVideoSrc] = useState('');
+  const [uploadedDaysAgo, setUploadedDaysAgo] = useState('');
 
 
     function scrollToDiv() {
@@ -50,11 +53,28 @@ function DisplayHomePage({ language }){
         });
     };
     useEffect(() => {
+      const fetchVideo = async () => {
+        const { videoUrl, publishedAt } = await getLatestLiveStream();
+
+        if (videoUrl) {
+            setVideoSrc(videoUrl);
+            if (publishedAt) {
+                const uploadDate = new Date(publishedAt);
+                const today = new Date();
+                const diffTime = Math.abs(today - uploadDate);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                setUploadedDaysAgo(diffDays);
+            }
+        }
+    };
+
+    fetchVideo();
         window.addEventListener('scroll', handleScroll);
         handleScroll();
         return () => {
         window.removeEventListener('scroll', handleScroll);
         };
+        
     }, []);
 
 
@@ -130,8 +150,12 @@ function DisplayHomePage({ language }){
         <div id="bottom-page">
          <div id="bottom-left-div">
           <h2 id="youtube-title" className="scroll-animation no-select">{siteText[language].missedService}</h2>
-          <h6 id="sub-head-title-for-vid" className="no-select">{siteText[language].dailyUploads}</h6>
-         <iframe width="616" height="347" src="https://www.youtube.com/embed/f-kw9P2VC5w?si=70yKwFCcSCTZqYFD&autoplay=1&mute=1" id="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h6 id="sub-head-title-for-vid" className="no-select"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-camera-reels-fill" viewBox="0 0 16 16">
+  <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+  <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/>
+</svg> {siteText[language].dailyUploads} {uploadedDaysAgo} {siteText[language].dailyUploadsSecondHalf}</h6>
+         <iframe width="616" height="347" src={videoSrc} id="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
          <Dropdown setTopic={setTopic} language={language}/>
          </div>
     

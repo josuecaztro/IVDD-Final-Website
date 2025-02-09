@@ -13,6 +13,9 @@ import "./Donate.css"
 
 
 function DisplayDonatePage (){
+
+    //look up online how to implement payment methods
+    const [amount, setAmount] = useState("");
     const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE);
 const [clientSecret, setClientSecret] = useState("");
 useEffect(() => {
@@ -20,7 +23,7 @@ useEffect(() => {
     fetch("https://iglesiavozdedios.net/api/payments/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items: [{ id: "xl-tshirt", amount: 1000 }] }),
+      body: JSON.stringify({ items: [{ amount: 1000 }] }),
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
@@ -32,11 +35,20 @@ const appearance = {
 // Enable the skeleton loader UI for optimal loading.
 const loader = 'auto';
 
-    //look up online how to implement payment methods
 
     return (
         <div id="the-donate-full-page">
             <h2 id="don-title">DONATE HERE</h2>
+            <p>Test only</p>
+            <input
+  type="number"
+  placeholder="Enter amount"
+  value={amount}
+  onChange={(e) => setAmount(e.target.value)}
+  min="1"
+  required
+/>
+
         <div id="Donate-Stripe-Div">
          {clientSecret && (
         <Elements options={{ clientSecret, appearance, loader }} stripe={stripePromise}>

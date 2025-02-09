@@ -41,7 +41,7 @@
 }
 
 #middle-page{
-  padding: 60px;
+  padding: 50px;
   color: white;
   background-image: linear-gradient(#3b6b94, #7796b1);
 
@@ -50,7 +50,6 @@
   width: 100%;
   gap: 8rem;
   justify-content: center;
-
 }
 
 #middle-page p, li {

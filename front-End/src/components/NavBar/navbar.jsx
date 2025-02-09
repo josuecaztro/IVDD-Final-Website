@@ -10,12 +10,13 @@ import './navbar.css';
 
 function GenerateNav( { language, setLanguage } ){
 
-  function scrollToFooter(){
-    const element = document.getElementById('thefooter');
-    if (element){
-      element.scrollIntoView({behavior: 'smooth'});
-    }
-  }
+  // MY DAD SAID THIS WAS NO LONGER NECESSARY TO INCLUDE THIS INFORMATION IN NAVBAR
+  // function scrollToFooter(){
+  //   const element = document.getElementById('thefooter');
+  //   if (element){
+  //     element.scrollIntoView({behavior: 'smooth'});
+  //   }
+  // }
 
   function toggleLanguage (){
     setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'es' : 'en'));
@@ -63,12 +64,12 @@ return (
 
 
       <NavDropdown title={navText[language].contactUs} id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1" onClick={scrollToFooter}>{navText[language].email}</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2" onClick={scrollToFooter}>
+        {/* <NavDropdown.Item href="#action/3.1" onClick={scrollToFooter}>{navText[language].email}</NavDropdown.Item> */}
+        {/* <NavDropdown.Item href="#action/3.2" onClick={scrollToFooter}>
           {navText[language].phoneNumber}
-        </NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3" onClick={scrollToFooter}>{navText[language].address}</NavDropdown.Item>
-        <NavDropdown.Divider />
+        </NavDropdown.Item> */}
+        {/* <NavDropdown.Item href="#action/3.3" onClick={scrollToFooter}>{navText[language].address}</NavDropdown.Item> */}
+        {/* <NavDropdown.Divider /> */}
         <NavDropdown.Item as={NavLink} to="/contact">
           {navText[language].sendMessage}
         </NavDropdown.Item>

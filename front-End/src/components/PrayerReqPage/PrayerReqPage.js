@@ -10,7 +10,7 @@ function DisplayPrayerReqPage( { language } ){
         lastName: '',
         phoneNumber: '',
         messageBody: '',
-        dateTime: ''
+        dateTime: "Default: There is no deadline for any prayer request."
       });
     
       const handleInputChange = (e) => {
@@ -115,7 +115,7 @@ function DisplayPrayerReqPage( { language } ){
               />
             </div>
     
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="dateTime">{prText[language].dateTime}  <span className="red-star">*</span></label>
               <input
                 type="text"
@@ -127,7 +127,7 @@ function DisplayPrayerReqPage( { language } ){
                 onChange={handleInputChange}
                 required
               />
-            </div>
+            </div> */}
     
             <button type="submit" id="submit-id-pr" className="btn btn-success">{prText[language].submit}</button>
           </form>

@@ -34,7 +34,7 @@ const LiveStreamBanner = () => {
     }
 
     fetchLiveStatus();
-    const interval = setInterval(fetchLiveStatus, 60000); // Check every 60 seconds if there's a live
+    const interval = setInterval(fetchLiveStatus, 300000); // Check every 5 minutes if there's a live
 
     return () => clearInterval(interval);
   }, []);

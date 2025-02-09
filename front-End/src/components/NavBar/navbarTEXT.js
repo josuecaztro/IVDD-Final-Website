@@ -16,7 +16,7 @@ const navText = {
         phoneNumber: "Phone Number",
         address: "Address",
         sendMessage: "Send Message",
-        liveVids: "Live Services"
+        liveVids: "Sermons by Topic"
     },
     es: {
         main: "Iglesia Voz de Dios",
@@ -33,7 +33,7 @@ const navText = {
         phoneNumber: "Número de Teléfono",
         address: "Dirección",
         sendMessage: "Enviar Mensaje",
-        liveVids: "Servicios en Vivo"
+        liveVids: "Mensajes por Tema"
         }
 }
 
