@@ -1,9 +1,73 @@
-#the-donate-full-page{
+.don1-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  height: 100vh;
 }
 
-#don-title{
-    text-align: center;
-    padding: 1.5rem;
+.don1-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.don1-caption {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.don1-dropdown, .don1-input {
+  font-size: 1rem;
+  padding: 10px;
+  margin: 10px 0;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.don1-button {
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+
+.don1-button:hover {
+  background: #218838;
+}
+
+.don1-home-button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.don1-home-button:hover {
+  background: #0056b3;
+}
+
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .don1-dropdown, .don1-input {
+    width: 80%;
+  }
 }
 
 

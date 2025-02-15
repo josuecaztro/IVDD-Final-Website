@@ -18,7 +18,7 @@ export const GiveText = {
         }
     },
     es: {
-        title: "Dar",
+        title: "Donar",
         caption: '"Porque donde esté tu tesoro, allí estará también tu corazón." - Mateo 6:21',
         optionTitle: "En Persona",
         optionText: "Únete a uno de nuestros servicios. ¡Nos encantaría verte!",
