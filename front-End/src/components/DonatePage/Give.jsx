@@ -11,13 +11,15 @@ const DisplayGivePage = ({ language }) => {
       <h1 className="give-title">{GiveText[language].title}</h1>
       <p className="give-caption">{GiveText[language].caption}</p>
       
+      {/* [PLEASE DONATE IN PERSON] OPTION */}
       <div className="give-options">
         <div className="give-option">
           <h2 className="give-option-title">{GiveText[language].optionTitle}</h2>
           <p className="give-option-text">{GiveText[language].optionText}</p>
           <h2>🙏</h2>
         </div>
-        
+
+        {/* [DONATE ONLINE] OPTION */}
         <div className="give-option">
           <h2 className="give-option-title">{GiveText[language].optionTitle2}</h2>
           <p className="give-option-text">{GiveText[language].optionText2}</p>
@@ -27,5 +29,4 @@ const DisplayGivePage = ({ language }) => {
     </div>
   );
 };
-
 export default DisplayGivePage;

@@ -1,0 +1,73 @@
+.SUCC-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    height: 100vh;
+  }
+  
+  .SUCC-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .SUCC-message {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .SUCC-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .SUCC-button {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .SUCC-button:hover {
+    background: #218838;
+  }
+  
+  .SUCC-home-button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+    margin-top: 20px;
+  }
+  
+  .SUCC-home-button:hover {
+    background: #0056b3;
+  }
+  
+  /* for Mobile */
+  @media (max-width: 768px) {
+    .SUCC-options {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .SUCC-button {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  }
+  
