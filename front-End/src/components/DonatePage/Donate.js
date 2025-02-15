@@ -23,7 +23,7 @@ useEffect(() => {
     fetch("https://iglesiavozdedios.net/api/payments/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items: [{ amount: 1000 }] }),
+      body: JSON.stringify({ items: [{ amount: 500 }] }),
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
