@@ -91,13 +91,13 @@ return (
       <button className="don1-home-button" onClick={() => navigate("/donate")}>Cancel & Return Home</button>
     </div>
 
-<div id="Donate-Stripe-Div">
+{/* <div id="Donate-Stripe-Div">
 {clientSecret && (
 <Elements options={{ clientSecret, appearance, loader }} stripe={stripePromise}>
    <CheckoutForm />  
 </Elements>
 )}
-</div>
+</div> */}
 
 </>
     
