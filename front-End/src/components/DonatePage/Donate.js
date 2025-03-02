@@ -12,16 +12,15 @@ function DisplayDonatePage (){
   const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE);
   const [clientSecret, setClientSecret] = useState("");
 
-  useEffect(() => {
-    // Create PaymentIntent as soon as the page loads
-    fetch("https://iglesiavozdedios.net/api/payments/create-payment-intent", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items: [{ amount: 500 }] }),
-    })
-      .then((res) => res.json())
-      .then((data) => setClientSecret(data.clientSecret));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://iglesiavozdedios.net/api/payments/create-payment-intent", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ items: [{ amount: amount }] }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => setClientSecret(data.clientSecret));
+  // }, []);
 
   const appearance = {
     theme: 'stripe',
@@ -34,18 +33,28 @@ function DisplayDonatePage (){
   const [customAmount, setCustomAmount] = useState("");
   const [isCustom, setIsCustom] = useState(false);
   const navigate = useNavigate();
+
   const handleCustomAmount = (e) => {
     const value = e.target.value.replace(/[^0-9]/g, ""); // ONLY accept numbers
     setCustomAmount(value);
     setAmount(value ? parseInt(value, 10) : "");
   };
+
   const handleSubmit = () => {
-    if (!amount || amount < 100) {
-      alert("Please enter a valid amount (at least $1.00 / 100 cents).");
-      return;
-    }
-    //DO SOMETHING WITH AMOUNT HERE
-  };
+  if (!amount || amount < 100) {
+    alert("Please enter a valid amount (at least $1.00 / 100 cents).");
+    return;
+  }
+  fetch("http://iglesiavozdedios.net/api/payments/create-payment-intent", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ amount: amount }),
+  })
+    .then((res) => res.json())
+    .then((data) => setClientSecret(data.clientSecret))
+    .catch((err) => console.error("Error fetching payment intent:", err));
+};
+
   const handleAmountChange = (e) => {
     const value = e.target.value;
     if (value === "custom") {
@@ -91,13 +100,13 @@ return (
       <button className="don1-home-button" onClick={() => navigate("/donate")}>Cancel & Return Home</button>
     </div>
 
-{/* <div id="Donate-Stripe-Div">
+<div id="Donate-Stripe-Div">
 {clientSecret && (
 <Elements options={{ clientSecret, appearance, loader }} stripe={stripePromise}>
    <CheckoutForm />  
 </Elements>
 )}
-</div> */}
+</div>
 
 </>
     
@@ -105,7 +114,3 @@ return (
 }
 
 export default DisplayDonatePage;
-
-
-    
-

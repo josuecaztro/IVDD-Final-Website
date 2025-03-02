@@ -49,6 +49,7 @@ return (
 
       <Nav.Link as={NavLink} to="/livetopics">{navText[language].liveVids}</Nav.Link>
       <Nav.Link as={NavLink} to="/donate">{navText[language].donate}</Nav.Link>
+      <Nav.Link as={NavLink} to="/visitors">{navText[language].visitors}</Nav.Link>
       <Nav.Link as={NavLink} to="/prayerReq">{navText[language].prayerReq}</Nav.Link>
 
 

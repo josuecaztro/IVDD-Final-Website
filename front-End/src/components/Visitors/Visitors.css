@@ -1,0 +1,84 @@
+.visit-container {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .visit-title, .visit-heading {
+    color: #2c3e50;
+  }
+  
+  .visit-service-info {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .visit-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .visit-item {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+  
+  .visit-plan {
+    margin-top: 20px;
+    padding: 15px;
+    background: #ecf0f1;
+    border-radius: 8px;
+  }
+  
+  .visit-input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+  }
+  
+  .visit-button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .visit-button:hover {
+    background: #2980b9;
+  }
+  
+  .visit-thank-you {
+    font-size: 18px;
+    color: #27ae60;
+    font-weight: bold;
+  }
+  
+  .visit-faq {
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+  
+  .visit-summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .visit-summary:hover {
+    color: #3498db;
+  }

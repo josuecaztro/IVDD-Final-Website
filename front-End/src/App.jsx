@@ -13,6 +13,7 @@ import ShowAllVideoTopics from './components/VideoTopicPage/videotopic';
 import DisplayAdminDashboard from './components/Admin/Dashboard/adminDashboard';
 import DisplayDepartmentsPage from './components/Departments/Departments';
 import DisplayDonateCompletePage from './components/DonatePage/PaySuccess';
+import NewVisitors from './components/Visitors/Visitors';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
       <Route path="/prayerReq" element={<DisplayPrayerReqPage language={language}/>}/>
       <Route path="/admin" element={<DisplayAdminDashboard/>}/>
       <Route path="/donate/complete" element={<DisplayDonateCompletePage language={language}/>}/>
+      <Route path="/visitors" element={<NewVisitors language={language}/>}/>
     </Routes>
     </Router>
 
