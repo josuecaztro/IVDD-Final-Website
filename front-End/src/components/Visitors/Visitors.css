@@ -82,3 +82,10 @@
   .visit-summary:hover {
     color: #3498db;
   }
+
+  /* FOR EVERYTHING MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+  .visit-title {
+    margin: 0;
+}
+}
