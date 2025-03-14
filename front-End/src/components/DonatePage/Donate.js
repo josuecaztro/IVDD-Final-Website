@@ -45,7 +45,7 @@ function DisplayDonatePage (){
     alert("Please enter a valid amount (at least $1.00 / 100 cents).");
     return;
   }
-  fetch("http://iglesiavozdedios.net/api/payments/create-payment-intent", {
+  fetch("https://iglesiavozdedios.net/api/payments/create-payment-intent", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ amount: amount }),
