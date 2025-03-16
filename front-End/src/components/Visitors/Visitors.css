@@ -31,8 +31,9 @@
   .visit-plan {
     margin-top: 20px;
     padding: 15px;
-    background: #ecf0f1;
+    /* background: #ecf0f1; */
     border-radius: 8px;
+    justify-self: center;
   }
   
   .visit-input {
@@ -88,4 +89,9 @@
   .visit-title {
     margin: 0;
 }
+.visit-plan {
+  justify-self: auto;
+  width: 100%;
+}
+
 }
