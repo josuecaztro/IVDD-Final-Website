@@ -118,7 +118,11 @@ function DisplayHomePage({ language }){
           <h6
            id="sub-head-title-for-vid"
            className="no-select">
-           <CameraIcon/> {siteText[language].dailyUploads} {uploadedDaysAgo} {siteText[language].dailyUploadsSecondHalf}
+           <CameraIcon/> {siteText[language].dailyUploads} {uploadedDaysAgo} {
+              uploadedDaysAgo === 1
+                ? (language === "en" ? "day ago" : "día")
+                : siteText[language].dailyUploadsSecondHalf
+            }
           </h6>
          <iframe width="616" height="347" src={videoSrc} id="youtube" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
          <Dropdown setTopic={setTopic} language={language}/>
