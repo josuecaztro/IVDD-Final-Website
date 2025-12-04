@@ -4,7 +4,6 @@
 
 My dad's church organization isn't so tech-savvy, and I noticed they didn't have a website. I thought this would be a great opportunity to use my skills in full-stack development to construct a website for our church organization. <strong>Although it's a work in progress, the website is hosted LIVE NOW at this link [HERE](https://www.iglesiavozdedios.net)</strong> <code>(or visit www.iglesiavozdedios.net)</code>
 
----
 
 ## 🌅 App Vision
 
@@ -18,7 +17,6 @@ The current roadmap:
 * **Harden security** (e.g., remove public DB exposure, private repo with secure CI/CD secrets).
 * **Add new modules** like SMS announcements and online donations.
 
----
 
 ## 🧩 Main Modules
 
