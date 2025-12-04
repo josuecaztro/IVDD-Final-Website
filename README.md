@@ -44,7 +44,7 @@ The current roadmap:
 * **Better Admin Dashboard**
 
 ## 🛠️ Tech Stack
-
+Architecture Diagram : [Link Here](https://app.diagrams.net/#G1OOL-6B8z6jaGWHHtPaoWh5BktkpsT5IH#%7B%22pageId%22%3A%22T9eGbRpf31z7ZIOLd12q%22%7D)
 ### **Frontend**
 
 * JavaScript
