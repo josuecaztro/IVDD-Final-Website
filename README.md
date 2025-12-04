@@ -87,105 +87,19 @@ Both SSH into the EC2 instance, `git pull`, and restart services manually — **
 
 ## 🧑‍💻 Local Development Guide
 
-### **Prerequisites**
-
----
-
 ## ▶️ Start the Backend (Spring Boot — current)
 
-```bash
-cd ivdd-backend
-./mvnw spring-boot:run
-```
-
-The server runs on:
-
-```
-http://localhost:8080
-```
+> There's no command, just manually start it in IntelliJ.
 
 ---
 
-## ▶️ Start the Backend (Quarkus — migration branch)
-
-```bash
-cd ivdd-backend
-./mvnw quarkus:dev
-```
-
-Hot-reload dev mode at:
-
-```
-http://localhost:8080
-```
-
----
-
-## ▶️ Start the Frontend (Vite React)
-
-```bash
-cd front-End
-npm install
-npm run dev
-```
+## ▶️ Start the Frontend
 
 Frontend runs on:
 
 ```
-http://localhost:5173
+npm start
 ```
-
----
-
-## 🚀 How to Trigger CI/CD (GitHub Actions)
-
-Currently the repo contains two workflows:
-
-### **Frontend Deploy**
-
-Triggers on:
-
-* Push to `main` under `/front-End/**`
-* Manual dispatch
-
-Performs:
-
-* `ssh` into EC2
-* `cd` into frontend directory
-* `git pull`
-* Builds frontend
-* Copies build files into NGINX web root
-
-### **Backend Deploy**
-
-Triggers on:
-
-* Push to `main` under `/ivdd-backend/**`
-* Manual dispatch
-
-Performs:
-
-* `ssh` into EC2
-* `git pull`
-* Restarts backend Java application (raw, non-Docker)
-
-### **Manual Trigger**
-
-Go to:
-**GitHub → Actions → Choose workflow → Run workflow**
-
----
-
-## 🧱 Project Structure (High-Level)
-
-```
-/
-├── front-End/         # React (Vite) client
-├── ivdd-backend/      # Java backend (Spring → Quarkus migration)
-├── nginx/             # Configs (if applicable)
-└── .github/workflows/ # CI/CD pipelines
-```
-
 ---
 
 ## 🔐 Security Notes (Important)
@@ -211,16 +125,5 @@ Feedback, ideas, or improvements are always welcome.
 ## 🙏 Author
 
 **Josue Castro**
-Full-stack engineer • AWS enthusiast • Son building for his father’s ministry
+Full-stack engineer • Son building for his father’s ministry
 
----
-
-If you want, I can also generate:
-
-✅ a **BADGE section** (build passing, AWS deploy status, etc.)
-✅ a **diagram of the architecture**
-✅ a **database schema diagram**
-✅ a **migration plan Spring → Quarkus**
-✅ an **issue roadmap** pre-formatted for GitHub Issues
-
-Just say the word.
