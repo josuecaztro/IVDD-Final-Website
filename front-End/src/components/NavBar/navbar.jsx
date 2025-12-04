@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import navText from './navbarTEXT';
 import ShowToggleButton from './toggleLangButton';
 import './navbar.css';
+import ivddLogo from '../../images/newlogo2025.png';
 
 
 function GenerateNav( { language, setLanguage } ){
@@ -27,7 +28,16 @@ return (
   <>
 <Navbar expand="lg" className="bg-body-tertiary" class="nav" data-bs-theme="dark">
 <Container>
-  <Navbar.Brand as={NavLink} to="/">{navText[language].main}</Navbar.Brand>
+  {/* <Navbar.Brand as={NavLink} to="/">{navText[language].main}</Navbar.Brand> */}
+  <Navbar.Brand as={NavLink} to="/" className="d-flex align-items-center">
+  <img 
+    id="nav-main-new-logo"
+    src={ivddLogo} 
+    alt="Logo" 
+    style={{ height: '40px', width: 'auto', marginRight: '10px' }}
+  />
+  {navText[language].main}
+</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="me-auto">

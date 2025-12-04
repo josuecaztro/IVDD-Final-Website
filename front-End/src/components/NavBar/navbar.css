@@ -3,6 +3,17 @@
     color: lightgray;;
 }
 
+#nav-main-new-logo {
+  border: none;
+  transition: filter 0.25s ease;
+}
+
+#nav-main-new-logo:hover {
+  filter: brightness(1.2) sepia(0.4) hue-rotate(10deg);
+}
+
+
+
 /* used to be 601 and 1024px */
 @media (min-width: 601px) and (max-width: 1370px) {
 
