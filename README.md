@@ -17,7 +17,6 @@ The current roadmap:
 * **Harden security** (e.g., remove public DB exposure, private repo with secure CI/CD secrets).
 * **Add new modules** like SMS announcements and online donations.
 
-
 ## 🧩 Main Modules
 
 ### **1. Events Module (Google Calendar API)**
@@ -43,8 +42,6 @@ The current roadmap:
 * **Online Donations** integration
 * **SMS Subscription / Announcements**
 * **Better Admin Dashboard**
-
----
 
 ## 🛠️ Tech Stack
 
@@ -81,15 +78,11 @@ Two GitHub Actions workflows:
 
 Both SSH into the EC2 instance, `git pull`, and restart services manually — **no Docker in production yet**.
 
----
-
 ## 🧑‍💻 Local Development Guide
 
 ## ▶️ Start the Backend (Spring Boot — current)
 
 > There's no command, just manually start it in IntelliJ.
-
----
 
 ## ▶️ Start the Frontend
 
@@ -98,7 +91,6 @@ Frontend runs on:
 ```
 npm start
 ```
----
 
 ## 🔐 Security Notes (Important)
 
@@ -111,14 +103,10 @@ npm start
   * Rebuild CI/CD with GitHub OIDC or SSM Session Manager
   * Remove any hardcoded hostnames/keys
 
----
-
 ## 🤝 Contributions & Feedback
 
 This is a personal/hobby project serving a real community.
 Feedback, ideas, or improvements are always welcome.
-
----
 
 ## 🙏 Author
 
